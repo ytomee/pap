@@ -10,7 +10,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                     <div className="main-header">
                         <div className="header-left">
                             <div className="header-logo">
-                            <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox" src="assets/imgs/template/jobhub-logo.svg" /></a></Link>
+                            <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox" src="assets/imgs/template/logo.svg" /></a></Link>
                             </div>
                         </div>
                         <div className="header-nav">
@@ -54,7 +54,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                                 <Link legacyBehavior href="/job-details"><a>Jobs Details</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/job-details-2"><a>Jobs Details 2            </a></Link>
+                                                <Link legacyBehavior href="/job-details-2"><a>Jobs Details 2</a></Link>
                                             </li>
                                         </ul>
                                     </li>
@@ -138,9 +138,9 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                         </div>
                         <div className="header-right">
                             <div className="block-signin">
-                                <Link legacyBehavior href="page-register"><a className="text-link-bd-btom hover-up">Register</a></Link>
+                                <Link legacyBehavior href="page-register"><a className="">Criar conta</a></Link>
 
-                                <Link legacyBehavior href="page-signin"><a className="btn btn-default btn-shadow ml-40 hover-up">Sign in</a></Link>
+                                <Link legacyBehavior href="page-signin"><a className="btn btn-default btn-shadow ml-40">Login</a></Link>
                             </div>
                         </div>
                     </div>

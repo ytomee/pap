@@ -7,11 +7,11 @@
     transition: 0.2s;
     &.btn-default {
         color: $color-white;
-        background-color: $color-brand-2;
+        background-color: #1f1f1f;
         line-height: 26px;
         padding: 10px 25px;
         &:hover {
-            background-color: $color-brand;
+            background-color: #000000;
             transform: translateY(-2px);
             transition: 0.2s;
         }

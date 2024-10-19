@@ -235,13 +235,13 @@ input:focus::-moz-placeholder {
 }
 
 a {
-  color: #05264E;
+  color: #1f1f1f;
 }
 a:hover {
-  color: #3C65F5;
+  color: #000000;
 }
 a *:hover {
-  color: #3C65F5;
+  color: #1f1f1f;
 }
 
 li.hr span {
@@ -919,13 +919,12 @@ h6,
 }
 .btn.btn-default {
   color: #ffffff;
-  background-color: #3C65F5;
+  background-color: #1f1f1f;
   line-height: 26px;
   padding: 10px 25px;
 }
 .btn.btn-default:hover {
-  background-color: #05264E;
-  transform: translateY(-2px);
+  background-color: #000000;
   transition: 0.2s;
 }
 
@@ -1071,12 +1070,18 @@ h6,
 
 .btn-border-brand-2 {
   padding: 12px 20px;
-  border: 1px solid #3C65F5;
+  border: 1px solid #1f1f1f;
   background-color: #ffffff;
   border-radius: 8px;
-  color: #3C65F5;
+  color: #1f1f1f;
   font-size: 14px;
   line-height: 22px;
+}
+
+.btn-border-brand-2:hover {
+  border: 1px solid #1f1f1f;
+  background-color: #1f1f1f;
+  color: #ffffff;
 }
 
 .btn-brand-1 {
@@ -3089,21 +3094,33 @@ ul li:last-child .card-list-4 {
 }
 
 .header {
-  padding: 30px 0;
+  padding: 20px 0;
   float: left;
   width: 100%;
 }
 .header .main-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
 }
 .header .main-header .header-right {
   display: inline-block;
   min-width: 215px;
   text-align: right;
 }
+
+.header .block-signin {
+  display: flex;
+  align-items: center;
+}
+
 .header .main-header .header-nav {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   text-align: center;
 }
@@ -3114,6 +3131,7 @@ ul li:last-child .card-list-4 {
 .header .main-header .header-left .header-logo {
   margin-right: 0;
   min-width: 139px;
+  max-width: 250px;
 }
 .header .nav-main-menu {
   display: inline-block;
@@ -3158,23 +3176,14 @@ ul li:last-child .card-list-4 {
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  color: #05264E;
+  color: #414141;
   display: block;
   padding: 0px;
   text-decoration: none;
   position: relative;
 }
 .header .main-menu li a:hover, .header .main-menu li a.active {
-  color: #3C65F5;
-}
-.header .main-menu li a:hover::before, .header .main-menu li a.active::before {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background-color: #3C65F5;
-  position: absolute;
-  bottom: -10px;
-  left: 0px;
+  color: #000000;
 }
 .header .main-menu li a i {
   font-size: 10px;
