@@ -1,21 +1,11 @@
 ﻿/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link';
 import React from 'react';
-import { useState, useEffect } from "react";
 
 const Header = ({handleOpen,handleRemove,openClass}) => {
-    const [scroll, setScroll] = useState(0)
-    useEffect(() => {
-        document.addEventListener("scroll", () => {
-          const scrollCheck = window.scrollY > 100
-          if (scrollCheck !== scroll) {
-            setScroll(scrollCheck)
-          }
-        })
-      })
     return (
         <>
-            <header className={scroll ? "header sticky-bar stick" : "header sticky-bar"}>
+            <header className="header sticky-bar">
                 <div className="container">
                     <div className="main-header">
                         <div className="header-left">
