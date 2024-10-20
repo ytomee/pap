@@ -16,119 +16,20 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                         <div className="header-nav">
                             <nav className="nav-main-menu">
                                 <ul className="main-menu">
-                                    <li className="has-children">
-                                    <Link legacyBehavior href="/"><a className="active">Home</a></Link>
-
-                                        <ul className="sub-menu">
-                                            <li>
-                                                <Link legacyBehavior href="/"><a>Home 1</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/index-2"><a>Home 2</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/index-3"><a>Home 3</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/index-4"><a>Home 4</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/index-5"><a>Home 5</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/index-6"><a>Home 6</a></Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-children">
-                                        <Link legacyBehavior href="/jobs-grid"><a>Find a Job</a></Link>
-
-                                        <ul className="sub-menu">
-                                            <li>
-                                                <Link legacyBehavior href="/jobs-grid"><a>Jobs Grid</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/jobs-list"><a>Jobs List</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/job-details"><a>Jobs Details</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/job-details-2"><a>Jobs Details 2</a></Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-children">
-                                        <Link legacyBehavior href="/companies-grid"><a>Recruiters</a></Link>
-
-                                        <ul className="sub-menu">
-                                            <li>
-                                                <Link legacyBehavior href="/companies-grid"><a>Recruiters</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/company-details"><a>Company Details</a></Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-children">
-                                        <Link legacyBehavior href="/candidates-grid"><a>Candidates</a></Link>
-
-                                        <ul className="sub-menu">
-                                            <li>
-                                                <Link legacyBehavior href="/candidates-grid"><a>Candidates Grid</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/candidate-details"><a>Candidate Details</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/candidate-profile"><a>Candidate Profile</a></Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-children">
-                                        <Link legacyBehavior href="/blog-grid"><a>Pages</a></Link>
-
-                                        <ul className="sub-menu">
-                                            <li>
-                                                <Link legacyBehavior href="/page-about"><a>About Us</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-pricing"><a>Pricing Plan</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-contact"><a>Contact Us</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-register"><a>Register</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-signin"><a>Signin</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-reset-password"><a>Reset Password</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-content-protected"><a>Content Protected</a></Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-children">
-                                        <Link legacyBehavior href="/blog-grid"><a>Blog</a></Link>
-
-                                        <ul className="sub-menu">
-                                            <li>
-                                                <Link legacyBehavior href="/blog-grid"><a>Blog Grid</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/blog-grid-2"><a>Blog Grid 2</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/blog-details"><a>Blog Single</a></Link>
-                                            </li>
-                                        </ul>
+                                    <li>
+                                        <Link legacyBehavior href="/jobs-grid"><a>Procurar trabalho</a></Link>
                                     </li>
                                     <li>
-                                        <Link legacyBehavior href="/page-contact"><a>Contact</a></Link>
+                                        <Link legacyBehavior href="/companies-grid"><a>Empresas</a></Link>
+                                    </li>
+                                    <li>
+                                        <Link legacyBehavior href="/candidates-grid"><a>Candidatos</a></Link>
+                                    </li>
+                                    <li>
+                                        <Link legacyBehavior href="/blog-grid"><a>Blog</a></Link>
+                                    </li>
+                                    <li>
+                                        <Link legacyBehavior href="/page-contact"><a>Sobre nós</a></Link>
                                     </li>
                                 </ul>
                             </nav>
