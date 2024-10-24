@@ -423,6 +423,7 @@ input[type=number]:focus,
     max-width: 1350px;
   }
 }
+
 strong {
   font-weight: bold;
 }
@@ -687,7 +688,7 @@ h6 {
 }
 
 .color-brand-2 {
-  color: #3C65F5;
+  color: #000000;
 }
 
 .op-70 {
@@ -2940,13 +2941,12 @@ ul li:last-child .card-list-4 {
   color: #4F5E64;
 }
 .banner-hero .heading-banner {
-  color: #05264E;
+  color: #000000;
   font-size: 48px;
   line-height: 60px;
-  color: #05264E;
 }
 .banner-hero .color-brand-2 {
-  color: #3C65F5;
+  color: #000000;
   position: relative;
 }
 .banner-hero .color-brand-2::after {

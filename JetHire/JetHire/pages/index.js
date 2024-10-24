@@ -4,8 +4,6 @@ import Link from "next/link";
 import Layout from "../components/Layout/Layout";
 import CategoryTab2 from "../components/elements/CategoryTab2";
 import BlogSlider from "../components/sliders/Blog";
-import BrandSlider3 from "../components/sliders/Brand3";
-import CategorySlider4 from "../components/sliders/Category4";
 
 export default function Index5() {
     return (
@@ -27,16 +25,15 @@ export default function Index5() {
                                                 Each month, more than 3 million job seekers turn to website in their search for work, making over 140,000 applications every single day
                                             </div>
                                             <div className="mt-30">
-                                                <a className="btn btn-default mr-15">Get Started</a>
-
-                                                <a className="btn btn-border-brand-2">Learn more</a>
+                                                <a href="page-register" className="btn btn-default mr-15">Começar</a>
+                                                <a className="btn btn-border-brand-2">Saber mais</a>
                                             </div>
-                                            <div className="mt-50 mb-20">
-                                                <span className="font-md color-text-paragraph-2">Trusted by</span>
-                                            </div>
-                                            <div className="box-logos-485">
-                                                <div className="box-swiper">
-                                                    <BrandSlider3 />
+                                            <div className="mt-50">
+                                                <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
+                                                    <form>
+                                                        <input className="form-input input-keysearch mr-10 style-2" type="text" placeholder="Palavras-chave... " />
+                                                        <button className="btn btn-default btn-find font-sm">Procurar</button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -64,20 +61,10 @@ export default function Index5() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="box-search-2">
-                                    <div className="block-banner">
-                                        <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
-                                            <form>
-                                                <input className="form-input input-keysearch mr-10 style-2" type="text" placeholder="Your keyword... " />
-                                                <button className="btn btn-default btn-find font-sm">Search</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </section>
-                    <section className="section-box overflow-visible mt-50 mb-50">
+                    <section className="section-box overflow-visible mt-10 mb-60">
                         <div className="container">
                             <div className="row">
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
@@ -139,23 +126,63 @@ export default function Index5() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-50 mb-30 bg-brand-2 pt-60 pb-60">
+                    <section className="section-box mt-70 mb-40">
                         <div className="container">
-                            <div className="row">
-                                <div className="col-xl-5">
-                                    <div className="pt-70">
-                                        <h2 className="color-white mb-20">Explore the Marketplace</h2>
-                                        <p className="color-white mb-30">Search and connect with the right candidates faster. Tell us what you are looking for and we will get to work for you.</p>
-                                        <div className="mt-20">
-                                            <a className="btn btn-brand-1 btn-icon-more hover-up">Explore</a>
+                            <div className="text-start">
+                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Como funciona</h2>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Com apenas alguns passos, vais encontrar o trabalho ideal para ti!</p>
+                            </div>
+                            <div className="mt-70">
+                                <div className="row">
+                                    <div className="col-lg-4">
+                                        <div className="box-step step-1">
+                                            <h1 className="number-element">1</h1>
+                                            <h4 className="mb-20">
+                                                Cria uma conta
+                                                <br className="d-none d-lg-block" />
+                                                para começar
+                                            </h4>
+                                            <p className="font-lg color-text-paragraph-2">
+                                                Lorem ipsum dolor sit amet,
+                                                <br className="d-none d-lg-block" />
+                                                consectetur adipisicing elit, sed do{" "}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-4">
+                                        <div className="box-step step-2">
+                                            <h1 className="number-element">2</h1>
+                                            <h4 className="mb-20">
+                                                Observa as várias
+                                                <br className="d-none d-lg-block" />
+                                                ofertas de trabalho
+                                            </h4>
+                                            <p className="font-lg color-text-paragraph-2">
+                                                Lorem ipsum dolor sit amet,
+                                                <br className="d-none d-lg-block" />
+                                                consectetur adipisicing elit, sed do{" "}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-4">
+                                        <div className="box-step">
+                                            <h1 className="number-element">3</h1>
+                                            <h4 className="mb-20">
+                                                Encontra a que
+                                                <br className="d-none d-lg-block" />
+                                                mais te agrada!
+                                            </h4>
+                                            <p className="font-lg color-text-paragraph-2">
+                                                Lorem ipsum dolor sit amet,
+                                                <br className="d-none d-lg-block" />
+                                                consectetur adipisicing elit, sed do{" "}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-xl-7">
-                                    <div className="box-swiper mt-50 layout-brand-1">
-                                        <CategorySlider4 />
-                                    </div>
-                                </div>
+                            </div>
+                            <div className="mt-50 text-center">
+                                <a href="page-register" className="btn btn-default">Começar</a>
                             </div>
                         </div>
                     </section>
