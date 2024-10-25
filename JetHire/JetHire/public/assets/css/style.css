@@ -38,6 +38,19 @@ TABLE CONTENT
 @import url(plugins/perfect-scrollbar.css);
 @import url(plugins/animate.min.css);
 /*RESET*/
+
+:root {
+  /* COLOR PALLETE */
+  --black: #424242;
+  --gray: #CDC9C3;
+  --white: #FFFFFF;
+  --blue: #D9E4DD;
+}
+
+body {
+  background-color: var(--white);
+}
+
 html,
 body,
 div,
@@ -235,13 +248,13 @@ input:focus::-moz-placeholder {
 }
 
 a {
-  color: #1f1f1f;
+  color: var(--black);
 }
 a:hover {
   color: #000000;
 }
 a *:hover {
-  color: #1f1f1f;
+  color: var(--black);
 }
 
 li.hr span {
@@ -256,32 +269,32 @@ p {
   color: #4F5E64;
 } /*--- Common Classes---------------------*/
 ::-moz-selection {
-  background: #05264E; /* WebKit/Blink Browsers */
-  color: #fff;
+  background: var(--black); /* WebKit/Blink Browsers */
+  color: var(--white);
 }
 ::selection {
-  background: #05264E; /* WebKit/Blink Browsers */
-  color: #fff;
+  background: var(--black); /* WebKit/Blink Browsers */
+  color: var(--white);
 }
 
 ::-moz-selection {
-  background: #05264E; /* Gecko Browsers */
-  color: #fff;
+  background: var(--black); /* Gecko Browsers */
+  color: var(--white);
 }
 
 ::-moz-placeholder {
-  color: #A0ABB8;
+  color: var(--gray);
   opacity: 1;
 }
 
 ::placeholder {
-  color: #A0ABB8;
+  color: var(--gray);
   opacity: 1;
 }
 
 :-ms-input-placeholder,
 ::-webkit-input-placeholder {
-  color: #A0ABB8;
+  color: var(--gray);
   opacity: 1;
 }
 
@@ -907,7 +920,7 @@ h6,
 .display-2,
 .heading-lg,
 .heading-sm-1 {
-  color: #05264E;
+  color: #000000;
 }
 
 .btn {
@@ -7605,8 +7618,8 @@ ul li:last-child .card-list-4 {
 }
 
 .number-element {
-  color: #3C65F5;
-  background-color: #EFF2FB;
+  color: #000000;
+  background-color: #e1e1e1;
   width: 110px;
   height: 110px;
   border-radius: 50%;

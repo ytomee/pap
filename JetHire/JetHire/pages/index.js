@@ -2,8 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
-import CategoryTab2 from "../components/elements/CategoryTab2";
 import BlogSlider from "../components/sliders/Blog";
+import CategoryTab from "../components/elements/CategoryTab";
 
 export default function Index5() {
     return (
@@ -139,8 +139,8 @@ export default function Index5() {
                                             <h1 className="number-element">1</h1>
                                             <h4 className="mb-20">
                                                 Cria uma conta
-                                                <br className="d-none d-lg-block" />
-                                                para começar
+                                                <br/>
+                                                 para começar
                                             </h4>
                                             <p className="font-lg color-text-paragraph-2">
                                                 Lorem ipsum dolor sit amet,
@@ -154,7 +154,7 @@ export default function Index5() {
                                             <h1 className="number-element">2</h1>
                                             <h4 className="mb-20">
                                                 Observa as várias
-                                                <br className="d-none d-lg-block" />
+                                                <br/>
                                                 ofertas de trabalho
                                             </h4>
                                             <p className="font-lg color-text-paragraph-2">
@@ -169,7 +169,7 @@ export default function Index5() {
                                             <h1 className="number-element">3</h1>
                                             <h4 className="mb-20">
                                                 Encontra a que
-                                                <br className="d-none d-lg-block" />
+                                                <br/>
                                                 mais te agrada!
                                             </h4>
                                             <p className="font-lg color-text-paragraph-2">
@@ -181,29 +181,23 @@ export default function Index5() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="mt-50 text-center">
+                            {/* <div className="mt-30 text-center">
                                 <a href="page-register" className="btn btn-default">Começar</a>
-                            </div>
+                            </div> */}
                         </div>
                     </section>
-                    <section className="section-box mt-50">
-                        <div className="section-box wow animate__animated animate__fadeIn">
-                            <div className="container">
-                                <div className="text-start">
-                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Latest Jobs Post</h2>
-                                    <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
-                                        Explore the different types of available jobs to apply
-                                        <br className="d-none d-lg-block" />
-                                        discover which is right for you.
-                                    </p>
-                                </div>
-                                <div className="mt-50">
-                                    <CategoryTab2 />
-                                </div>
-                            </div>
+                    <section className="section-box mt-90">
+                    <div className="container">
+                        <div className="text-start">
+                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Ofertas recentes</h2>
+                            <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Search and connect with the right candidates faster. </p>
                         </div>
+                        <div className="mt-30">
+                            <CategoryTab />
+                        </div>
+                    </div>
                     </section>
-                    <section className="section-box mt-50 mb-30 bg-border-3 pt-100 pb-100">
+                    <section className="section-box mt-80 mb-30 bg-border-3 pt-100 pb-100">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-6">
@@ -219,66 +213,6 @@ export default function Index5() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className="section-box mt-70 mb-40">
-                        <div className="container">
-                            <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">How It Works</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Just via some simple steps, you will find your ideal candidates you are looking for!</p>
-                            </div>
-                            <div className="mt-70">
-                                <div className="row">
-                                    <div className="col-lg-4">
-                                        <div className="box-step step-1">
-                                            <h1 className="number-element">1</h1>
-                                            <h4 className="mb-20">
-                                                Register an
-                                                <br className="d-none d-lg-block" />
-                                                account to start
-                                            </h4>
-                                            <p className="font-lg color-text-paragraph-2">
-                                                Lorem ipsum dolor sit amet,
-                                                <br className="d-none d-lg-block" />
-                                                consectetur adipisicing elit, sed do{" "}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4">
-                                        <div className="box-step step-2">
-                                            <h1 className="number-element">2</h1>
-                                            <h4 className="mb-20">
-                                                Explore over
-                                                <br className="d-none d-lg-block" />
-                                                thousands of resumes
-                                            </h4>
-                                            <p className="font-lg color-text-paragraph-2">
-                                                Lorem ipsum dolor sit amet,
-                                                <br className="d-none d-lg-block" />
-                                                consectetur adipisicing elit, sed do{" "}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4">
-                                        <div className="box-step">
-                                            <h1 className="number-element">3</h1>
-                                            <h4 className="mb-20">
-                                                Find the most
-                                                <br className="d-none d-lg-block" />
-                                                suitable candidate
-                                            </h4>
-                                            <p className="font-lg color-text-paragraph-2">
-                                                Lorem ipsum dolor sit amet,
-                                                <br className="d-none d-lg-block" />
-                                                consectetur adipisicing elit, sed do{" "}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="mt-50 text-center">
-                                <a className="btn btn-default">Get Started</a>
                             </div>
                         </div>
                     </section>
@@ -626,344 +560,12 @@ export default function Index5() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-xl-3 col-lg-4 col-md-6">
-                                        <div className="card-grid-2 hover-up">
-                                            <div className="card-grid-2-image-left">
-                                                <div className="card-grid-2-image-rd online">
-                                                    <Link legacyBehavior href="candidate-details">
-                                                        <a>
-                                                            <figure>
-                                                                <img alt="jobBox" src="assets/imgs/page/candidates/user5.png" />
-                                                            </figure>
-                                                        </a>
-                                                    </Link>
-                                                </div>
-                                                <div className="card-profile pt-10">
-                                                    <Link legacyBehavior href="candidate-details">
-                                                        <a>
-                                                            <h5>Floyd Miles</h5>
-                                                        </a>
-                                                    </Link>
-                                                    <span className="font-xs color-text-mutted">Photo Editing</span>
-                                                    <div className="rate-reviews-small pt-5">
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span className="ml-10 color-text-mutted font-xs">(65)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="card-block-info">
-                                                <p className="font-xs color-text-paragraph-2">| Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repellendus magni, atque delectus molestias quis?</p>
-                                                <div className="card-2-bottom card-2-bottom-candidate mt-30">
-                                                    <div className="text-start">
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Figma</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Adobe XD</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">PSD</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">App</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Digital</a>
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                                <div className="employers-info align-items-center justify-content-center mt-15">
-                                                    <div className="row">
-                                                        <div className="col-6">
-                                                            <span className="d-flex align-items-center">
-                                                                <i className="fi-rr-marker mr-5 ml-0" />
-                                                                <span className="font-sm color-text-mutted">Chicago, US</span>
-                                                            </span>
-                                                        </div>
-                                                        <div className="col-6">
-                                                            <span className="d-flex justify-content-end align-items-center">
-                                                                <i className="fi-rr-clock mr-5" />
-                                                                <span className="font-sm color-brand-1">$45 / hour</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-3 col-lg-4 col-md-6">
-                                        <div className="card-grid-2 hover-up">
-                                            <div className="card-grid-2-image-left">
-                                                <div className="card-grid-2-image-rd online">
-                                                    <Link legacyBehavior href="candidate-details">
-                                                        <a>
-                                                            <figure>
-                                                                <img alt="jobBox" src="assets/imgs/page/candidates/user6.png" />
-                                                            </figure>
-                                                        </a>
-                                                    </Link>
-                                                </div>
-                                                <div className="card-profile pt-10">
-                                                    <Link legacyBehavior href="candidate-details">
-                                                        <a>
-                                                            <h5>Devon Lane</h5>
-                                                        </a>
-                                                    </Link>
-                                                    <span className="font-xs color-text-mutted">Online Marketing</span>
-                                                    <div className="rate-reviews-small pt-5">
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span className="ml-10 color-text-mutted font-xs">(65)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="card-block-info">
-                                                <p className="font-xs color-text-paragraph-2">| Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repellendus magni, atque delectus molestias quis?</p>
-                                                <div className="card-2-bottom card-2-bottom-candidate mt-30">
-                                                    <div className="text-start">
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Figma</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Adobe XD</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">PSD</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">App</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Digital</a>
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                                <div className="employers-info align-items-center justify-content-center mt-15">
-                                                    <div className="row">
-                                                        <div className="col-6">
-                                                            <span className="d-flex align-items-center">
-                                                                <i className="fi-rr-marker mr-5 ml-0" />
-                                                                <span className="font-sm color-text-mutted">Chicago, US</span>
-                                                            </span>
-                                                        </div>
-                                                        <div className="col-6">
-                                                            <span className="d-flex justify-content-end align-items-center">
-                                                                <i className="fi-rr-clock mr-5" />
-                                                                <span className="font-sm color-brand-1">$45 / hour</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-3 col-lg-4 col-md-6">
-                                        <div className="card-grid-2 hover-up">
-                                            <div className="card-grid-2-image-left">
-                                                <div className="card-grid-2-image-rd online">
-                                                    <Link legacyBehavior href="candidate-details">
-                                                        <a>
-                                                            <figure>
-                                                                <img alt="jobBox" src="assets/imgs/page/candidates/user7.png" />
-                                                            </figure>
-                                                        </a>
-                                                    </Link>
-                                                </div>
-                                                <div className="card-profile pt-10">
-                                                    <Link legacyBehavior href="candidate-details">
-                                                        <a>
-                                                            <h5>Jerome Bell</h5>
-                                                        </a>
-                                                    </Link>
-                                                    <span className="font-xs color-text-mutted">UI/UX Designer</span>
-                                                    <div className="rate-reviews-small pt-5">
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span className="ml-10 color-text-mutted font-xs">(65)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="card-block-info">
-                                                <p className="font-xs color-text-paragraph-2">| Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repellendus magni, atque delectus molestias quis?</p>
-                                                <div className="card-2-bottom card-2-bottom-candidate mt-30">
-                                                    <div className="text-start">
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Figma</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Adobe XD</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">PSD</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">App</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Digital</a>
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                                <div className="employers-info align-items-center justify-content-center mt-15">
-                                                    <div className="row">
-                                                        <div className="col-6">
-                                                            <span className="d-flex align-items-center">
-                                                                <i className="fi-rr-marker mr-5 ml-0" />
-                                                                <span className="font-sm color-text-mutted">Chicago, US</span>
-                                                            </span>
-                                                        </div>
-                                                        <div className="col-6">
-                                                            <span className="d-flex justify-content-end align-items-center">
-                                                                <i className="fi-rr-clock mr-5" />
-                                                                <span className="font-sm color-brand-1">$45 / hour</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-3 col-lg-4 col-md-6">
-                                        <div className="card-grid-2 hover-up">
-                                            <div className="card-grid-2-image-left">
-                                                <div className="card-grid-2-image-rd online">
-                                                    <Link legacyBehavior href="candidate-details">
-                                                        <a>
-                                                            <figure>
-                                                                <img alt="jobBox" src="assets/imgs/page/candidates/user8.png" />
-                                                            </figure>
-                                                        </a>
-                                                    </Link>
-                                                </div>
-                                                <div className="card-profile pt-10">
-                                                    <Link legacyBehavior href="candidate-details">
-                                                        <a>
-                                                            <h5>Eleanor</h5>
-                                                        </a>
-                                                    </Link>
-                                                    <span className="font-xs color-text-mutted">UI/UX Designer</span>
-                                                    <div className="rate-reviews-small pt-5">
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span>
-                                                            <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                                        </span>
-                                                        <span className="ml-10 color-text-mutted font-xs">(65)</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="card-block-info">
-                                                <p className="font-xs color-text-paragraph-2">| Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repellendus magni, atque delectus molestias quis?</p>
-                                                <div className="card-2-bottom card-2-bottom-candidate mt-30">
-                                                    <div className="text-start">
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Figma</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Adobe XD</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">PSD</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">App</a>
-                                                        </Link>
-
-                                                        <Link legacyBehavior href="/jobs-grid">
-                                                            <a className="btn btn-tags-sm mb-10 mr-5">Digital</a>
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                                <div className="employers-info align-items-center justify-content-center mt-15">
-                                                    <div className="row">
-                                                        <div className="col-6">
-                                                            <span className="d-flex align-items-center">
-                                                                <i className="fi-rr-marker mr-5 ml-0" />
-                                                                <span className="font-sm color-text-mutted">Chicago, US</span>
-                                                            </span>
-                                                        </div>
-                                                        <div className="col-6">
-                                                            <span className="d-flex justify-content-end align-items-center">
-                                                                <i className="fi-rr-clock mr-5" />
-                                                                <span className="font-sm color-brand-1">$45 / hour</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div className="row mt-40 mb-60">
                                     <div className="col-lg-12">
                                         <div className="text-center">
                                             <Link legacyBehavior href="/blog-grid">
-                                                <a className="btn btn-brand-1 btn-icon-load mt--30 hover-up">Load More Posts</a>
+                                                <a className="btn btn-brand-1 mt--30 hover-up">Ver mais</a>
                                             </Link>
                                         </div>
                                     </div>
@@ -985,28 +587,8 @@ export default function Index5() {
                                 </div>
                                 <div className="text-center">
                                     <Link legacyBehavior href="/blog-grid">
-                                        <a className="btn btn-brand-1 btn-icon-load mt--30 hover-up">Load More Posts</a>
+                                        <a className="btn btn-brand-1 mt--30 hover-up">Ir para o blog</a>
                                     </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className="section-box mt-50 mb-20">
-                        <div className="container">
-                            <div className="box-newsletter box-newsletter-3">
-                                <div className="row">
-                                    <div className="col-xl-12 text-center">
-                                        <div className="d-inline-block">
-                                            <h2 className="color-white mt-30">Subscribe our newsletter</h2>
-                                            <p className="mt-10 font-lg color-white">New Things Will Always Update Regularl</p>
-                                            <div className="box-form-newsletter mt-30">
-                                                <form className="form-newsletter">
-                                                    <input className="input-newsletter" type="text" placeholder="Enter your email here" />
-                                                    <button className="btn btn-default font-heading icon-send-letter">Subscribe</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
