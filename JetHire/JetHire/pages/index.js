@@ -17,12 +17,12 @@ export default function Index5() {
                                     <div className="col-xl-7 col-lg-12">
                                         <div className="block-banner">
                                             <h1 className="heading-banner wow animate__animated animate__fadeInUp">
-                                                Find Jobs,
-                                                <br className="d-none d-lg-block" />
-                                                Hire Creatives
+                                                Procura emprego,
+                                                <br className="d-lg-block" />
+                                                contrata talentos
                                             </h1>
                                             <div className="banner-description mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-                                                Each month, more than 3 million job seekers turn to website in their search for work, making over 140,000 applications every single day
+                                                A tua próxima oportunidade está a apenas um clique. Simplificamos o processo para que te concentres no que importa: encontrar o trabalho certo.
                                             </div>
                                             <div className="mt-30">
                                                 <a href="page-register" className="btn btn-default mr-15">Começar</a>
@@ -67,7 +67,7 @@ export default function Index5() {
                     <section className="section-box overflow-visible mt-10 mb-60">
                         <div className="container">
                             <div className="row">
-                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div className="col-lg-4 col-sm-6 col-12">
                                     <div className="text-center">
                                         <h1 className="color-brand-2">
                                             <span className="count">25</span>
@@ -81,7 +81,7 @@ export default function Index5() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div className="col-lg-4 col-sm-6 col-12">
                                     <div className="text-center">
                                         <h1 className="color-brand-2">
                                             <span className="count">17</span>
@@ -95,27 +95,13 @@ export default function Index5() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div className="col-lg-4 col-12">
                                     <div className="text-center">
                                         <h1 className="color-brand-2">
                                             <span className="count">86</span>
                                             <span> +</span>
                                         </h1>
                                         <h5>Skilled People</h5>
-                                        <p className="font-sm color-text-paragraph mt-10">
-                                            We always provide people a <br className="d-none d-lg-block" />
-                                            complete solution upon focused of <br className="d-none d-lg-block" />
-                                            any business
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                                    <div className="text-center">
-                                        <h1 className="color-brand-2">
-                                            <span className="count">28</span>
-                                            <span> +</span>
-                                        </h1>
-                                        <h5>CHappy Clients</h5>
                                         <p className="font-sm color-text-paragraph mt-10">
                                             We always provide people a <br className="d-none d-lg-block" />
                                             complete solution upon focused of <br className="d-none d-lg-block" />
@@ -189,8 +175,8 @@ export default function Index5() {
                     <section className="section-box mt-90">
                     <div className="container">
                         <div className="text-start">
-                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Ofertas recentes</h2>
-                            <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Search and connect with the right candidates faster. </p>
+                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Ofertas mais recentes</h2>
+                            <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Encontra as ofertas de trabalho mais recentes. </p>
                         </div>
                         <div className="mt-30">
                             <CategoryTab />
@@ -205,11 +191,11 @@ export default function Index5() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="pl-30">
-                                        <h5 className="color-brand-2 mb-15 mt-15">Create Profile</h5>
-                                        <h2 className="color-brand-1 mt-0 mb-15">Create Your Personal Account Profile</h2>
-                                        <p className="font-lg color-text-paragraph-2">Work Profile is a personality assessment that measures an individual's work personality through their workplace traits, social and emotional traits; as well as the values and aspirations that drive them forward.</p>
+                                        <h5 className="color-brand-2 mb-15 mt-15">Não percas esta oportunidade</h5>
+                                        <h1 className="color-brand-1 mt-0 mb-15">Cria já o teu perfil</h1>
+                                        <p className="font-lg color-text-paragraph-2">Ao partilhares as tuas habilidades, experiências e aspirações, estarás um passo mais próximo de encontrar a oportunidade de trabalho ideal para ti. Não deixes para amanhã o que podes fazer hoje!</p>
                                         <div className="mt-20">
-                                            <a className="btn btn-default">Create Profile</a>
+                                            <a href="page-register" className="btn btn-default">Criar conta</a>
                                         </div>
                                     </div>
                                 </div>
@@ -219,12 +205,8 @@ export default function Index5() {
                     <section className="section-box mt-70">
                         <div className="container">
                             <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Top Candidates</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
-                                    Jobs is a curated job board of the best jobs for developers, designers
-                                    <br className="d-none d-lg-block" />
-                                    and marketers in the tech industry.
-                                </p>
+                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Candidatos recentes</h2>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Encontra os candidatos mais recentes da plataforma.</p>
                             </div>
                             <div className="mt-50 card-bg-white">
                                 <div className="row">
@@ -576,8 +558,8 @@ export default function Index5() {
                     <section className="section-box mt-50 mb-50">
                         <div className="container">
                             <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">News and Blog</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Get the latest news, updates and tips</p>
+                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Blog</h2>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Tem acesso ás últimas notícias e dicas dos nossos membros!</p>
                             </div>
                         </div>
                         <div className="container">

@@ -13,32 +13,32 @@ const CategoryTab = () => {
                 <ul className="nav nav-tabs" role="tablist">
                     <li>
                         <a className={active === 1 ? "active" : ""} onClick={() => handleOnClick(1)}>
-                            <img src="/assets/imgs/page/homepage1/management.svg" alt="jobBox" /> Management
+                            <img src="/assets/imgs/page/homepage1/management.svg" alt="jobBox" /> Criatividade
                         </a>
                     </li>
                     <li>
                         <a className={active === 2 ? "active" : ""} onClick={() => handleOnClick(2)}>
-                            <img src="/assets/imgs/page/homepage1/marketing.svg" alt="jobBox" /> Marketing &amp; Sale
+                            <img src="/assets/imgs/page/homepage1/marketing.svg" alt="jobBox" /> Tecnologia
                         </a>
                     </li>
                     <li>
                         <a className={active === 3 ? "active" : ""} onClick={() => handleOnClick(3)}>
-                            <img src="/assets/imgs/page/homepage1/finance.svg" alt="jobBox" /> Finance
+                            <img src="/assets/imgs/page/homepage1/finance.svg" alt="jobBox" /> Ciências
                         </a>
                     </li>
                     <li>
                         <a className={active === 4 ? "active" : ""} onClick={() => handleOnClick(4)}>
-                            <img src="/assets/imgs/page/homepage1/human.svg" alt="jobBox" /> Human Resource
+                            <img src="/assets/imgs/page/homepage1/human.svg" alt="jobBox" /> Atendimento
                         </a>
                     </li>
                     <li>
                         <a className={active === 5 ? "active" : ""} onClick={() => handleOnClick(5)}>
-                            <img src="/assets/imgs/page/homepage1/retail.svg" alt="jobBox" /> Retail &amp; Products
+                            <img src="/assets/imgs/page/homepage1/retail.svg" alt="jobBox" /> Gestão
                         </a>
                     </li>
                     <li>
                         <a className={active === 6 ? "active" : ""} onClick={() => handleOnClick(6)}>
-                            <img src="/assets/imgs/page/homepage1/content.svg" alt="jobBox" /> Content Writer
+                            <img src="/assets/imgs/page/homepage1/content.svg" alt="jobBox" /> Operador
                         </a>
                     </li>
                 </ul>

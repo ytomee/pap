@@ -41,10 +41,16 @@ TABLE CONTENT
 
 :root {
   /* COLOR PALLETE */
-  --black: #424242;
-  --gray: #CDC9C3;
-  --white: #FFFFFF;
-  --blue: #D9E4DD;
+  --1: #f8f9fa;
+  --2: #e9ecef;
+  --3: #dee2e6;
+  --4: #ced4da;
+  --5: #adb5bd;
+  --6: #6c757d;
+  --7: #495057;
+  --8: #343a40;
+  --9: #212529;
+  --10: #000000;
 }
 
 body {
@@ -933,12 +939,12 @@ h6,
 }
 .btn.btn-default {
   color: #ffffff;
-  background-color: #1f1f1f;
+  background-color: var(--10);
   line-height: 26px;
   padding: 10px 25px;
 }
 .btn.btn-default:hover {
-  background-color: #000000;
+  background-color: var(--9);
   transition: 0.2s;
 }
 
