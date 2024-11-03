@@ -40,21 +40,58 @@ TABLE CONTENT
 /*RESET*/
 
 :root {
-  /* COLOR PALLETE */
-  --1: #f8f9fa;
-  --2: #e9ecef;
-  --3: #dee2e6;
-  --4: #ced4da;
-  --5: #adb5bd;
-  --6: #6c757d;
-  --7: #495057;
-  --8: #343a40;
-  --9: #212529;
-  --10: #000000;
-}
+  /* BRAND COLOR */
+  --red-100: #FFEBEB;
+  --red-200: #EFBFBF;
+  --red-300: #DE9393;
+  --red-400: #CE6666;
+  --red-500: #BD3A3A;
+  --red-600: #A12C2C;
+  --red-700: #851D1D;
+  --red-800: #690F0F;
+  --red-900: #4D0000;
 
-body {
-  background-color: var(--white);
+  /* SUPPORTING COLORS */
+  --yellow-100: #FFF0D6;
+  --yellow-200: #FADFAF;
+  --yellow-300: #F5CD89;
+  --yellow-400: #F0BC62;
+  --yellow-500: #EBAA3B;
+  --yellow-600: #CC912C;
+  --yellow-700: #AE791E;
+  --yellow-800: #8F600F;
+  --yellow-900: #704700;
+
+  --green-100: #F6FFC4;
+  --green-200: #EBF8A2;
+  --green-300: #E0F181;
+  --green-400: #D4E95F;
+  --green-500: #C9E23D;
+  --green-600: #A6BB2E;
+  --green-700: #83951F;
+  --green-800: #606E0F;
+  --green-900: #3D4700;
+
+  --blue-100: #CFE0FF;
+  --blue-200: #AAC7FA;
+  --blue-300: #85AEF5;
+  --blue-400: #6094F0;
+  --blue-500: #3B7BEB;
+  --blue-600: #2C62C0;
+  --blue-700: #1E4996;
+  --blue-800: #0F306B;
+  --blue-900: #001740;
+
+  /* NEUTRAL COLORS */
+  --neutral-100: #FFFFFF;
+  --neutral-200: #DFDFDF;
+  --neutral-300: #BFBFBF;
+  --neutral-400: #9F9F9F;
+  --neutral-500: #808080;
+  --neutral-600: #606060;
+  --neutral-700: #404040;
+  --neutral-800: #202020;
+  --neutral-900: #000000;
 }
 
 html,
