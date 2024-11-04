@@ -19,7 +19,7 @@ export default function Index5() {
                                             <h1 className="heading-banner wow animate__animated animate__fadeInUp">
                                                 Procura emprego,
                                                 <br className="d-lg-block" />
-                                                contrata talentos
+                                                contrata talentos.
                                             </h1>
                                             <div className="banner-description mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
                                                 A tua próxima oportunidade está a apenas um clique. Simplificamos o processo para que te concentres no que importa: encontrar o trabalho certo.
@@ -32,7 +32,7 @@ export default function Index5() {
                                                 <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
                                                     <form>
                                                         <input className="form-input input-keysearch mr-10 style-2" type="text" placeholder="Palavras-chave... " />
-                                                        <button className="btn btn-default btn-find font-sm">Procurar</button>
+                                                        <button className="btn btn-default font-sm">Procurar</button>
                                                     </form>
                                                 </div>
                                             </div>

@@ -291,13 +291,13 @@ input:focus::-moz-placeholder {
 }
 
 a {
-  color: var(--black);
+  color: var(--neutral-900);
 }
 a:hover {
-  color: #000000;
+  color: var(--neutral-900);
 }
 a *:hover {
-  color: var(--black);
+  color: var(--neutral-900);
 }
 
 li.hr span {
@@ -312,32 +312,32 @@ p {
   color: #4F5E64;
 } /*--- Common Classes---------------------*/
 ::-moz-selection {
-  background: var(--black); /* WebKit/Blink Browsers */
-  color: var(--white);
+  background: var(--neutral-700); /* WebKit/Blink Browsers */
+  color: var(--neutral-100);
 }
 ::selection {
-  background: var(--black); /* WebKit/Blink Browsers */
-  color: var(--white);
+  background: var(--neutral-700); /* WebKit/Blink Browsers */
+  color: var(--neutral-100);
 }
 
 ::-moz-selection {
-  background: var(--black); /* Gecko Browsers */
-  color: var(--white);
+  background: var(--neutral-700); /* Gecko Browsers */
+  color: var(--neutral-100);
 }
 
 ::-moz-placeholder {
-  color: var(--gray);
+  color: var(--neutral-500);
   opacity: 1;
 }
 
 ::placeholder {
-  color: var(--gray);
+  color: var(--neutral-500);
   opacity: 1;
 }
 
 :-ms-input-placeholder,
 ::-webkit-input-placeholder {
-  color: var(--gray);
+  color: var(--neutral-500);
   opacity: 1;
 }
 
@@ -975,13 +975,13 @@ h6,
   transition: 0.2s;
 }
 .btn.btn-default {
-  color: #ffffff;
-  background-color: var(--10);
+  color: var(--neutral-100);
+  background-color: var(--neutral-900);
   line-height: 26px;
   padding: 10px 25px;
 }
 .btn.btn-default:hover {
-  background-color: var(--9);
+  background-color: var(--neutral-800);
   transition: 0.2s;
 }
 
