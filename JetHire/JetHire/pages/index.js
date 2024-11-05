@@ -17,22 +17,22 @@ export default function Index5() {
                                     <div className="col-xl-7 col-lg-12">
                                         <div className="block-banner">
                                             <h1 className="heading-banner wow animate__animated animate__fadeInUp">
-                                                Procura emprego,
+                                                Procura <span>emprego</span>,
                                                 <br className="d-lg-block" />
-                                                contrata talentos.
+                                                contrata <span>talentos</span>.
                                             </h1>
                                             <div className="banner-description mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
                                                 A tua próxima oportunidade está a apenas um clique. Simplificamos o processo para que te concentres no que importa: encontrar o trabalho certo.
                                             </div>
-                                            <div className="mt-30">
-                                                <a href="page-register" className="btn btn-default mr-15">Começar</a>
+                                            <div className="mt-30 d-flex">
+                                                <a href="#howitworks" className="btn btn-default mr-15">Começar</a>
                                                 <a className="btn btn-border-brand-2">Saber mais</a>
                                             </div>
                                             <div className="mt-50">
                                                 <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
                                                     <form>
                                                         <input className="form-input input-keysearch mr-10 style-2" type="text" placeholder="Palavras-chave... " />
-                                                        <button className="btn btn-default font-sm">Procurar</button>
+                                                        <button className="btn btn-default font-sm"><i className="fa-solid fa-magnifying-glass"></i>Procurar</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -69,11 +69,11 @@ export default function Index5() {
                             <div className="row">
                                 <div className="col-lg-4 col-sm-6 col-12">
                                     <div className="text-center">
-                                        <h1 className="color-brand-2">
+                                        <h1 className="color-brand-2 ">
                                             <span className="count">25</span>
-                                            <span> K+</span>
+                                            <span> +</span>
                                         </h1>
-                                        <h5>Completed Cases</h5>
+                                        <h5 className="banner-info-description">Completed Cases</h5>
                                         <p className="font-sm color-text-paragraph mt-10">
                                             We always provide people a <br className="d-none d-lg-block" />
                                             complete solution upon focused of
@@ -87,7 +87,7 @@ export default function Index5() {
                                             <span className="count">17</span>
                                             <span> +</span>
                                         </h1>
-                                        <h5>Our Office</h5>
+                                        <h5 className="banner-info-description">Our Office</h5>
                                         <p className="font-sm color-text-paragraph mt-10">
                                             We always provide people a <br className="d-none d-lg-block" />
                                             complete solution upon focused of <br className="d-none d-lg-block" />
@@ -101,7 +101,7 @@ export default function Index5() {
                                             <span className="count">86</span>
                                             <span> +</span>
                                         </h1>
-                                        <h5>Skilled People</h5>
+                                        <h5 className="banner-info-description">Skilled People</h5>
                                         <p className="font-sm color-text-paragraph mt-10">
                                             We always provide people a <br className="d-none d-lg-block" />
                                             complete solution upon focused of <br className="d-none d-lg-block" />
@@ -112,7 +112,7 @@ export default function Index5() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-70 mb-40">
+                    <section id="#howitworks" className="section-box mt-70 mb-40">
                         <div className="container">
                             <div className="text-start">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Como funciona</h2>
@@ -194,7 +194,7 @@ export default function Index5() {
                                         <h5 className="color-brand-2 mb-15 mt-15">Não percas esta oportunidade</h5>
                                         <h1 className="color-brand-1 mt-0 mb-15">Cria já o teu perfil</h1>
                                         <p className="font-lg color-text-paragraph-2">Ao partilhares as tuas habilidades, experiências e aspirações, estarás um passo mais próximo de encontrar a oportunidade de trabalho ideal para ti. Não deixes para amanhã o que podes fazer hoje!</p>
-                                        <div className="mt-20">
+                                        <div className="mt-20 d-flex">
                                             <a href="page-register" className="btn btn-default">Criar conta</a>
                                         </div>
                                     </div>

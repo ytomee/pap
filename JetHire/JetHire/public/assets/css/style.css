@@ -42,13 +42,13 @@ TABLE CONTENT
 :root {
   /* BRAND COLOR */
   --red-100: #FFEBEB;
-  --red-200: #EFBFBF;
-  --red-300: #DE9393;
-  --red-400: #CE6666;
-  --red-500: #BD3A3A;
-  --red-600: #A12C2C;
-  --red-700: #851D1D;
-  --red-800: #690F0F;
+  --red-200: #F3B1B7;
+  --red-300: #E87783;
+  --red-400: #DC3C4F;
+  --red-500: #D0021B;
+  --red-600: #AF0214;
+  --red-700: #8F010E;
+  --red-800: #6E0107;
   --red-900: #4D0000;
 
   /* SUPPORTING COLORS */
@@ -269,6 +269,10 @@ input:focus::-moz-placeholder {
   opacity: 0;
   -moz-transition: 0.4s;
   transition: 0.4s;
+}
+
+.fa-solid {
+  margin-right: 8px;
 }
 
 .dropdown-sort .dropdown-toggle:focus {
@@ -744,7 +748,7 @@ h6 {
 }
 
 .color-brand-2 {
-  color: #000000;
+  color: var(--red-500);
 }
 
 .op-70 {
@@ -972,16 +976,19 @@ h6,
   padding: 13px 25px;
   font-size: 14px;
   line-height: 1;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 .btn.btn-default {
   color: var(--neutral-100);
   background-color: var(--neutral-900);
   line-height: 26px;
   padding: 10px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn.btn-default:hover {
-  background-color: var(--neutral-800);
+  background-color: var(--red-600);
   transition: 0.2s;
 }
 
@@ -2997,9 +3004,15 @@ ul li:last-child .card-list-4 {
   color: #4F5E64;
 }
 .banner-hero .heading-banner {
-  color: #000000;
+  color: var(--neutral-900);
   font-size: 48px;
   line-height: 60px;
+}
+.banner-hero .heading-banner span{
+  color: var(--red-500);
+}
+.banner-info-description {
+  color: var(--red-800);
 }
 .banner-hero .color-brand-2 {
   color: #000000;
@@ -3019,7 +3032,7 @@ ul li:last-child .card-list-4 {
 .banner-hero .banner-description {
   position: relative;
   font-size: 18px;
-  color: #4F5E64;
+  color: var(--neutral-500);
 }
 .banner-hero.banner-image-single {
   padding: 20px 0px 20px 0px;
@@ -3396,7 +3409,9 @@ ul li:last-child .card-list-4 {
   color: #3C65F5;
   font-weight: 500;
 }
-
+.count{
+  font-size: 7rem;
+}
 .user-account {
   display: flex;
   align-items: center;
@@ -3972,7 +3987,7 @@ ul li:last-child .card-list-4 {
   border: 0;
   background-color: #fff;
   transition-duration: 0.2s;
-  background-color: #3C65F5;
+  background-color: var(--red-500);
   background-image: url(../imgs/template/icons/go-top.svg);
   background-repeat: no-repeat;
   background-position: center;
