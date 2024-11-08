@@ -316,16 +316,16 @@ p {
   color: #4F5E64;
 } /*--- Common Classes---------------------*/
 ::-moz-selection {
-  background: var(--neutral-700); /* WebKit/Blink Browsers */
+  background: var(--red-500); /* WebKit/Blink Browsers */
   color: var(--neutral-100);
 }
 ::selection {
-  background: var(--neutral-700); /* WebKit/Blink Browsers */
+  background: var(--red-500); /* WebKit/Blink Browsers */
   color: var(--neutral-100);
 }
 
 ::-moz-selection {
-  background: var(--neutral-700); /* Gecko Browsers */
+  background: var(--red-500); /* Gecko Browsers */
   color: var(--neutral-100);
 }
 
@@ -980,7 +980,7 @@ h6,
 }
 .btn.btn-default {
   color: var(--neutral-100);
-  background-color: var(--neutral-900);
+  background-color: var(--neutral-800);
   line-height: 26px;
   padding: 10px 25px;
   display: flex;
@@ -1143,9 +1143,8 @@ h6,
 }
 
 .btn-border-brand-2:hover {
-  border: 1px solid #1f1f1f;
-  background-color: #1f1f1f;
-  color: #ffffff;
+  border: 1px solid var(--red-500);
+  color: var(--red-500);
 }
 
 .btn-brand-1 {

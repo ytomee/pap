@@ -25,7 +25,7 @@ export default function Index5() {
                                                 A tua próxima oportunidade está a apenas um clique. Simplificamos o processo para que te concentres no que importa: encontrar o trabalho certo.
                                             </div>
                                             <div className="mt-30 d-flex">
-                                                <a href="#howitworks" className="btn btn-default mr-15">Começar</a>
+                                                <a href="#howitworks" className="btn btn-default mr-15"><i class="fa-solid fa-caret-down"></i>Começar</a>
                                                 <a className="btn btn-border-brand-2">Saber mais</a>
                                             </div>
                                             <div className="mt-50">
