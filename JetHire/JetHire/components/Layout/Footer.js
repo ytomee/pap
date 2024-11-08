@@ -70,7 +70,7 @@ const Footer = () => {
                 </div> */}
                 <div className="footer-bottom mt-50">
                     <div className="row">
-                        <div className="col-md-6"><span className="font-xs color-text-paragraph">Copyright © 2025. Desenvolvido por <a href="#">Tomé Almeida</a> </span></div>
+                        <div className="col-md-6"><span className="font-xs color-text-paragraph">Copyright © 2025. Desenvolvido por <a target='blank' href="https://github.com/ytomee">Tomé Almeida</a> </span></div>
                         <div className="col-md-6 text-md-end text-start">
                             <div className="footer-social">
                                 <a className="font-xs color-text-paragraph" href="#">Política de privacidade</a>

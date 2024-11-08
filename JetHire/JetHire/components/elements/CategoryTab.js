@@ -13,12 +13,12 @@ const CategoryTab = () => {
                 <ul className="nav nav-tabs" role="tablist">
                     <li>
                         <a className={active === 1 ? "active" : ""} onClick={() => handleOnClick(1)}>
-                            <img src="/assets/imgs/page/homepage1/management.svg" alt="jobBox" /> Criatividade
+                            <img src="/assets/imgs/page/homepage1/management.svg" alt="jobBox" /> Tecnologia
                         </a>
                     </li>
                     <li>
                         <a className={active === 2 ? "active" : ""} onClick={() => handleOnClick(2)}>
-                            <img src="/assets/imgs/page/homepage1/marketing.svg" alt="jobBox" /> Tecnologia
+                            <img src="/assets/imgs/page/homepage1/marketing.svg" alt="jobBox" /> Criatividade
                         </a>
                     </li>
                     <li>

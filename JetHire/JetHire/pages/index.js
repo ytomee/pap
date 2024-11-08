@@ -25,14 +25,14 @@ export default function Index5() {
                                                 A tua próxima oportunidade está a apenas um clique. Simplificamos o processo para que te concentres no que importa: encontrar o trabalho certo.
                                             </div>
                                             <div className="mt-30 d-flex">
-                                                <a href="#howitworks" className="btn btn-default mr-15"><i class="fa-solid fa-caret-down"></i>Começar</a>
+                                                <a href="#comofunciona" className="btn btn-default mr-15">Começar<i className="fa-solid fa-caret-down ml-10"></i></a>
                                                 <a className="btn btn-border-brand-2">Saber mais</a>
                                             </div>
                                             <div className="mt-50">
                                                 <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
                                                     <form>
                                                         <input className="form-input input-keysearch mr-10 style-2" type="text" placeholder="Palavras-chave... " />
-                                                        <button className="btn btn-default font-sm"><i className="fa-solid fa-magnifying-glass"></i>Procurar</button>
+                                                        <button className="btn btn-default font-sm"><i className="fa-solid fa-magnifying-glass mr-10"></i>Procurar</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -112,7 +112,7 @@ export default function Index5() {
                             </div>
                         </div>
                     </section>
-                    <section id="#howitworks" className="section-box mt-70 mb-40">
+                    <section id="comofunciona" className="section-box mt-70 mb-40">
                         <div className="container">
                             <div className="text-start">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Como funciona</h2>
@@ -128,10 +128,8 @@ export default function Index5() {
                                                 <br/>
                                                  para começar
                                             </h4>
-                                            <p className="font-lg color-text-paragraph-2">
-                                                Lorem ipsum dolor sit amet,
-                                                <br className="d-none d-lg-block" />
-                                                consectetur adipisicing elit, sed do{" "}
+                                            <p className="font-lg color-text-paragraph-2 px-5">
+                                                Regista-te rapidamente e junta-te a nós na tua busca por uma nova oportunidade.
                                             </p>
                                         </div>
                                     </div>
@@ -143,10 +141,8 @@ export default function Index5() {
                                                 <br/>
                                                 ofertas de trabalho
                                             </h4>
-                                            <p className="font-lg color-text-paragraph-2">
-                                                Lorem ipsum dolor sit amet,
-                                                <br className="d-none d-lg-block" />
-                                                consectetur adipisicing elit, sed do{" "}
+                                            <p className="font-lg color-text-paragraph-2 px-5">
+                                                Encontra oportunidades à tua medida, ao alcance de um clique.
                                             </p>
                                         </div>
                                     </div>
@@ -158,18 +154,16 @@ export default function Index5() {
                                                 <br/>
                                                 mais te agrada!
                                             </h4>
-                                            <p className="font-lg color-text-paragraph-2">
-                                                Lorem ipsum dolor sit amet,
-                                                <br className="d-none d-lg-block" />
-                                                consectetur adipisicing elit, sed do{" "}
+                                            <p className="font-lg color-text-paragraph-2 px-5">
+                                                Escolhe a oportunidade que combina contigo e prepara-te para dar o próximo passo.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="mt-30 text-center">
-                                <a href="page-register" className="btn btn-default">Começar</a>
-                            </div> */}
+                            <div className="mt-30 text-center d-flex justify-content-center">
+                                <a href="page-register" className="btn btn-default"><i class="fa-solid fa-clipboard-user mr-10"></i>Começar</a>
+                            </div>
                         </div>
                     </section>
                     <section className="section-box mt-90">
