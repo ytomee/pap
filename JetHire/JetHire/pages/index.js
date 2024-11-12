@@ -162,7 +162,7 @@ export default function Index5() {
                                 </div>
                             </div>
                             <div className="mt-30 text-center d-flex justify-content-center">
-                                <a href="page-register" className="btn btn-default"><i class="fa-solid fa-clipboard-user mr-10"></i>Começar</a>
+                                <a href="page-register" className="btn btn-default"><i className="fa-solid fa-clipboard-user mr-10"></i>Começar</a>
                             </div>
                         </div>
                     </section>
