@@ -1010,11 +1010,6 @@ h6,
   border-radius: 5px;
   color: #4F5E64 !important;
 }
-.btn-grey-small:hover {
-  color: var(--red-500) !important;
-  background-color: var(--red-200);
-}
-
 .btn-grey-big {
   padding: 17px 21px;
   gap: 10px;
@@ -3050,7 +3045,7 @@ ul li:last-child .card-list-4 {
 }
 .banner-hero.banner-single {
   padding: 40px 20px 60px 20px;
-  background: #F2F6FD;
+  background: var(--red-000);
   border-radius: 16px;
   position: relative;
 }
@@ -6757,28 +6752,26 @@ ul li:last-child .card-list-4 {
   font-weight: bold;
 }
 .paginations .pager li a:hover {
-  color: #05264E;
+  color: var(--red-500);
 }
 .paginations .pager li a.active {
-  color: #05264E;
+  color: var(--red-500);
 }
 .paginations .pager li a.pager-number.active::before {
   content: "";
   height: 28px;
   width: 28px;
-  background: #E0E6F7;
   opacity: 0.3;
   border-radius: 50%;
   position: absolute;
   z-index: -1;
   top: 8px;
-  left: -1px;
+  left: -2px;
 }
 .paginations .pager li a.pager-number:hover::before {
   content: "";
   height: 28px;
   width: 28px;
-  background: #E0E6F7;
   opacity: 0.3;
   border-radius: 50%;
   position: absolute;
@@ -6975,7 +6968,7 @@ ul li:last-child .card-list-4 {
   font-size: 12px;
   line-height: 18px;
   border-radius: 7px;
-  background: #E0E6F7;
+  background: var(--red-100);
   color: var(--red-500);
 }
 
@@ -7001,7 +6994,7 @@ ul li:last-child .card-list-4 {
   display: none;
 }
 .content-page .card-grid-2:hover {
-  border-color: #B4C0E0;
+  border-color: var(--red-500);
 }
 
 .sidebar-shadow.none-shadow {
@@ -7042,7 +7035,11 @@ ul li:last-child .card-list-4 {
 .job-list-list .list-recent-jobs {
   margin-top: 0px;
 }
-
+.job-list-number{
+ font-size: 58px;
+ font-weight: 900;
+ color: var(--red-500);
+}
 .job-tags a {
   background-color: #F2F6FD;
   color: #4F5E64;

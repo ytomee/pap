@@ -17,7 +17,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                             <nav className="nav-main-menu">
                                 <ul className="main-menu">
                                     <li>
-                                        <Link legacyBehavior href="/jobs-grid"><a>Procurar trabalho</a></Link>
+                                        <Link legacyBehavior href="/jobs-list"><a>Procurar trabalho</a></Link>
                                     </li>
                                     <li>
                                         <Link legacyBehavior href="/companies-grid"><a>Empresas</a></Link>

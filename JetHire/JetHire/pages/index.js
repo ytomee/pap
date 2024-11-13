@@ -563,7 +563,7 @@ export default function Index5() {
                                 </div>
                                 <div className="text-center">
                                     <Link legacyBehavior href="/blog-grid">
-                                        <a className="btn btn-brand-1 mt--30 hover-up">Ir para o blog</a>
+                                        <a className="btn btn-brand-1 mt--30 hover-up"><i class="fa-brands fa-blogger-b mr-10"></i>Ir para o blog</a>
                                     </Link>
                                 </div>
                             </div>
