@@ -10,146 +10,20 @@ export default function CandidateGrid() {
                 <div>
                     <section className="section-box-2">
                         <div className="container">
-                            <div className="banner-hero banner-company">
+                            <div className="banner-hero banner-single banner-single-bg">
                                 <div className="block-banner text-center">
-                                    <h3 className="wow animate__animated animate__fadeInUp">Browse Candidates</h3>
+                                    <h3 className="wow animate__animated animate__fadeInUp">
+                                        <span className="job-list-number"> 4 </span> candidatos disponíveis
+                                    </h3>
                                     <div className="font-sm color-text-paragraph-2 mt-10 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repellendus magni, <br className="d-none d-xl-block" />
                                         atque delectus molestias quis?
                                     </div>
-                                    <div className="box-list-character">
-                                        <ul>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a className="active">A</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>B</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>C</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>D</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>E</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>F</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>G</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>H</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>I</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>J</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>K</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>L</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>M</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>N</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>O</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>P</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>Q</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>R</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>S</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>T</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>U</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>V</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>W</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>X</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>Y</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>Z</a>
-                                                </Link>
-                                            </li>
-                                        </ul>
+                                    <div className="form-find text-start mt-40 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                                        <form>
+                                            <input className="form-input input-keysearch mr-10" type="text" placeholder="Palavras-chave... " />
+                                            <button className="btn btn-default btn-find font-sm">Procurar</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -162,75 +36,31 @@ export default function CandidateGrid() {
                                     <div className="row">
                                         <div className="col-xl-6 col-lg-5">
                                             <span className="text-small text-showing">
-                                                Showing <strong>41-60 </strong>of <strong>944 </strong>jobs
+                                                A mostrar <strong>41-60 </strong>de <strong>944 </strong>candidatos
                                             </span>
                                         </div>
                                         <div className="col-xl-6 col-lg-7 text-lg-end mt-sm-15">
                                             <div className="display-flex2">
-                                                <div className="box-border mr-10">
-                                                    <span className="text-sortby">Show:</span>
-                                                    <div className="dropdown dropdown-sort">
-                                                        <button className="btn dropdown-toggle" id="dropdownSort" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-                                                            <span>12</span>
-                                                            <i className="fi-rr-angle-small-down" />
-                                                        </button>
-                                                        <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownSort">
-                                                            <li>
-                                                                <Link legacyBehavior href="#">
-                                                                    <a className="dropdown-item active">10</a>
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link legacyBehavior href="#">
-                                                                    <a className="dropdown-item">12</a>
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link legacyBehavior href="#">
-                                                                    <a className="dropdown-item">20</a>
-                                                                </Link>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
                                                 <div className="box-border">
-                                                    <span className="text-sortby">Sort by:</span>
+                                                    <span className="text-sortby">Ordenar por:</span>
                                                     <div className="dropdown dropdown-sort">
                                                         <button className="btn dropdown-toggle" id="dropdownSort2" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-                                                            <span>Newest Post</span>
+                                                            <span>Mais recente</span>
                                                             <i className="fi-rr-angle-small-down" />
                                                         </button>
                                                         <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownSort2">
                                                             <li>
                                                                 <Link legacyBehavior href="#">
-                                                                    <a className="dropdown-item active">Newest Post</a>
+                                                                    <a className="dropdown-item active">Mais recente</a>
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link legacyBehavior href="#">
-                                                                    <a className="dropdown-item">Oldest Post</a>
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link legacyBehavior href="#">
-                                                                    <a className="dropdown-item">Rating Post</a>
+                                                                    <a className="dropdown-item">Mais antigo</a>
                                                                 </Link>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                </div>
-                                                <div className="box-view-type">
-                                                    <Link legacyBehavior href="/jobs-list">
-                                                        <a className="view-type">
-                                                            <img src="assets/imgs/template/icons/icon-list.svg" alt="jobBox" />
-                                                        </a>
-                                                    </Link>
-
-                                                    <Link legacyBehavior href="/jobs-grid">
-                                                        <a className="view-type">
-                                                            <img src="assets/imgs/template/icons/icon-grid-hover.svg" alt="jobBox" />
-                                                        </a>
-                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -1617,8 +1447,8 @@ export default function CandidateGrid() {
                     <section className="section-box mt-50 mb-50">
                         <div className="container">
                             <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">News and Blog</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Get the latest news, updates and tips</p>
+                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Blog</h2>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Tem acesso ás últimas notícias e dicas dos nossos membros!</p>
                             </div>
                         </div>
                         <div className="container">
@@ -1628,34 +1458,8 @@ export default function CandidateGrid() {
                                 </div>
                                 <div className="text-center">
                                     <Link legacyBehavior href="blog-grid">
-                                        <a className="btn btn-brand-1 btn-icon-load mt--30 hover-up">Load More Posts</a>
+                                        <a className="btn btn-brand-1 mt--30 hover-up"><i className="fa-brands fa-blogger-b mr-10"></i>Ir para o blog</a>
                                     </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className="section-box mt-50 mb-20">
-                        <div className="container">
-                            <div className="box-newsletter">
-                                <div className="row">
-                                    <div className="col-xl-3 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/template/newsletter-left.png" alt="joxBox" />
-                                    </div>
-                                    <div className="col-lg-12 col-xl-6 col-12">
-                                        <h2 className="text-md-newsletter text-center">
-                                            New Things Will Always
-                                            <br /> Update Regularly
-                                        </h2>
-                                        <div className="box-form-newsletter mt-40">
-                                            <form className="form-newsletter">
-                                                <input className="input-newsletter" type="text" placeholder="Enter your email here" />
-                                                <button className="btn btn-default font-heading icon-send-letter">Subscribe</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-3 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/template/newsletter-right.png" alt="joxBox" />
-                                    </div>
                                 </div>
                             </div>
                         </div>

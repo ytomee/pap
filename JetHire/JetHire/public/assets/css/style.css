@@ -988,11 +988,16 @@ h6,
   justify-content: center;
   align-items: center;
 }
+.btn.btn-email-company{
+  background-color: var(--neutral-100);
+  border: none;
+  padding: 20px 25px;
+  font-size: 1rem;
+}
 .btn.btn-default:hover {
   background-color: var(--red-600);
   transition: 0.2s;
 }
-
 .btn-grey {
   padding: 17px 20px;
   gap: 10px;
@@ -1002,7 +1007,6 @@ h6,
   font-size: 14px;
   line-height: 14px;
 }
-
 .btn-grey-small {
   background-color: var(--red-100);
   font-size: 12px;
@@ -1013,17 +1017,13 @@ h6,
 .btn-grey-big {
   padding: 17px 21px;
   gap: 10px;
-  background: #E0E6F7;
+  background: var(--red-400);
   border-radius: 4px;
-  color: #05264E;
+  color: var(--neutral-100);
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
 }
-.btn-grey-big:hover {
-  color: var(--red-500);
-}
-
 .btn-apply-now {
   background-color: var(--red-100);
   color: var(--red-500);
@@ -1033,7 +1033,6 @@ h6,
   font-size: 12px;
   text-transform: capitalize;
 }
-
 .btn-apply {
   background-color: var(--red-500);
   color: var(--neutral-100);
@@ -1044,14 +1043,12 @@ h6,
   background-color: #05264E;
   color: #ffffff;
 }
-
 .btn-apply-icon {
   background-image: url(../imgs/template/icons/apply.svg);
   background-position: 15px 11px;
   background-repeat: no-repeat;
   padding-left: 40px;
 }
-
 .btn-apply-big {
   background-color: var(--red-500);
   color: #ffffff;
@@ -1066,7 +1063,6 @@ h6,
   color: #fff;
   background-color: #05264E;
 }
-
 .btn-call-icon {
   background-image: url(../imgs/template/icons/call.svg);
   background-position: 24px 17px;
@@ -1877,11 +1873,11 @@ label {
 .card-grid-1 {
   position: relative;
   border-radius: 10px;
-  border: 0.88px solid #E0E6F7;
+  border: 0.88px solid var(--red-200);
   overflow: hidden;
   margin-bottom: 30px;
   position: relative;
-  background: #F8FAFF;
+  background: var(--red-000);
   text-align: center;
   padding: 30px;
 }
@@ -2659,14 +2655,32 @@ ul li:last-child .card-list-4 {
 }
 
 .box-newsletter {
-  padding: 57px 0px 96px 0px;
+  padding: 50px 30px;
   background: url(../imgs/template/bg-newsletter.svg) no-repeat 0px 0px;
   background-size: cover;
   border-radius: 16px;
 }
+.box-register-company{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.form-register-company{
+  background-color: var(--neutral-100);
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 20px;
+}
+.form-register-company a{
+  font-weight: 700;
+}
+.form-register-company:nth-child(2){
+  cursor: pointer;
+}
 .box-newsletter .box-form-newsletter {
   background: #ffffff;
-  max-width: 610px;
+  max-width: 670px;
   padding: 10px;
   border-radius: 10px;
   margin: auto;
@@ -2697,8 +2711,8 @@ ul li:last-child .card-list-4 {
 }
 .box-newsletter .text-md-newsletter {
   color: #ffffff;
-  font-size: 37px;
-  line-height: 55px;
+  font-size: 34px;
+  line-height: 35px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: bold;
 }
@@ -2784,8 +2798,6 @@ ul li:last-child .card-list-4 {
 }
 
 .breacrumb-cover {
-  background-color: #F8FAFF;
-  background-image: url(../imgs/page/blog/bg-breadcrumb.png);
   background-position: top center;
   padding: 50px 0;
 }

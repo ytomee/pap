@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
-import BlogSlider from "./../components/sliders/Blog";
 
 export default function CompaniesGrid() {
     return (
@@ -10,146 +9,20 @@ export default function CompaniesGrid() {
                 <div>
                     <section className="section-box-2">
                         <div className="container">
-                            <div className="banner-hero banner-company">
+                            <div className="banner-hero banner-single banner-single-bg">
                                 <div className="block-banner text-center">
-                                    <h3 className="wow animate__animated animate__fadeInUp">Browse Companies</h3>
+                                    <h3 className="wow animate__animated animate__fadeInUp">
+                                        <span className="job-list-number"> 4 </span> empresas disponíveis
+                                    </h3>
                                     <div className="font-sm color-text-paragraph-2 mt-10 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repellendus magni, <br className="d-none d-xl-block" />
                                         atque delectus molestias quis?
                                     </div>
-                                    <div className="box-list-character">
-                                        <ul>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a className="active">A</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>B</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>C</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>D</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>E</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>F</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>G</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>H</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>I</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>J</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>K</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>L</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>M</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>N</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>O</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>P</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>Q</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>R</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>S</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>T</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>U</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>V</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>W</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>X</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>Y</a>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="#">
-                                                    <a>Z</a>
-                                                </Link>
-                                            </li>
-                                        </ul>
+                                    <div className="form-find text-start mt-40 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                                        <form>
+                                            <input className="form-input input-keysearch mr-10" type="text" placeholder="Palavras-chave... " />
+                                            <button className="btn btn-default btn-find font-sm">Procurar</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -164,75 +37,36 @@ export default function CompaniesGrid() {
                                             <div className="row">
                                                 <div className="col-xl-6 col-lg-5">
                                                     <span className="text-small text-showing">
-                                                        Showing <strong>41-60 </strong>of <strong>944 </strong>jobs
+                                                        A mostrar <strong>41-60 </strong>de <strong>944 </strong>empresas
                                                     </span>
                                                 </div>
                                                 <div className="col-xl-6 col-lg-7 text-lg-end mt-sm-15">
                                                     <div className="display-flex2">
-                                                        <div className="box-border mr-10">
-                                                            <span className="text-sortby">Show:</span>
-                                                            <div className="dropdown dropdown-sort">
-                                                                <button className="btn dropdown-toggle" id="dropdownSort" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-                                                                    <span>12</span>
-                                                                    <i className="fi-rr-angle-small-down" />
-                                                                </button>
-                                                                <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownSort">
-                                                                    <li>
-                                                                        <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item active">10</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item">12</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item">20</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
                                                         <div className="box-border">
-                                                            <span className="text-sortby">Sort by:</span>
+                                                            <span className="text-sortby">Ordenar por:</span>
                                                             <div className="dropdown dropdown-sort">
                                                                 <button className="btn dropdown-toggle" id="dropdownSort2" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-                                                                    <span>Newest Post</span>
+                                                                    <span>Qualificação</span>
                                                                     <i className="fi-rr-angle-small-down" />
                                                                 </button>
                                                                 <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownSort2">
                                                                     <li>
                                                                         <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item active">Newest Post</a>
+                                                                            <a className="dropdown-item active">Qualificação</a>
                                                                         </Link>
                                                                     </li>
                                                                     <li>
                                                                         <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item">Oldest Post</a>
+                                                                            <a className="dropdown-item">Vagas <i className="fa-solid fa-arrow-up ml-5"></i></a>
                                                                         </Link>
                                                                     </li>
                                                                     <li>
                                                                         <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item">Rating Post</a>
+                                                                            <a className="dropdown-item">Vagas <i className="fa-solid fa-arrow-down ml-5"></i></a>
                                                                         </Link>
                                                                     </li>
                                                                 </ul>
                                                             </div>
-                                                        </div>
-                                                        <div className="box-view-type">
-                                                            <Link legacyBehavior href="/jobs-list">
-                                                                <a className="view-type">
-                                                                    <img src="assets/imgs/template/icons/icon-list.svg" alt="jobBox" />
-                                                                </a>
-                                                            </Link>
-
-                                                            <Link legacyBehavior href="/jobs-grid">
-                                                                <a className="view-type">
-                                                                    <img src="assets/imgs/template/icons/icon-grid-hover.svg" alt="jobBox" />
-                                                                </a>
-                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -270,8 +104,7 @@ export default function CompaniesGrid() {
                                                         <div className="mt-30">
                                                             <Link legacyBehavior href="/jobs-grid">
                                                                 <a className="btn btn-grey-big">
-                                                                    <span>12</span>
-                                                                    <span> Jobs Open</span>
+                                                                    <span>12 Jobs Open</span>
                                                                 </a>
                                                             </Link>
                                                         </div>
@@ -1111,39 +944,20 @@ export default function CompaniesGrid() {
                                         <div className="sidebar-filters">
                                             <div className="filter-block head-border mb-30">
                                                 <h5>
-                                                    Advance Filter
+                                                    Filtros avançados
                                                     <Link legacyBehavior href="#">
-                                                        <a className="link-reset">Reset</a>
+                                                        <a className="link-reset"><i className="fa-solid fa-rotate-right mr-5"></i> Repor</a>
                                                     </Link>
                                                 </h5>
                                             </div>
-                                            <div className="filter-block mb-30">
-                                                <div className="form-group select-style select-style-icon">
-                                                    <select className="form-control form-icons select-active">
-                                                        <option>New York, US</option>
-                                                        <option>London</option>
-                                                        <option>Paris</option>
-                                                        <option>Berlin</option>
-                                                    </select>
-                                                    <i className="fi-rr-marker" />
-                                                </div>
-                                            </div>
                                             <div className="filter-block mb-20">
-                                                <h5 className="medium-heading mb-15">Industry</h5>
+                                                <h5 className="medium-heading mb-15">Indústria</h5>
                                                 <div className="form-group">
                                                     <ul className="list-checkbox">
                                                         <li>
                                                             <label className="cb-container">
-                                                                <input type="checkbox" defaultChecked="checked" />
-                                                                <span className="text-small">All</span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">180</span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Software</span>
+                                                                <span className="text-small">Tecnologia</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">12</span>
@@ -1151,7 +965,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Finance</span>
+                                                                <span className="text-small">Criatividade</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">23</span>
@@ -1159,7 +973,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Recruting</span>
+                                                                <span className="text-small">Ciências</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">43</span>
@@ -1167,7 +981,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Management</span>
+                                                                <span className="text-small">Atendimento</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">65</span>
@@ -1175,7 +989,15 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Advertising</span>
+                                                                <span className="text-small">Gestão</span>
+                                                                <span className="checkmark" />
+                                                            </label>
+                                                            <span className="number-item">76</span>
+                                                        </li>
+                                                        <li>
+                                                            <label className="cb-container">
+                                                                <input type="checkbox" />
+                                                                <span className="text-small">Operador</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">76</span>
@@ -1184,38 +1006,9 @@ export default function CompaniesGrid() {
                                                 </div>
                                             </div>
                                             <div className="filter-block mb-20">
-                                                <h5 className="medium-heading mb-25">Salary Range</h5>
-                                                <div className="list-checkbox pb-20">
-                                                    <div className="row position-relative mt-10 mb-20">
-                                                        <div className="col-sm-12 box-slider-range">
-                                                            <div id="slider-range" />
-                                                        </div>
-                                                        <div className="box-input-money">
-                                                            <input className="input-disabled form-control min-value-money" type="text" name="min-value-money" disabled="disabled" defaultValue />
-                                                            <input className="form-control min-value" type="hidden" name="min-value" defaultValue />
-                                                        </div>
-                                                    </div>
-                                                    <div className="box-number-money">
-                                                        <div className="row mt-30">
-                                                            <div className="col-sm-6 col-6">
-                                                                <span className="font-sm color-brand-1">$0</span>
-                                                            </div>
-                                                            <div className="col-sm-6 col-6 text-end">
-                                                                <span className="font-sm color-brand-1">$500</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="form-group mb-20">
+                                                <h5 className="medium-heading mb-25">Salário</h5>
+                                                <div className="form-group">
                                                     <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" defaultChecked="checked" />
-                                                                <span className="text-small">All</span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">145</span>
-                                                        </li>
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
@@ -1268,75 +1061,13 @@ export default function CompaniesGrid() {
                                                 </div>
                                             </div>
                                             <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">Popular Keyword</h5>
-                                                <div className="form-group">
-                                                    <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" defaultChecked="checked" />
-                                                                <span className="text-small">Software</span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">24</span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">Developer</span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">45</span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">Web</span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">57</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">Position</h5>
+                                                <h5 className="medium-heading mb-10">Experiência</h5>
                                                 <div className="form-group">
                                                     <ul className="list-checkbox">
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Senior</span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">12</span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" defaultChecked="checked" />
-                                                                <span className="text-small">Junior</span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">35</span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">Fresher</span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">56</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">Experience Level</h5>
-                                                <div className="form-group">
-                                                    <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">Internship</span>
+                                                                <span className="text-small"> {'<'} 1 ano</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">56</span>
@@ -1344,7 +1075,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Entry Level</span>
+                                                                <span className="text-small">1-2 anos</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">87</span>
@@ -1352,7 +1083,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" defaultChecked="checked" />
-                                                                <span className="text-small">Associate</span>
+                                                                <span className="text-small">2-3 anos</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">24</span>
@@ -1360,7 +1091,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Mid Level</span>
+                                                                <span className="text-small">3-4 anos</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">45</span>
@@ -1368,7 +1099,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Director</span>
+                                                                <span className="text-small">4-5 anos</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">76</span>
@@ -1376,7 +1107,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Executive</span>
+                                                                <span className="text-small"> {'>'} 5 anos </span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">89</span>
@@ -1385,13 +1116,13 @@ export default function CompaniesGrid() {
                                                 </div>
                                             </div>
                                             <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">Onsite/Remote</h5>
+                                                <h5 className="medium-heading mb-10">Modalidade</h5>
                                                 <div className="form-group">
                                                     <ul className="list-checkbox">
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">On-site</span>
+                                                                <span className="text-small">Presencial</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">12</span>
@@ -1399,7 +1130,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" defaultChecked="checked" />
-                                                                <span className="text-small">Remote</span>
+                                                                <span className="text-small">Remoto</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">65</span>
@@ -1407,7 +1138,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Hybrid</span>
+                                                                <span className="text-small">Híbrido</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">58</span>
@@ -1416,7 +1147,7 @@ export default function CompaniesGrid() {
                                                 </div>
                                             </div>
                                             <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">Job Posted</h5>
+                                                <h5 className="medium-heading mb-10">Oferta publicada</h5>
                                                 <div className="form-group">
                                                     <ul className="list-checkbox">
                                                         <li>
@@ -1430,7 +1161,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">1 day</span>
+                                                                <span className="text-small">1 dia</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">65</span>
@@ -1438,7 +1169,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">7 days</span>
+                                                                <span className="text-small">7 dias</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">24</span>
@@ -1446,7 +1177,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">30 days</span>
+                                                                <span className="text-small">30 dias</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">56</span>
@@ -1455,13 +1186,13 @@ export default function CompaniesGrid() {
                                                 </div>
                                             </div>
                                             <div className="filter-block mb-20">
-                                                <h5 className="medium-heading mb-15">Job type</h5>
+                                                <h5 className="medium-heading mb-15">Tipo de trabalho</h5>
                                                 <div className="form-group">
                                                     <ul className="list-checkbox">
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Full Time</span>
+                                                                <span className="text-small">Tempo inteiro</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">25</span>
@@ -1469,7 +1200,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" defaultChecked="checked" />
-                                                                <span className="text-small">Part Time</span>
+                                                                <span className="text-small">Part-time</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">64</span>
@@ -1477,7 +1208,7 @@ export default function CompaniesGrid() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Remote Jobs</span>
+                                                                <span className="text-small">Trabalhos remotos</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">78</span>
@@ -1499,49 +1230,30 @@ export default function CompaniesGrid() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-50 mb-50">
-                        <div className="container">
-                            <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">News and Blog</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Get the latest news, updates and tips</p>
-                            </div>
-                        </div>
-                        <div className="container">
-                            <div className="mt-50">
-                                <div className="box-swiper style-nav-top">
-                                    <BlogSlider />
-                                </div>
-                                <div className="text-center">
-                                    <Link legacyBehavior href="blog-grid">
-                                        <a className="btn btn-brand-1 btn-icon-load mt--30 hover-up">Load More Posts</a>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                     <section className="section-box mt-50 mb-20">
                         <div className="container">
-                            <div className="box-newsletter">
-                                <div className="row">
-                                    <div className="col-xl-3 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/template/newsletter-left.png" alt="joxBox" />
-                                    </div>
-                                    <div className="col-lg-12 col-xl-6 col-12">
-                                        <h2 className="text-md-newsletter text-center">
-                                            New Things Will Always
-                                            <br /> Update Regularly
-                                        </h2>
-                                        <div className="box-form-newsletter mt-40">
-                                            <form className="form-newsletter">
-                                                <input className="input-newsletter" type="text" placeholder="Enter your email here" />
-                                                <button className="btn btn-default font-heading icon-send-letter">Subscribe</button>
-                                            </form>
+                            <div className="row">
+                                <div className="col-12">
+                                    <div className="box-newsletter">
+                                        <div className="text-md-newsletter text-center">
+                                            Quer trabalhar connosco?  Registe a sua empresa!
+                                        </div>
+                                        <div className="box-register-company mt-40">
+                                            <div className="form-register-company">Preencha o formulário com os dados necessários! <i className="fa-solid fa-arrow-right ml-10"></i></div>
+                                            <div className="form-register-company"><a><i className="fa-solid fa-clipboard-list mr-10"></i>Formulário</a></div>
                                         </div>
                                     </div>
-                                    <div className="col-xl-3 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/template/newsletter-right.png" alt="joxBox" />
-                                    </div>
                                 </div>
+                                {/* <div className="col-lg-4 col-12">
+                                    <div className="box-newsletter">
+                                        <div className="text-md-newsletter text-center">
+                                            teste
+                                        </div>
+                                        <div className="mt-40 d-flex justify-content-center">
+                                            <a href="mailto:tomealmeida@gmail.com" className="btn btn-email-company font-heading"><i className="fa-regular fa-envelope mr-5"></i> Email</a>
+                                        </div>
+                                    </div>
+                                </div> */}
                             </div>
                         </div>
                     </section>
