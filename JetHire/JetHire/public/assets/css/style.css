@@ -51,6 +51,7 @@ TABLE CONTENT
   --red-700: #8F010E;
   --red-800: #6E0107;
   --red-900: #4D0000;
+  --red-1000: #270000;
 
   /* SUPPORTING COLORS */
   --yellow-100: #FFF0D6;
@@ -1433,7 +1434,7 @@ input[type=email],
 input[type=date],
 input[type=time],
 input[type=tel] {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-300);
   border-radius: 4px;
   height: 50px;
   box-shadow: none;
@@ -1446,7 +1447,7 @@ input[type=email]:focus,
 input[type=date]:focus,
 input[type=time]:focus,
 input[type=tel]:focus {
-  border: 1px solid #EFF2FB;
+  border: 1px solid var(--red-500);
 }
 
 select {
@@ -2399,10 +2400,10 @@ label {
 .card-grid-5 .box-cover-img {
   position: absolute;
   bottom: 0px;
-  top: 10%;
+  top: 50%;
   width: 100%;
-  background: url(../imgs/page/blog/bg-black-trans.png) repeat-x center bottom;
   z-index: 2;
+  background: linear-gradient(to top, var(--red-1000), transparent);
 }
 .card-grid-5 .box-cover-img .content-bottom {
   position: absolute;
@@ -2796,7 +2797,6 @@ ul li:last-child .card-list-4 {
   -ms-transform: scale(0.7);
   padding: 0;
 }
-
 .breacrumb-cover {
   background-position: top center;
   padding: 50px 0;
@@ -3812,7 +3812,7 @@ ul li:last-child .card-list-4 {
 }
 
 .sidebar-title {
-  border-bottom: thin solid #E0E6F6;
+  border-bottom: thin solid var(--neutral-200);
   font-weight: 600;
   margin-bottom: 30px;
   padding-bottom: 10px;
@@ -6423,7 +6423,7 @@ ul li:last-child .card-list-4 {
 }
 
 .sidebar-border, .sidebar-shadow {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   padding: 25px;
   border-radius: 8px;
   background-color: #ffffff;

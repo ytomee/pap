@@ -12,7 +12,7 @@ export default function BlogGrid() {
                                 <div className="row">
                                     <div className="col-lg-6 col-12">
                                         <h2 className="mb-10">Blog</h2>
-                                        <p className="font-lg color-text-paragraph-2">Get the latest news, updates and tips</p>
+                                        <p className="font-lg color-text-paragraph-2">Tem acesso ás últimas notícias e dicas dos nossos membros!</p>
                                     </div>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@ export default function BlogGrid() {
                                                         <div className="content-bottom">
                                                             <h3 className="color-white mb-20">11 Tips to Help You Get New Clients</h3>
                                                             <div className="author d-flex align-items-center mr-20">
-                                                                <img className="mr-10" alt="jobBox" src="assets/imgs/page/candidates/user3.png" />
+                                                                <img className="mr-10"  src="assets/imgs/page/candidates/user3.png" />
                                                                 <span className="color-white font-sm mr-25">Azumi Rose</span>
                                                                 <span className="color-white font-sm">25 April 2022</span>
                                                             </div>
@@ -49,7 +49,7 @@ export default function BlogGrid() {
                                                     <div className="content-bottom">
                                                         <h3 className="color-white mb-20">Recruiter and Land Your Dream Job</h3>
                                                         <div className="author d-flex align-items-center mr-20">
-                                                            <img className="mr-10" alt="jobBox" src="assets/imgs/page/candidates/user1.png" />
+                                                            <img className="mr-10"  src="assets/imgs/page/candidates/user1.png" />
                                                             <span className="color-white font-sm mr-25">Thompson</span>
                                                             <span className="color-white font-sm">28 April 2022</span>
                                                         </div>
@@ -67,7 +67,7 @@ export default function BlogGrid() {
                                                     <div className="content-bottom">
                                                         <h3 className="color-white mb-20">Work-From-Home Jobs That Pay Well</h3>
                                                         <div className="author d-flex align-items-center mr-20">
-                                                            <img className="mr-10" alt="jobBox" src="assets/imgs/page/blog/ava_1.png" />
+                                                            <img className="mr-10"  src="assets/imgs/page/blog/ava_1.png" />
                                                             <span className="color-white font-sm mr-25">Alice Json</span>
                                                             <span className="color-white font-sm">29 April 2022</span>
                                                         </div>
@@ -84,8 +84,8 @@ export default function BlogGrid() {
                         <div className="post-loop-grid">
                             <div className="container">
                                 <div className="text-left">
-                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Latest Posts</h2>
-                                    <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Don't miss the trending news</p>
+                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Publicações recentes</h2>
+                                    <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Não percas as publicações mais recentes!</p>
                                 </div>
                                 <div className="row mt-30">
                                     <div className="col-lg-8">
@@ -96,7 +96,7 @@ export default function BlogGrid() {
                                                         <Link legacyBehavior href="blog-details">
                                                             <a>
                                                                 <figure>
-                                                                    <img alt="jobBox" src="assets/imgs/page/blog/img1.png" />
+                                                                    <img  src="assets/imgs/page/blog/img1.png" />
                                                                 </figure>
                                                             </a>
                                                         </Link>
@@ -112,7 +112,7 @@ export default function BlogGrid() {
                                                                 <a>21 Job Interview Tips: How To Make a Great Impression</a>
                                                             </Link>
                                                         </h5>
-                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable healthcare company by creating high-quality healthcare products in iconic, sustainable packaging.</p>
+                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable hehcare company by creating high-quality hehcare products in iconic, sustainable packaging.</p>
                                                         <div className="card-2-bottom mt-20">
                                                             <div className="row">
                                                                 <div className="col-lg-6 col-6">
@@ -139,7 +139,7 @@ export default function BlogGrid() {
                                                         <Link legacyBehavior href="blog-details">
                                                             <a>
                                                                 <figure>
-                                                                    <img alt="jobBox" src="assets/imgs/page/blog/img2.png" />
+                                                                    <img  src="assets/imgs/page/blog/img2.png" />
                                                                 </figure>
                                                             </a>
                                                         </Link>
@@ -155,7 +155,7 @@ export default function BlogGrid() {
                                                                 <a>Email Examples: How To Respond to Employer Interview Requests</a>
                                                             </Link>
                                                         </h5>
-                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable healthcare company by creating high-quality healthcare products in iconic, sustainable packaging.</p>
+                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable hehcare company by creating high-quality hehcare products in iconic, sustainable packaging.</p>
                                                         <div className="card-2-bottom mt-20">
                                                             <div className="row">
                                                                 <div className="col-lg-6 col-6">
@@ -182,7 +182,7 @@ export default function BlogGrid() {
                                                         <Link legacyBehavior href="blog-details">
                                                             <a>
                                                                 <figure>
-                                                                    <img alt="jobBox" src="assets/imgs/page/blog/img3.png" />
+                                                                    <img  src="assets/imgs/page/blog/img3.png" />
                                                                 </figure>
                                                             </a>
                                                         </Link>
@@ -198,7 +198,7 @@ export default function BlogGrid() {
                                                                 <a>How To Write an Application Letter (With Examples)</a>
                                                             </Link>
                                                         </h5>
-                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable healthcare company by creating high-quality healthcare products in iconic, sustainable packaging.</p>
+                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable hehcare company by creating high-quality hehcare products in iconic, sustainable packaging.</p>
                                                         <div className="card-2-bottom mt-20">
                                                             <div className="row">
                                                                 <div className="col-lg-6 col-6">
@@ -225,7 +225,7 @@ export default function BlogGrid() {
                                                         <Link legacyBehavior href="blog-details">
                                                             <a>
                                                                 <figure>
-                                                                    <img alt="jobBox" src="assets/imgs/page/homepage1/img-news1.png" />
+                                                                    <img  src="assets/imgs/page/homepage1/img-news1.png" />
                                                                 </figure>
                                                             </a>
                                                         </Link>
@@ -241,7 +241,7 @@ export default function BlogGrid() {
                                                                 <a>17 jobs hired at 15 (and even 14) you should know</a>
                                                             </Link>
                                                         </h5>
-                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable healthcare company by creating high-quality healthcare products in iconic, sustainable packaging.</p>
+                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable hehcare company by creating high-quality hehcare products in iconic, sustainable packaging.</p>
                                                         <div className="card-2-bottom mt-20">
                                                             <div className="row">
                                                                 <div className="col-lg-6 col-6">
@@ -268,7 +268,7 @@ export default function BlogGrid() {
                                                         <Link legacyBehavior href="blog-details">
                                                             <a>
                                                                 <figure>
-                                                                    <img alt="jobBox" src="assets/imgs/page/homepage1/img-news2.png" />
+                                                                    <img  src="assets/imgs/page/homepage1/img-news2.png" />
                                                                 </figure>
                                                             </a>
                                                         </Link>
@@ -284,7 +284,7 @@ export default function BlogGrid() {
                                                                 <a>How To Write a Cover Letter (Plus Tips and Examples)</a>
                                                             </Link>
                                                         </h5>
-                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable healthcare company by creating high-quality healthcare products in iconic, sustainable packaging.</p>
+                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable hehcare company by creating high-quality hehcare products in iconic, sustainable packaging.</p>
                                                         <div className="card-2-bottom mt-20">
                                                             <div className="row">
                                                                 <div className="col-lg-6 col-6">
@@ -311,7 +311,7 @@ export default function BlogGrid() {
                                                         <Link legacyBehavior href="blog-details">
                                                             <a>
                                                                 <figure>
-                                                                    <img alt="jobBox" src="assets/imgs/page/homepage1/img-news3.png" />
+                                                                    <img  src="assets/imgs/page/homepage1/img-news3.png" />
                                                                 </figure>
                                                             </a>
                                                         </Link>
@@ -327,7 +327,7 @@ export default function BlogGrid() {
                                                                 <a>10 Best Skills To Include on a Resume in 2022</a>
                                                             </Link>
                                                         </h5>
-                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable healthcare company by creating high-quality healthcare products in iconic, sustainable packaging.</p>
+                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable hehcare company by creating high-quality hehcare products in iconic, sustainable packaging.</p>
                                                         <div className="card-2-bottom mt-20">
                                                             <div className="row">
                                                                 <div className="col-lg-6 col-6">
@@ -354,7 +354,7 @@ export default function BlogGrid() {
                                                         <Link legacyBehavior href="blog-details">
                                                             <a>
                                                                 <figure>
-                                                                    <img alt="jobBox" src="assets/imgs/page/blog/img1.png" />
+                                                                    <img  src="assets/imgs/page/blog/img1.png" />
                                                                 </figure>
                                                             </a>
                                                         </Link>
@@ -370,7 +370,7 @@ export default function BlogGrid() {
                                                                 <a>39 Strengths and Weaknesses To Discuss in a Job Interview</a>
                                                             </Link>
                                                         </h5>
-                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable healthcare company by creating high-quality healthcare products in iconic, sustainable packaging.</p>
+                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable hehcare company by creating high-quality hehcare products in iconic, sustainable packaging.</p>
                                                         <div className="card-2-bottom mt-20">
                                                             <div className="row">
                                                                 <div className="col-lg-6 col-6">
@@ -397,7 +397,7 @@ export default function BlogGrid() {
                                                         <Link legacyBehavior href="blog-details">
                                                             <a>
                                                                 <figure>
-                                                                    <img alt="jobBox" src="assets/imgs/page/blog/img2.png" />
+                                                                    <img  src="assets/imgs/page/blog/img2.png" />
                                                                 </figure>
                                                             </a>
                                                         </Link>
@@ -413,7 +413,7 @@ export default function BlogGrid() {
                                                                 <a>List of Weaknesses: 10 Things To Say in an Interview</a>
                                                             </Link>
                                                         </h5>
-                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable healthcare company by creating high-quality healthcare products in iconic, sustainable packaging.</p>
+                                                        <p className="mt-10 color-text-paragraph font-sm">Our mission is to create the world&amp;rsquo;s most sustainable hehcare company by creating high-quality hehcare products in iconic, sustainable packaging.</p>
                                                         <div className="card-2-bottom mt-20">
                                                             <div className="row">
                                                                 <div className="col-lg-6 col-6">
@@ -485,7 +485,7 @@ export default function BlogGrid() {
                                         <div className="widget_search mb-40">
                                             <div className="search-form">
                                                 <form action="#">
-                                                    <input type="text" placeholder="Search" />
+                                                    <input type="text" className="search-blog" placeholder="Pesquisar..." />
                                                     <button type="submit">
                                                         <i className="fi-rr-search" />
                                                     </button>
@@ -493,12 +493,12 @@ export default function BlogGrid() {
                                             </div>
                                         </div>
                                         <div className="sidebar-shadow sidebar-news-small">
-                                            <h5 className="sidebar-title">Trending Now</h5>
+                                            <h5 className="sidebar-title">Tendências</h5>
                                             <div className="post-list-small">
                                                 <div className="post-list-small-item d-flex align-items-center">
                                                     <figure className="thumb mr-15">
                                                         <a href="/blog-details">
-                                                            <img src="assets/imgs/page/blog/img-trending.png" alt="jobBox" />
+                                                            <img src="assets/imgs/page/blog/img-trending.png"  />
                                                         </a>
                                                     </figure>
                                                     <div className="content">
@@ -507,7 +507,7 @@ export default function BlogGrid() {
                                                         </h5>
                                                         <div className="post-meta text-muted d-flex align-items-center mb-15">
                                                             <div className="author d-flex align-items-center mr-20">
-                                                                <img alt="jobBox" src="assets/imgs/page/homepage1/user1.png" />
+                                                                <img  src="assets/imgs/page/homepage1/user1.png" />
                                                                 <span>Sugar Rosie</span>
                                                             </div>
                                                         </div>
@@ -516,7 +516,115 @@ export default function BlogGrid() {
                                                 <div className="post-list-small-item d-flex align-items-center">
                                                     <figure className="thumb mr-15">
                                                         <a href="/blog-details">
-                                                            <img src="assets/imgs/page/blog/gallery1.png" alt />
+                                                            <img src="assets/imgs/page/blog/img-trending.png"  />
+                                                        </a>
+                                                    </figure>
+                                                    <div className="content">
+                                                        <h5>
+                                                            <a href="/blog-details">How to get better agents in New York, USA</a>
+                                                        </h5>
+                                                        <div className="post-meta text-muted d-flex align-items-center mb-15">
+                                                            <div className="author d-flex align-items-center mr-20">
+                                                                <img  src="assets/imgs/page/homepage1/user1.png" />
+                                                                <span>Sugar Rosie</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="post-list-small-item d-flex align-items-center">
+                                                    <figure className="thumb mr-15">
+                                                        <a href="/blog-details">
+                                                            <img src="assets/imgs/page/blog/img-trending.png"  />
+                                                        </a>
+                                                    </figure>
+                                                    <div className="content">
+                                                        <h5>
+                                                            <a href="/blog-details">How to get better agents in New York, USA</a>
+                                                        </h5>
+                                                        <div className="post-meta text-muted d-flex align-items-center mb-15">
+                                                            <div className="author d-flex align-items-center mr-20">
+                                                                <img  src="assets/imgs/page/homepage1/user1.png" />
+                                                                <span>Sugar Rosie</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="post-list-small-item d-flex align-items-center">
+                                                    <figure className="thumb mr-15">
+                                                        <a href="/blog-details">
+                                                            <img src="assets/imgs/page/blog/img-trending.png"  />
+                                                        </a>
+                                                    </figure>
+                                                    <div className="content">
+                                                        <h5>
+                                                            <a href="/blog-details">How to get better agents in New York, USA</a>
+                                                        </h5>
+                                                        <div className="post-meta text-muted d-flex align-items-center mb-15">
+                                                            <div className="author d-flex align-items-center mr-20">
+                                                                <img  src="assets/imgs/page/homepage1/user1.png" />
+                                                                <span>Sugar Rosie</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="post-list-small-item d-flex align-items-center">
+                                                    <figure className="thumb mr-15">
+                                                        <a href="/blog-details">
+                                                            <img src="assets/imgs/page/blog/img-trending.png"  />
+                                                        </a>
+                                                    </figure>
+                                                    <div className="content">
+                                                        <h5>
+                                                            <a href="/blog-details">How to get better agents in New York, USA</a>
+                                                        </h5>
+                                                        <div className="post-meta text-muted d-flex align-items-center mb-15">
+                                                            <div className="author d-flex align-items-center mr-20">
+                                                                <img  src="assets/imgs/page/homepage1/user1.png" />
+                                                                <span>Sugar Rosie</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="post-list-small-item d-flex align-items-center">
+                                                    <figure className="thumb mr-15">
+                                                        <a href="/blog-details">
+                                                            <img src="assets/imgs/page/blog/img-trending.png"  />
+                                                        </a>
+                                                    </figure>
+                                                    <div className="content">
+                                                        <h5>
+                                                            <a href="/blog-details">How to get better agents in New York, USA</a>
+                                                        </h5>
+                                                        <div className="post-meta text-muted d-flex align-items-center mb-15">
+                                                            <div className="author d-flex align-items-center mr-20">
+                                                                <img  src="assets/imgs/page/homepage1/user1.png" />
+                                                                <span>Sugar Rosie</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="post-list-small-item d-flex align-items-center">
+                                                    <figure className="thumb mr-15">
+                                                        <a href="/blog-details">
+                                                            <img src="assets/imgs/page/blog/img-trending.png"  />
+                                                        </a>
+                                                    </figure>
+                                                    <div className="content">
+                                                        <h5>
+                                                            <a href="/blog-details">How to get better agents in New York, USA</a>
+                                                        </h5>
+                                                        <div className="post-meta text-muted d-flex align-items-center mb-15">
+                                                            <div className="author d-flex align-items-center mr-20">
+                                                                <img  src="assets/imgs/page/homepage1/user1.png" />
+                                                                <span>Sugar Rosie</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="post-list-small-item d-flex align-items-center">
+                                                    <figure className="thumb mr-15">
+                                                        <a href="/blog-details">
+                                                            <img src="assets/imgs/page/blog/gallery1.png"  />
                                                         </a>
                                                     </figure>
                                                     <div className="content">
@@ -525,7 +633,7 @@ export default function BlogGrid() {
                                                         </h5>
                                                         <div className="post-meta text-muted d-flex align-items-center mb-15">
                                                             <div className="author d-flex align-items-center mr-20">
-                                                                <img alt="jobBox" src="assets/imgs/page/homepage1/user3.png" />
+                                                                <img  src="assets/imgs/page/homepage1/user3.png" />
                                                                 <span>Harding</span>
                                                             </div>
                                                             <div className="date">
@@ -537,7 +645,7 @@ export default function BlogGrid() {
                                                 <div className="post-list-small-item d-flex align-items-center">
                                                     <figure className="thumb mr-15">
                                                         <a href="/blog-details">
-                                                            <img src="assets/imgs/page/blog/gallery2.png" alt />
+                                                            <img src="assets/imgs/page/blog/gallery2.png"  />
                                                         </a>
                                                     </figure>
                                                     <div className="content">
@@ -546,7 +654,7 @@ export default function BlogGrid() {
                                                         </h5>
                                                         <div className="post-meta text-muted d-flex align-items-center mb-15">
                                                             <div className="author d-flex align-items-center mr-20">
-                                                                <img alt="jobBox" src="assets/imgs/page/homepage1/user2.png" />
+                                                                <img  src="assets/imgs/page/homepage1/user2.png" />
                                                                 <span>Steven</span>
                                                             </div>
                                                             <div className="date">
@@ -558,7 +666,7 @@ export default function BlogGrid() {
                                                 <div className="post-list-small-item d-flex align-items-center">
                                                     <figure className="thumb mr-15">
                                                         <a href="/blog-details">
-                                                            <img src="assets/imgs/page/blog/gallery4.png" alt />
+                                                            <img src="assets/imgs/page/blog/gallery4.png"  />
                                                         </a>
                                                     </figure>
                                                     <div className="content">
@@ -567,7 +675,7 @@ export default function BlogGrid() {
                                                         </h5>
                                                         <div className="post-meta text-muted d-flex align-items-center mb-15">
                                                             <div className="author d-flex align-items-center mr-20">
-                                                                <img alt="jobBox" src="assets/imgs/page/homepage1/user3.png" />
+                                                                <img  src="assets/imgs/page/homepage1/user3.png" />
                                                                 <span>Merias</span>
                                                             </div>
                                                             <div className="date">
@@ -579,7 +687,7 @@ export default function BlogGrid() {
                                                 <div className="post-list-small-item d-flex align-items-center">
                                                     <figure className="thumb mr-15">
                                                         <a href="/blog-details">
-                                                            <img src="assets/imgs/page/blog/gallery5.png" alt />
+                                                            <img src="assets/imgs/page/blog/gallery5.png"/>
                                                         </a>
                                                     </figure>
                                                     <div className="content">
@@ -589,7 +697,7 @@ export default function BlogGrid() {
                                                         </h5>
                                                         <div className="post-meta text-muted d-flex align-items-center mb-15">
                                                             <div className="author d-flex align-items-center mr-20">
-                                                                <img alt="jobBox" src="assets/imgs/page/homepage1/user1.png" />
+                                                                <img src="assets/imgs/page/homepage1/user1.png" />
                                                                 <span>Rosie</span>
                                                             </div>
                                                             <div className="date">
@@ -600,102 +708,6 @@ export default function BlogGrid() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="sidebar-shadow sidebar-news-small">
-                                            <h5 className="sidebar-title">Gallery</h5>
-                                            <div className="post-list-small">
-                                                <ul className="gallery-3">
-                                                    <li>
-                                                        <Link legacyBehavior href="#">
-                                                            <a>
-                                                                <img src="assets/imgs/page/blog/gallery1.png" />
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link legacyBehavior href="#">
-                                                            <a>
-                                                                <img src="assets/imgs/page/blog/gallery2.png" />
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link legacyBehavior href="#">
-                                                            <a>
-                                                                <img src="assets/imgs/page/blog/gallery3.png" />
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link legacyBehavior href="#">
-                                                            <a>
-                                                                <img src="assets/imgs/page/blog/gallery4.png" />
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link legacyBehavior href="#">
-                                                            <a>
-                                                                <img src="assets/imgs/page/blog/gallery5.png" />
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link legacyBehavior href="#">
-                                                            <a>
-                                                                <img src="assets/imgs/page/blog/gallery6.png" />
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link legacyBehavior href="#">
-                                                            <a>
-                                                                <img src="assets/imgs/page/blog/gallery7.png" />
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link legacyBehavior href="#">
-                                                            <a>
-                                                                <img src="assets/imgs/page/blog/gallery8.png" />
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link legacyBehavior href="#">
-                                                            <a>
-                                                                <img src="assets/imgs/page/blog/gallery9.png" />
-                                                            </a>
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className="section-box mt-50 mb-20">
-                        <div className="container">
-                            <div className="box-newsletter">
-                                <div className="row">
-                                    <div className="col-xl-3 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/template/newsletter-left.png" alt="joxBox" />
-                                    </div>
-                                    <div className="col-lg-12 col-xl-6 col-12">
-                                        <h2 className="text-md-newsletter text-center">
-                                            New Things Will Always
-                                            <br /> Update Regularly
-                                        </h2>
-                                        <div className="box-form-newsletter mt-40">
-                                            <form className="form-newsletter">
-                                                <input className="input-newsletter" type="text" placeholder="Enter your email here" />
-                                                <button className="btn btn-default font-heading icon-send-letter">Subscribe</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-3 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/template/newsletter-right.png" alt="joxBox" />
                                     </div>
                                 </div>
                             </div>
