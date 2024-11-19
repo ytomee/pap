@@ -1240,7 +1240,7 @@ export default function CompaniesGrid() {
                                         </div>
                                         <div className="box-register-company mt-40">
                                             <div className="form-register-company">Preencha o formulário com os dados necessários! <i className="fa-solid fa-arrow-right ml-10"></i></div>
-                                            <div className="form-register-company"><a><i className="fa-solid fa-clipboard-list mr-10"></i>Formulário</a></div>
+                                            <div className="form-register-company"><a><i className="fa-solid fa-clipboard-list mr-10"></i><span>Formulário</span></a></div>
                                         </div>
                                     </div>
                                 </div>

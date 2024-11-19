@@ -1339,7 +1339,6 @@ span.btn {
   border-radius: 4px;
   border: 1px solid #E0E6F6;
   width: 100%;
-  line-height: 53px;
   display: flex;
   align-content: center;
   align-items: center;
@@ -1347,10 +1346,16 @@ span.btn {
   margin-bottom: 15px;
 }
 .social-login img {
-  margin-right: 4px;
+  margin-right: 8px;
+  width: 20px; 
+}
+.social-icons-group{
+  display: flex;
+  gap: 10px;
 }
 .social-login:hover {
   color: var(--red-500);
+  border: 1px solid var(--red-500);
   box-shadow: 0px 10px 20px -5px rgba(10, 42, 105, 0.06);
 }
 
@@ -2671,13 +2676,14 @@ ul li:last-child .card-list-4 {
   background-color: var(--neutral-100);
   border-radius: 10px;
   padding: 15px 30px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .form-register-company a{
   font-weight: 700;
 }
 .form-register-company:nth-child(2){
   cursor: pointer;
+  font-size: 20px;
 }
 .box-newsletter .box-form-newsletter {
   background: #ffffff;
@@ -6954,7 +6960,9 @@ ul li:last-child .card-list-4 {
   color: #4F5E64;
   font-weight: 500;
 }
-
+.text-small a{
+  color: var(--red-500)!important;
+}
 .float-right {
   float: right;
 }
