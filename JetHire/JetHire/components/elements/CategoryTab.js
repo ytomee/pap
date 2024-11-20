@@ -92,7 +92,7 @@ const CategoryTab = () => {
                                                 <span className="text-muted">/Hour</span>
                                             </div>
                                             <div className="col-lg-5 col-5 text-end">
-                                                <div className="btn btn-apply-now" data-bs-toggle="modal" data-bs-target="#ModalApplyJobForm">
+                                                <div className="btn btn-apply-now">
                                                     Apply now
                                                 </div>
                                             </div>
