@@ -4,6 +4,7 @@ import Link from "next/link";
 import Layout from "../components/Layout/Layout";
 import BlogSlider from "../components/sliders/Blog";
 import CategoryTab from "../components/elements/CategoryTab";
+import CategorySlider from "../components/sliders/Category";
 
 export default function Index5() {
     return (
@@ -64,50 +65,15 @@ export default function Index5() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box overflow-visible mt-10 mb-60">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-4 col-sm-6 col-12">
-                                    <div className="text-center">
-                                        <h1 className="color-brand-2 ">
-                                            <span className="count">25</span>
-                                            <span> +</span>
-                                        </h1>
-                                        <h5 className="banner-info-description">Completed Cases</h5>
-                                        <p className="font-sm color-text-paragraph mt-10">
-                                            We always provide people a <br className="d-none d-lg-block" />
-                                            complete solution upon focused of
-                                            <br className="d-none d-lg-block" /> any business
-                                        </p>
-                                    </div>
+                    <section className="section-box">
+                        <div className="section-box wow animate__animated animate__fadeIn">
+                            <div className="container">
+                                <div>
+                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Procurar por categoria</h2>
+                                    <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Find the job that’s perfect for you. about 800+ new jobs everyday</p>
                                 </div>
-                                <div className="col-lg-4 col-sm-6 col-12">
-                                    <div className="text-center">
-                                        <h1 className="color-brand-2">
-                                            <span className="count">17</span>
-                                            <span> +</span>
-                                        </h1>
-                                        <h5 className="banner-info-description">Our Office</h5>
-                                        <p className="font-sm color-text-paragraph mt-10">
-                                            We always provide people a <br className="d-none d-lg-block" />
-                                            complete solution upon focused of <br className="d-none d-lg-block" />
-                                            any business
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-12">
-                                    <div className="text-center">
-                                        <h1 className="color-brand-2">
-                                            <span className="count">86</span>
-                                            <span> +</span>
-                                        </h1>
-                                        <h5 className="banner-info-description">Skilled People</h5>
-                                        <p className="font-sm color-text-paragraph mt-10">
-                                            We always provide people a <br className="d-none d-lg-block" />
-                                            complete solution upon focused of <br className="d-none d-lg-block" />
-                                            any business
-                                        </p>
-                                    </div>
+                                <div className="box-swiper mt-50">
+                                    <CategorySlider />
                                 </div>
                             </div>
                         </div>
@@ -177,19 +143,31 @@ export default function Index5() {
                         </div>
                     </div>
                     </section>
-                    <section className="section-box mt-80 mb-30 bg-border-3 pt-100 pb-100">
+                    <section className="section-box overflow-visible mt-130 mb-130">
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-6">
-                                    <img className="bdrd-10" src="assets/imgs/page/homepage5/img-profile.png" alt="jobBox" />
+                                <div className="col-lg-6 col-sm-12">
+                                    <div className="box-image-job">
+                                        <img className="img-job-1" alt="jobBox" src="assets/imgs/page/homepage1/img-chart.png" />
+                                        <img className="img-job-2" alt="jobBox" src="assets/imgs/page/homepage1/controlcard.png" />
+                                        <figure className="wow animate__animated animate__fadeIn">
+                                            <img alt="jobBox" src="assets/imgs/page/homepage1/img1.png" />
+                                        </figure>
+                                    </div>
                                 </div>
-                                <div className="col-lg-6">
-                                    <div className="pl-30">
-                                        <h5 className="color-brand-2 mb-15 mt-15">Não percas esta oportunidade</h5>
-                                        <h1 className="color-brand-1 mt-0 mb-15">Cria já o teu perfil</h1>
-                                        <p className="font-lg color-text-paragraph-2">Ao partilhares as tuas habilidades, experiências e aspirações, estarás um passo mais próximo de encontrar a oportunidade de trabalho ideal para ti. Não deixes para amanhã o que podes fazer hoje!</p>
-                                        <div className="mt-20 d-flex">
-                                            <a href="page-register" className="btn btn-default">Criar conta</a>
+                                <div className="col-lg-6 col-sm-12">
+                                    <div className="content-job-inner">
+                                        <span className="color-text-mutted text-32">Millions Of Jobs. </span>
+                                        <h2 className="text-52 wow animate__animated animate__fadeInUp">
+                                            Find The One That’s <span className="color-brand-2">Right</span> For You
+                                        </h2>
+                                        <div className="mt-40 pr-50 text-md-lh28 wow animate__animated animate__fadeInUp">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 600,000 companies worldwide. The right job is out there.</div>
+                                        <div className="mt-40 d-flex">
+                                            <div className="wow animate__animated animate__fadeInUp">
+                                                <Link legacyBehavior href="/jobs-grid">
+                                                    <a className="btn btn-default">Search Jobs</a>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -543,6 +521,25 @@ export default function Index5() {
                                             <Link legacyBehavior href="/blog-grid">
                                                 <a className="btn btn-brand-1 mt--30 hover-up">Ver mais</a>
                                             </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section className="section-box mt-80 mb-30 bg-border-3 pt-100 pb-100">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <img className="bdrd-10" src="assets/imgs/page/homepage5/img-profile.png" alt="jobBox" />
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="pl-30">
+                                        <h5 className="color-brand-2 mb-15 mt-15">Não percas esta oportunidade</h5>
+                                        <h1 className="color-brand-1 mt-0 mb-15">Cria já o teu perfil</h1>
+                                        <p className="font-lg color-text-paragraph-2">Ao partilhares as tuas habilidades, experiências e aspirações, estarás um passo mais próximo de encontrar a oportunidade de trabalho ideal para ti. Não deixes para amanhã o que podes fazer hoje!</p>
+                                        <div className="mt-20 d-flex">
+                                            <a href="page-register" className="btn btn-default">Criar conta</a>
                                         </div>
                                     </div>
                                 </div>

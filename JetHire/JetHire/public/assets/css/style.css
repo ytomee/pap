@@ -1571,7 +1571,7 @@ label {
   max-width: 100%;
 }
 .box-swiper .swiper-container .item-logo:hover {
-  border: 1px solid #B4C0E0;
+  border: 1px solid var(--red-500);
   box-shadow: 0px 10px 20px -5px rgba(10, 42, 105, 0.06);
 }
 .box-swiper .swiper-container .item-logo .image-left {
