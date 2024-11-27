@@ -70,10 +70,10 @@ export default function Index5() {
                             <div className="container">
                                 <div>
                                     <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Procurar por categoria</h2>
-                                    <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Find the job that’s perfect for you. about 800+ new jobs everyday</p>
+                                    <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Encontra o trabalho ideal para ti. Está atento/a a todas as oportunidades!</p>
                                 </div>
                                 <div className="box-swiper mt-50">
-                                    <CategorySlider />
+                                    <CategorySlider/>
                                 </div>
                             </div>
                         </div>
@@ -157,15 +157,15 @@ export default function Index5() {
                                 </div>
                                 <div className="col-lg-6 col-sm-12">
                                     <div className="content-job-inner">
-                                        <span className="color-text-mutted text-32">Millions Of Jobs. </span>
+                                        <span className="color-text-mutted text-32">Tanto trabalho. </span>
                                         <h2 className="text-52 wow animate__animated animate__fadeInUp">
-                                            Find The One That’s <span className="color-brand-2">Right</span> For You
+                                            Encontra o trabalho <span className="color-brand-2">Certo</span> para ti.
                                         </h2>
-                                        <div className="mt-40 pr-50 text-md-lh28 wow animate__animated animate__fadeInUp">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 600,000 companies worldwide. The right job is out there.</div>
+                                        <div className="mt-40 pr-50 text-md-lh28 wow animate__animated animate__fadeInUp">Descobre todas as oportunidades à tua espera. Explora as ofertas disponíveis. Aprende mais sobre o mundo do trabalho, desenvolve-te e conquista o teu futuro. Tudo isto, de forma simples e acessível, na <span>JetHire</span>.</div>
                                         <div className="mt-40 d-flex">
                                             <div className="wow animate__animated animate__fadeInUp">
                                                 <Link legacyBehavior href="/jobs-grid">
-                                                    <a className="btn btn-default">Search Jobs</a>
+                                                    <a href="jobs-list" className="btn btn-default"><i className="fa-solid fa-user mr-10"></i>Procurar trabalho</a>
                                                 </Link>
                                             </div>
                                         </div>

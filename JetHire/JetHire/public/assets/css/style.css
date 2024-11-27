@@ -702,7 +702,7 @@ h6 {
 }
 
 .color-text-mutted {
-  color: #A0ABB8;
+  color: var(--neutral-400);
 }
 
 .color-white {
@@ -712,7 +712,9 @@ h6 {
 .color-orange {
   color: #F58A3C !important;
 }
-
+.text-md-lh28 span {
+  font-weight: 900;
+}
 .text-14 {
   font-size: 14px;
   line-height: 14px;
@@ -731,7 +733,7 @@ h6 {
   font-size: 52px;
   line-height: 66px;
   font-weight: 800;
-  color: #05264E;
+  color: var(--red-900);
 }
 
 .text-42 {
@@ -1577,6 +1579,9 @@ label {
 .box-swiper .swiper-container .item-logo .image-left {
   min-width: 50px;
   padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .box-swiper .swiper-container .item-logo .text-info-right h4 {
   font-size: 16px;
