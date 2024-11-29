@@ -134,22 +134,22 @@ export default function Index5() {
                     </section>
                     <section className="section-box mt-90">
                     <div className="container">
-                        <div className="text-start">
-                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Ofertas mais recentes</h2>
+                        <div className="text-center">
+                            <h2 className="section-title wow animate__animated animate__fadeInUp">Ofertas mais recentes</h2>
                             <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Encontra as ofertas de trabalho mais recentes. </p>
                         </div>
-                        <div className="mt-30">
+                        <div className="mt-50">
                             <CategoryTab />
                         </div>
                     </div>
                     </section>
-                    <section className="section-box overflow-visible mt-130 mb-130">
+                    <section className="section-box overflow-visible mt-150 mb-150">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-6 col-sm-12">
                                     <div className="box-image-job">
-                                        <img className="img-job-1" alt="jobBox" src="assets/imgs/page/homepage1/img-chart.png" />
-                                        <img className="img-job-2" alt="jobBox" src="assets/imgs/page/homepage1/controlcard.png" />
+                                        {/* <img className="img-job-1" alt="jobBox" src="assets/imgs/page/homepage1/img-chart.png" />
+                                        <img className="img-job-2" alt="jobBox" src="assets/imgs/page/homepage1/controlcard.png" /> */}
                                         <figure className="wow animate__animated animate__fadeIn">
                                             <img alt="jobBox" src="assets/imgs/page/homepage1/img1.png" />
                                         </figure>
@@ -157,7 +157,7 @@ export default function Index5() {
                                 </div>
                                 <div className="col-lg-6 col-sm-12">
                                     <div className="content-job-inner">
-                                        <span className="color-text-mutted text-32">Tanto trabalho. </span>
+                                        <span className="color-text-mutted text-32">Muita oferta. </span>
                                         <h2 className="text-52 wow animate__animated animate__fadeInUp">
                                             Encontra o trabalho <span className="color-brand-2">Certo</span> para ti.
                                         </h2>
@@ -519,7 +519,7 @@ export default function Index5() {
                                     <div className="col-lg-12">
                                         <div className="text-center">
                                             <Link legacyBehavior href="/blog-grid">
-                                                <a className="btn btn-brand-1 mt--30 hover-up">Ver mais</a>
+                                                <a className="btn btn-brand-1 mt--30 hover-up"><i className="fa-solid fa-user-group mr-10"></i>Ver mais</a>
                                             </Link>
                                         </div>
                                     </div>
