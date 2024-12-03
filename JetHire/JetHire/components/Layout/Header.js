@@ -1,8 +1,11 @@
 ﻿/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
+import { signOut , useSession } from 'next-auth/react';
 
 const Header = ({handleOpen,handleRemove,openClass}) => {
+    const {status, data: session} = useSession();
     return (
         <>
             <header className="header sticky-bar">
@@ -39,9 +42,31 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                         </div>
                         <div className="header-right">
                             <div className="block-signin">
-                                <Link legacyBehavior href="page-register"><a className="">Criar conta</a></Link>
+                                {status === "authenticated" ? (
+                                    <ul className="main-menu">
+                                        <li className="has-children">
+                                        <a><span className="mr-10">{session?.user?.name}</span><Image src={session?.user?.image} height={35} width={35} style={{ borderRadius: '50%' }}/></a>
+                                            <ul className="sub-menu">
+                                                <li>
+                                                    <button><i className="fa-solid fa-user mr-5"></i>Ver perfil</button>
+                                                </li>
+                                                <li>
+                                                    <button><i className="fa-solid fa-gear mr-5"></i>Definições</button>
+                                                </li>
+                                                <li>
+                                                    <button onClick={() => signOut()}>
+                                                        <i className="fa-solid fa-person-running mr-5"></i>Sair</button>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                ) : (
+                                <>
+                                    <Link legacyBehavior href="page-register"><a className="">Criar conta</a></Link>
 
-                                <Link legacyBehavior href="page-signin"><a className="btn btn-default btn-shadow ml-40">Login</a></Link>
+                                    <Link legacyBehavior href="page-signin"><a className="btn btn-default btn-shadow ml-40">Login</a></Link>
+                                </>
+                                )}
                             </div>
                         </div>
                     </div>
