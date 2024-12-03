@@ -1,5 +1,8 @@
+"use client";
+
 import Layout from "../components/Layout/Layout";
 import Link from "next/link";
+import { signIn } from 'next-auth/react';
 
 export default function Register() {
     return (
@@ -14,7 +17,8 @@ export default function Register() {
                                     <h2 className="mt-10 mb-5 text-brand-1">Bem-Vindo!</h2>
                                     <p className="font-sm text-muted mb-30">Acesso a todas as funcionalidades. <br></br> Sem necessidade de cartão de crédito.</p>
                                     <div className="social-icons-group">
-                                        <button className="btn social-login hover-up mb-20">
+                                        <button onClick={() => signIn("google")} 
+                                        className="btn social-login hover-up mb-20">
                                             <img src="assets/imgs/template/icons/icon-google.svg"/>
                                             <strong>Google</strong>
                                         </button>

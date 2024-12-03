@@ -539,7 +539,7 @@ export default function Index5() {
                                         <h1 className="color-brand-1 mt-0 mb-15">Cria já o teu perfil</h1>
                                         <p className="font-lg color-text-paragraph-2">Ao partilhares as tuas habilidades, experiências e aspirações, estarás um passo mais próximo de encontrar a oportunidade de trabalho ideal para ti. Não deixes para amanhã o que podes fazer hoje!</p>
                                         <div className="mt-20 d-flex">
-                                            <a href="page-register" className="btn btn-default">Criar conta</a>
+                                            <a href="page-register" className="btn btn-default"><i className="fa-solid fa-feather mr-10"></i>Criar conta</a>
                                         </div>
                                     </div>
                                 </div>
@@ -560,7 +560,7 @@ export default function Index5() {
                                 </div>
                                 <div className="text-center">
                                     <Link legacyBehavior href="/blog-grid">
-                                        <a className="btn btn-brand-1 mt--30 hover-up"><i className="fa-brands fa-blogger-b mr-10"></i>Ir para o blog</a>
+                                        <a className="btn btn-brand-1 hover-up"><i className="fa-brands fa-blogger-b mr-10"></i>Ir para o blog</a>
                                     </Link>
                                 </div>
                             </div>

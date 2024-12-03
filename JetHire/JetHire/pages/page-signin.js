@@ -1,7 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
 import Layout from "../components/Layout/Layout";
 import Link from "next/link";
+import { signIn } from 'next-auth/react';
 
 export default function Signin() {
     return (
@@ -15,7 +18,8 @@ export default function Signin() {
                                     <h1 className="mt-10 mb-5 text-brand-1">Login</h1>
                                     <p className="font-sm text-brand-2 mb-20">Bem-vindo, outra vez! </p>
                                     <div className="social-icons-group">
-                                        <button className="btn social-login hover-up mb-20">
+                                        <button onClick={() => signIn("google")}
+                                        className="btn social-login hover-up mb-20">
                                             <img src="assets/imgs/template/icons/icon-google.svg"/>
                                             <strong>Google</strong>
                                         </button>
