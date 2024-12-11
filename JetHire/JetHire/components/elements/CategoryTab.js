@@ -151,7 +151,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-2.png" alt="jobBox" />
                                     </div>
@@ -203,7 +203,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-3.png" alt="jobBox" />
                                     </div>
@@ -259,7 +259,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-4.png" alt="jobBox" />
                                     </div>
@@ -366,7 +366,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-2.png" alt="jobBox" />
                                     </div>
@@ -418,7 +418,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-3.png" alt="jobBox" />
                                     </div>
@@ -474,7 +474,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-4.png" alt="jobBox" />
                                     </div>
@@ -530,7 +530,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-7.png" alt="jobBox" />
                                     </div>
@@ -582,7 +582,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-4.png" alt="jobBox" />
                                     </div>
@@ -634,7 +634,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-5.png" alt="jobBox" />
                                     </div>
@@ -682,7 +682,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-8.png" alt="jobBox" />
                                     </div>
@@ -742,7 +742,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-4.png" alt="jobBox" />
                                     </div>
@@ -794,7 +794,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-5.png" alt="jobBox" />
                                     </div>
@@ -842,7 +842,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-6.png" alt="jobBox" />
                                     </div>
@@ -894,7 +894,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-7.png" alt="jobBox" />
                                     </div>
@@ -950,7 +950,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-7.png" alt="jobBox" />
                                     </div>
@@ -1002,7 +1002,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-8.png" alt="jobBox" />
                                     </div>
@@ -1058,7 +1058,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-4.png" alt="jobBox" />
                                     </div>
@@ -1110,7 +1110,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-5.png" alt="jobBox" />
                                     </div>
@@ -1162,7 +1162,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-8.png" alt="jobBox" />
                                     </div>
@@ -1218,7 +1218,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-1.png" alt="jobBox" />
                                     </div>
@@ -1274,7 +1274,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-4.png" alt="jobBox" />
                                     </div>
@@ -1326,7 +1326,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-5.png" alt="jobBox" />
                                     </div>
@@ -1378,7 +1378,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-8.png" alt="jobBox" />
                                     </div>
@@ -1434,7 +1434,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-1.png" alt="jobBox" />
                                     </div>
@@ -1490,7 +1490,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-2.png" alt="jobBox" />
                                     </div>
@@ -1542,7 +1542,7 @@ const CategoryTab = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
                             <div className="card-grid-2 hover-up">
                                 <div className="card-grid-2-image-left">
-                                    <span className="flash" />
+                                    
                                     <div className="image-box">
                                         <img src="assets/imgs/brands/brand-3.png" alt="jobBox" />
                                     </div>

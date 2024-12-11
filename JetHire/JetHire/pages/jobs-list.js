@@ -606,13 +606,13 @@ export default function JobList() {
                                                 </h5>
                                             </div>
                                             <div className="filter-block mb-20">
-                                                <h5 className="medium-heading mb-15">Indústria</h5>
+                                                <h5 className="medium-heading mb-15">Área</h5>
                                                 <div className="form-group">
                                                     <ul className="list-checkbox">
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Tecnologia</span>
+                                                                <span className="text-small">Desenvolvimento</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">12</span>
@@ -620,7 +620,7 @@ export default function JobList() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Criatividade</span>
+                                                                <span className="text-small">Redes</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">23</span>
@@ -628,7 +628,7 @@ export default function JobList() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Ciências</span>
+                                                                <span className="text-small">Cibersegurança</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">43</span>
@@ -636,7 +636,7 @@ export default function JobList() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Atendimento</span>
+                                                                <span className="text-small">Dados & IA</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">65</span>
@@ -644,7 +644,7 @@ export default function JobList() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Gestão</span>
+                                                                <span className="text-small">Suporte Técnico</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">76</span>
@@ -652,7 +652,47 @@ export default function JobList() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Operador</span>
+                                                                <span className="text-small">Hardware & IoT</span>
+                                                                <span className="checkmark" />
+                                                            </label>
+                                                            <span className="number-item">76</span>
+                                                        </li>
+                                                        <li>
+                                                            <label className="cb-container">
+                                                                <input type="checkbox" />
+                                                                <span className="text-small">Cloud</span>
+                                                                <span className="checkmark" />
+                                                            </label>
+                                                            <span className="number-item">76</span>
+                                                        </li>
+                                                        <li>
+                                                            <label className="cb-container">
+                                                                <input type="checkbox" />
+                                                                <span className="text-small">Marketing</span>
+                                                                <span className="checkmark" />
+                                                            </label>
+                                                            <span className="number-item">76</span>
+                                                        </li>
+                                                        <li>
+                                                            <label className="cb-container">
+                                                                <input type="checkbox" />
+                                                                <span className="text-small">UI & UX</span>
+                                                                <span className="checkmark" />
+                                                            </label>
+                                                            <span className="number-item">76</span>
+                                                        </li>
+                                                        <li>
+                                                            <label className="cb-container">
+                                                                <input type="checkbox" />
+                                                                <span className="text-small">Consultoria</span>
+                                                                <span className="checkmark" />
+                                                            </label>
+                                                            <span className="number-item">76</span>
+                                                        </li>
+                                                        <li>
+                                                            <label className="cb-container">
+                                                                <input type="checkbox" />
+                                                                <span className="text-small">E-Commerce</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">76</span>
@@ -807,14 +847,6 @@ export default function JobList() {
                                                     <ul className="list-checkbox">
                                                         <li>
                                                             <label className="cb-container">
-                                                                <input type="checkbox" defaultChecked="checked" />
-                                                                <span className="text-small">All</span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">78</span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
                                                                 <input type="checkbox" />
                                                                 <span className="text-small">1 dia</span>
                                                                 <span className="checkmark" />
@@ -863,7 +895,7 @@ export default function JobList() {
                                                         <li>
                                                             <label className="cb-container">
                                                                 <input type="checkbox" />
-                                                                <span className="text-small">Trabalhos remotos</span>
+                                                                <span className="text-small">Estágio</span>
                                                                 <span className="checkmark" />
                                                             </label>
                                                             <span className="number-item">78</span>

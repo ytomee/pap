@@ -138,7 +138,7 @@ export default function Index5() {
                             <h2 className="section-title wow animate__animated animate__fadeInUp">Ofertas mais recentes</h2>
                             <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Encontra as ofertas de trabalho mais recentes. </p>
                         </div>
-                        <div className="mt-50">
+                        <div className="mt-30">
                             <CategoryTab />
                         </div>
                     </div>
