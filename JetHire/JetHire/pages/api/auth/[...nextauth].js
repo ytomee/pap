@@ -13,8 +13,8 @@ const authOptions = {
     ],
     callbacks: {
         async signIn({user, account}) {
-            console.log("User: ", user);
-            console.log("Account: ", account);
+            // console.log("User: ", user);
+            // console.log("Account: ", account);
 
             if(account.provider === 'google') {
                 const {name, email} = user;

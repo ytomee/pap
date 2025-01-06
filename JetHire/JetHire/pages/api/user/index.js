@@ -4,7 +4,6 @@ import User from "../../../models/user";
 export default async function handler(req, res) {
     if (req.method === "POST") {
         try {
-            // Lê o body da request no Pages Router
             const { name, email } = req.body;
 
             await connectMongoDB();
@@ -16,7 +15,6 @@ export default async function handler(req, res) {
             res.status(500).json({ message: "Erro no servidor" });
         }
     } else {
-        // Responde com 405 para métodos não permitidos
         res.setHeader("Allow", ["POST"]);
         res.status(405).json({ message: `Método ${req.method} não permitido` });
     }

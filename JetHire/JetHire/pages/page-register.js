@@ -2,9 +2,63 @@
 
 import Layout from "../components/Layout/Layout";
 import Link from "next/link";
+import { useState } from "react";
+
 import { signIn } from 'next-auth/react';
 
 export default function Register() {
+
+    const [formData, setFormData] = useState({
+        fullname: "",
+        email: "",
+        password: "",
+        rePassword: "",
+      });
+      const [errorMessage, setErrorMessage] = useState("");
+      const [successMessage, setSuccessMessage] = useState("");
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        const { fullname, email, password, rePassword } = formData;
+    
+        // Validação básica
+        if (password !== rePassword) {
+          return setErrorMessage("As palavras-passe não coincidem.");
+        }
+    
+        try {
+          const response = await fetch("/api/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              type: "user",
+              name: fullname,
+              email,
+              password,
+            }),
+          });
+    
+          const data = await response.json();
+          if (response.ok) {
+            setSuccessMessage(data.message);
+            setErrorMessage("");
+            setFormData({ fullname: "", email: "",  password: "", rePassword: "" });
+          } else {
+            setErrorMessage(data.message);
+          }
+        } catch (error) {
+          setErrorMessage("Erro ao processar o registo.");
+        }
+      };    
+
     return (
         <>
             <Layout>
@@ -35,7 +89,9 @@ export default function Register() {
                                         <span>ou continuar com</span>
                                     </div>
                                 </div>
-                                <form className="login-register text-start mt-20" action="#">
+                                <form onSubmit={handleSubmit} className="login-register text-start mt-20" action="#" method="POST">
+                                    {errorMessage && <p className="text-danger">{errorMessage}</p>}
+                                    {successMessage && <p className="text-success">{successMessage}</p>}
                                     <div className="form-group">
                                         <label className="form-label" htmlFor="input-1">
                                             Nome Completo *
@@ -43,38 +99,86 @@ export default function Register() {
                                         <input className="form-control" id="input-1" type="text" required name="fullname" placeholder="Jet Hire" />
                                     </div>
                                     <div className="form-group">
-                                        <label className="form-label" htmlFor="input-2">
-                                            Email *
-                                        </label>
-                                        <input className="form-control" id="input-2" type="email" required name="emailaddress" placeholder="jethire@gmail.com" />
+                                    <label className="form-label" htmlFor="fullname">
+                                        Nome Completo *
+                                    </label>
+                                    <input
+                                        className="form-control"
+                                        id="fullname"
+                                        type="text"
+                                        name="fullname"
+                                        value={formData.fullname}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="Jet Hire"
+                                    />
+                                    </div>
+
+                                    <div className="form-group">
+                                    <label className="form-label" htmlFor="email">
+                                        Email *
+                                    </label>
+                                    <input
+                                        className="form-control"
+                                        id="email"
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="jethire@gmail.com"
+                                    />
+                                    </div>
+
+                                    {/* <div className="form-group">
+                                    <label className="form-label" htmlFor="user">
+                                        Nome de utilizador *
+                                    </label>
+                                    <input
+                                        className="form-control"
+                                        id="user"
+                                        type="text"
+                                        name="user"
+                                        value={formData.user}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="jethire"
+                                    />
+                                    </div> */}
+
+                                    <div className="form-group">
+                                    <label className="form-label" htmlFor="password">
+                                        Palavra-passe *
+                                    </label>
+                                    <input
+                                        className="form-control"
+                                        id="password"
+                                        type="password"
+                                        name="password"
+                                        value={formData.password}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="••••••••"
+                                    />
+                                    </div>
+
+                                    <div className="form-group">
+                                    <label className="form-label" htmlFor="rePassword">
+                                        Repita a palavra-passe *
+                                    </label>
+                                    <input
+                                        className="form-control"
+                                        id="rePassword"
+                                        type="password"
+                                        name="rePassword"
+                                        value={formData.rePassword}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="••••••••"
+                                    />
                                     </div>
                                     <div className="form-group">
-                                        <label className="form-label" htmlFor="input-3">
-                                            Nome de utilizador *
-                                        </label>
-                                        <input className="form-control" id="input-3" type="text" required name="username" placeholder="jethire" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label className="form-label" htmlFor="input-4">
-                                            Palavra-passe *
-                                        </label>
-                                        <input className="form-control" id="input-4" type="password" required name="password" placeholder="••••••••" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label className="form-label" htmlFor="input-5">
-                                            Repita a palavra-passe *
-                                        </label>
-                                        <input className="form-control" id="input-5" type="password" required name="re-password" placeholder="••••••••" />
-                                    </div>
-                                    <div className="login_footer form-group d-flex justify-content-between">
-                                        <label className="cb-container">
-                                            <input type="checkbox" />
-                                            <span className="text-small">Concordo com os <a>Termos &amp; Condições</a></span>
-                                            <span className="checkmark" />
-                                        </label>
-                                    </div>
-                                    <div className="form-group">
-                                        <button className="btn btn-brand-1 hover-up w-100" type="submit" name="login">
+                                        <button className="btn btn-brand-1 hover-up w-100" type="submit">
                                             Registar
                                         </button>
                                     </div>
