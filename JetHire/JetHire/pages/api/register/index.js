@@ -1,5 +1,6 @@
 import { connectMongoDB } from "../../../lib/mongodb";
 import { User } from "../../../models/user";
+import { Profile } from "../../../models/user";
 
 export default async function handler(req, res) {
     await connectMongoDB();
@@ -8,7 +9,7 @@ export default async function handler(req, res) {
         const { type, name, email, password } = req.body;
 
         try {
-            // Criação do utilizador
+            // Cria o utilizador
             const newUser = await User.create({
                 type,
                 name,
@@ -16,7 +17,33 @@ export default async function handler(req, res) {
                 password,
             });
 
-            return res.status(201).json({ success: true, message: "Utilizador registado com sucesso!", user: newUser });
+            const newProfile = await Profile.create({
+                userID: newUser._id,
+                name: newUser.name,
+                city: "",
+                country: "",
+                job: "",
+                aboutMe: "",
+                yearsExperience: "",
+                language: "",
+                educationLevel: "",
+                phone: "",
+                email: newUser.email,
+                address: "",
+                site: "",
+                github: "",
+                linkedin: "",
+                workExperience: [],
+                education: [],
+                cv: null, 
+            });
+
+            return res.status(201).json({
+                success: true,
+                message: "Utilizador e perfil criados com sucesso!",
+                user: newUser,
+                profile: newProfile,
+            });
         } catch (error) {
             return res.status(400).json({ success: false, message: error.message });
         }

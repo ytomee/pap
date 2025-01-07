@@ -1059,8 +1059,10 @@ h6,
 .btn-apply-big {
   background-color: var(--red-500);
   color: #ffffff;
-  padding: 18px 35px;
-  border-radius: 4px;
+  font-size: 16px;
+  padding: 18px 18px;
+  border-radius: 6px;
+  transition: .2s;
 }
 .btn-apply-big.btn-apply-icon {
   padding-left: 50px;
@@ -1068,7 +1070,7 @@ h6,
 }
 .btn-apply-big:hover {
   color: #fff;
-  background-color: #05264E;
+  background-color: var(--red-700);
 }
 .btn-call-icon {
   background-image: url(../imgs/template/icons/call.svg);
@@ -1190,9 +1192,10 @@ h6,
   padding: 15px 28px 15px 60px;
   background: var(--red-500) url(../imgs/page/company/icon-email.svg) no-repeat 25px 15px;
   border-radius: 4px;
+  transition: .2s;
 }
 .btn-send-message:hover {
-  background-color: #05264E;
+  background-color: var(--red-700);
   color: #ffffff;
 }
 
@@ -1918,11 +1921,10 @@ label {
 }
 
 .card-location {
-  font-size: 12px;
-  color: #A0ABB8;
+  font-size: 14px;
+  color: var(--neutral-500);
   display: inline-block;
   padding: 0px 0px 0px 20px;
-  background: url(../imgs/template/icons/location.svg) no-repeat 0px 6px;
   line-height: 24px;
 }
 
@@ -6511,7 +6513,7 @@ ul li:last-child .card-list-4 {
   display: inline-block;
   width: 50%;
   min-width: 120px;
-  max-width: 120px;
+  /* max-width: 120px; */
 }
 
 .sidebar-list-job {
@@ -7181,23 +7183,21 @@ ul li:last-child .card-list-4 {
 }
 
 .box-company-profile {
-  max-width: 90%;
-  display: table;
-  table-layout: fixed;
-  margin: auto;
-  width: 100%;
-  padding: 20px 0px 0px 0px;
+  padding: 60px 0px 0px 0px;
   position: relative;
 }
 
-.image-compay {
+.image-company {
   position: absolute;
-  top: -80px;
-  left: 0px;
+  top: -110px;
+  left: 50px;
 }
-.image-compay img {
-  width: 100%;
-  border-radius: 16px;
+.image-company img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 10px solid var(--neutral-100);
+  object-fit: cover;
 }
 
 .aboutus-icon {

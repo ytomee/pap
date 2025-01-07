@@ -31,9 +31,28 @@ const profileSchema = new Schema(
             ref: 'User',
             required: true,
         },
-    }
+        name: String,
+        city: String,
+        country: String,
+        job: String,
+        aboutMe: String,
+        yearsExperience: String,
+        language: String,
+        educationLevel: String,
+        phone: String,
+        email: String,
+        address: String,
+        site: String,
+        github: String,
+        linkedin: String,
+        workExperience: [String],
+        education: [String],
+        cv: {
+            type: Buffer, 
+        },
+    },
+    { timestamps: true }
 );
-
 
 userSchema.pre("save", async function (next) {
     if (!this.isModified("password")) return next();
