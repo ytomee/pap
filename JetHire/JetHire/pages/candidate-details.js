@@ -25,33 +25,14 @@ export default function CandidateDetails() {
                                     <h3>
                                         Tomé Almeida <span className="card-location font-regular"><i className="fa-solid fa-location-dot mr-5"></i>Cantanhede, PT</span>
                                     </h3>
-                                    <p className="mt-5 font-md color-text-paragraph-2 mb-15">Front-End Developer</p>
+                                    <p className="mt-5 font-md color-text-paragraph">Full-Stack Developer</p>
                                 </div>
                                 <div className="col-lg-4 col-md-12 text-lg-end">
                                     <Link legacyBehavior href="page-contact">
-                                        <a className="btn btn-apply-big"><i className="fa-regular fa-circle-down mr-5"></i>Curriculum Vitae</a>
+                                        <a className="btn btn-apply-big"><i className="fa-solid fa-link mr-5"></i>Curriculum Vitae</a>
                                     </Link>
                                 </div>
                             </div>
-                        </div>
-                        <div className="box-nav-tabs mt-10 mb-5">
-                            <ul className="nav" role="tablist">
-                                <li>
-                                    <a className="btn btn-border aboutus-icon mr-15 mb-5 active" onClick={() => handleOnClick(1)}>
-                                        Short Bio
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="btn btn-border recruitment-icon mr-15 mb-5" onClick={() => handleOnClick(2)}>
-                                        Skills
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="btn btn-border people-icon mb-5" onClick={() => handleOnClick(3)}>
-                                        Working Experience
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
                         <div className="border-bottom pt-10 pb-10" />
                     </div>
@@ -62,34 +43,34 @@ export default function CandidateDetails() {
                             <div className="col-lg-8 col-md-12 col-sm-12 col-12">
                                 <div className="content-single">
                                     <div className="tab-content">
-                                        <div className={`tab-pane fade ${activeIndex === 1 && "show active"}`}>
-                                            <h4>About Me</h4>
+                                        <div>
+                                            <h4 className="mt-0 mb-20">Sobre mim</h4>
                                             <p>Hello there! My name is Alan Walker. I am a graphic designer, and I’m very passionate and dedicated to my work. With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!</p>
-                                            <h4>Professional Skills</h4>
-                                            <div className="row mb-40">
-                                                <div className="col-lg-6 col-md-6 col-sm-12 mb-30">
-                                                    <h6 className="color-text-paragraph-2">Programming</h6>
-                                                    <div className="box-progress-bar mt-20">
-                                                        <p className="font-xs color-text-paragraph-2 mb-10">HTML &amp; CSS</p>
+                                            <h4 className="mt-40">Competências profissionais</h4>
+                                            <div className="row">
+                                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                                    {/* <h6 className="color-text-paragraph">Programming</h6> */}
+                                                    <div className="box-progress-bar">
+                                                        <p className="font-xs color-text-paragraph mb-10">HTML &amp; CSS</p>
                                                         <div className="progress">
                                                             <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "78%" }} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
                                                                 <span>78%</span>
                                                             </div>
                                                         </div>
-                                                        <p className="font-xs color-text-paragraph-2 mb-10 mt-30">Javascript</p>
+                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Javascript</p>
                                                         <div className="progress">
                                                             <div className="progress-bar bg-brand-2" role="progressbar" style={{ width: "88%" }} aria-valuenow={50} aria-valuemin={0} aria-valuemax={100}>
                                                                 <span>88%</span>
                                                             </div>
                                                         </div>
-                                                        <p className="font-xs color-text-paragraph-2 mb-10 mt-30">Database</p>
+                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Database</p>
                                                         <div className="progress">
                                                             <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "62%" }} aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
                                                                 <span>62%</span>
                                                             </div>
                                                         </div>
-                                                        <p className="font-xs color-text-paragraph-2 mb-10 mt-30">React JS</p>
+                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">React JS</p>
                                                         <div className="progress">
                                                             <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "92%" }} aria-valuenow={100} aria-valuemin={0} aria-valuemax={100}>
                                                                 <span>92%</span>
@@ -97,28 +78,28 @@ export default function CandidateDetails() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-6 col-md-6 col-sm-12 mb-30">
-                                                    <h6 className="color-text-paragraph-2">Design</h6>
-                                                    <div className="box-progress-bar mt-20">
-                                                        <p className="font-xs color-text-paragraph-2 mb-10">Photoshop</p>
+                                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                                    {/* <h6 className="color-text-paragraph">Design</h6> */}
+                                                    <div className="box-progress-bar">
+                                                        <p className="font-xs color-text-paragraph mb-10">Photoshop</p>
                                                         <div className="progress">
                                                             <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "29%" }} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
                                                                 <span>29%</span>
                                                             </div>
                                                         </div>
-                                                        <p className="font-xs color-text-paragraph-2 mb-10 mt-30">Figma</p>
+                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Figma</p>
                                                         <div className="progress">
                                                             <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "20%" }} aria-valuenow={50} aria-valuemin={0} aria-valuemax={100}>
                                                                 <span>20%</span>
                                                             </div>
                                                         </div>
-                                                        <p className="font-xs color-text-paragraph-2 mb-10 mt-30">Illustrator</p>
+                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Illustrator</p>
                                                         <div className="progress">
                                                             <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "65%" }} aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
                                                                 <span>65%</span>
                                                             </div>
                                                         </div>
-                                                        <p className="font-xs color-text-paragraph-2 mb-10 mt-30">Sketch</p>
+                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Sketch</p>
                                                         <div className="progress">
                                                             <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "82%" }} aria-valuenow={100} aria-valuemin={0} aria-valuemax={100}>
                                                                 <span>82%</span>
@@ -128,40 +109,45 @@ export default function CandidateDetails() {
                                                 </div>
                                             </div>
                                             <p />
-                                            <h4>Work Experience</h4>
-                                            <ul>
-                                                <li>A portfolio demonstrating well thought through and polished end to end customer journeys</li>
-                                                <li>5+ years of industry experience in interactive design and / or visual design</li>
-                                                <li>Excellent interpersonal skills</li>
-                                                <li>Aware of trends in mobile, communications, and collaboration</li>
-                                                <li>Ability to create highly polished design prototypes, mockups, and other communication artifacts</li>
-                                                <li>The ability to scope and estimate efforts accurately and prioritize tasks and goals independently</li>
-                                                <li>History of impacting shipping products with your work</li>
-                                                <li>A Bachelor’s Degree in Design (or related field) or equivalent professional experience</li>
-                                                <li>Proficiency in a variety of design tools such as Figma, Photoshop, Illustrator, and Sketch</li>
+                                            <h4 className="mt-50">Experiência</h4>
+                                            <ul className="profile-list">
+                                                <li>
+                                                    <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>Critical Software</div>
+                                                    <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>Junior Developer</div>
+                                                    <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>2012 - Present</div>
+                                                </li>
                                             </ul>
-                                            <h4>Education</h4>
-                                            <ul>
-                                                <li>Necessitatibus quibusdam facilis</li>
-                                                <li>Velit unde aliquam et voluptas reiciendis non sapiente labore</li>
-                                                <li>Commodi quae ipsum quas est itaque</li>
-                                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
-                                                <li>Deleniti asperiores blanditiis nihil quia officiis dolor</li>
+                                            <h4 className="mt-40">Educação</h4>
+                                            <ul className="profile-list">
+                                                <li>
+                                                    <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>Escola Técnico Profissional de Cantanhede</div>
+                                                    <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>Técnico de Gestão e Programação de Sistemas Informáticos</div>
+                                                    <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>2012 - 2020</div>
+                                                </li>
                                             </ul>
-                                        </div>
-                                        <div className={`tab-pane fade ${activeIndex === 2 && "show active"}`}>
-                                            <h4>Skills</h4>
-                                            <p />
-                                            Hello there! My name is Alan Walker. I am a graphic designer, and I’m very passionate and dedicated to my work. With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.
-                                            <p />
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!
-                                        </div>
-                                        <div className={`tab-pane fade ${activeIndex === 3 && "show active"}`}>
-                                            <h4>Work Experiences</h4>
-                                            <p />
-                                            Hello there! My name is Alan Walker. I am a graphic designer, and I’m very passionate and dedicated to my work. With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.
-                                            <p />
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!
+                                            <h4 className="mt-40">Portfólio</h4>
+                                            <div className="row">
+                                                <div className="col-6 mb-20 mt-10">
+                                                    <div className="portfolio-square">
+                                                        Teste de portfolio
+                                                    </div>
+                                                </div>
+                                                <div className="col-6 mt-10">
+                                                    <div className="portfolio-square">
+                                                        Teste de portfolio
+                                                    </div>
+                                                </div>
+                                                <div className="col-6">
+                                                    <div className="portfolio-square">
+                                                        Teste de portfolio
+                                                    </div>
+                                                </div>
+                                                <div className="col-6">
+                                                    <div className="portfolio-square">
+                                                        Teste de portfolio
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -173,38 +159,62 @@ export default function CandidateDetails() {
                                         <ul>
                                             <li>
                                                 <div className="sidebar-icon-item">
-                                                    <i className="fi-rr-briefcase" />
+                                                    <i className="fa-solid fa-user-clock"></i>
                                                 </div>
                                                 <div className="sidebar-text-info">
                                                     <span className="text-description">Experiência</span>
-                                                    <strong className="small-heading">12 years</strong>
+                                                    <strong className="small-heading">Sem experiência</strong>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div className="sidebar-icon-item">
-                                                    <i className="fi-rr-marker" />
+                                                    <i className="fa-solid fa-earth-americas"></i>
                                                 </div>
                                                 <div className="sidebar-text-info">
                                                     <span className="text-description">Línguas</span>
-                                                    <strong className="small-heading">English, German</strong>
+                                                    <strong className="small-heading">Português, Inglês</strong>
+                                                </div>
+                                            </li>
+                                            <li className="pb-15">
+                                                <div className="sidebar-icon-item">
+                                                    <i className="fa-solid fa-graduation-cap"></i>
+                                                </div>
+                                                <div className="sidebar-text-info">
+                                                    <span className="text-description">Nível de educação</span>
+                                                    <strong className="small-heading">Ensino Profissional</strong>
+                                                </div>
+                                            </li>
+                                            <li className="pb-10">
+                                                <div className="sidebar-icon-item">
+                                                    <i className="fa-solid fa-link"></i>
+                                                </div>
+                                                <div className="sidebar-text-info">
+                                                    <span className="socials"><a>Site pessoal</a></span>
+                                                </div>
+                                            </li>
+                                            <li className="pb-10">
+                                                <div className="sidebar-icon-item">
+                                                    <i className="fa-brands fa-github"></i>
+                                                </div>
+                                                <div className="sidebar-text-info">
+                                                    <span className="socials"><a>GitHub</a></span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div className="sidebar-icon-item">
-                                                    <i className="fi-rr-time-fast" />
+                                                    <i className="fa-brands fa-linkedin"></i>
                                                 </div>
                                                 <div className="sidebar-text-info">
-                                                    <span className="text-description">Nível de educação</span>
-                                                    <strong className="small-heading">Master Degree</strong>
+                                                    <span className="socials"><a>LinkedIn</a></span>
                                                 </div>
                                             </li>
                                         </ul>
                                     </div>
                                     <div className="sidebar-list-job">
-                                        <ul className="ul-disc">
-                                            <li>205 North Michigan Avenue, Suite 810 Chicago, 60601, USA</li>
-                                            <li>Phone: (123) 456-7890</li>
-                                            <li>Email: contact@Evara.com</li>
+                                        <ul>
+                                            <li><strong>Localização:</strong> Cantanhede, Coimbra, PT</li>
+                                            <li><strong>Telemóvel:</strong> 965 360 269</li>
+                                            <li><strong>Email: </strong>tomealmeida@gmail.com</li>
                                         </ul>
                                         <div className="mt-30">
                                             <Link legacyBehavior href="page-contact">
