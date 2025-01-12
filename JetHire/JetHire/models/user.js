@@ -1,8 +1,24 @@
 import mongoose, { Schema } from "mongoose";
 import bcrypt from "bcrypt";
 
+// Subesquemas
+const workExperienceSchema = new Schema({
+    institute: { type: String, required: true },
+    role: { type: String, required: true },
+    start: { type: String, required: true },
+    end: { type: String, required: false },
+});
+
+const educationSchema = new Schema({
+    institute: { type: String, required: true },
+    course: { type: String, required: true },
+    start: { type: String, required: true },
+    end: { type: String, required: false },
+});
+
+// Esquema principal do utilizador com perfil integrado
 const userSchema = new Schema(
-    {   
+    {
         type: {
             type: String,
             required: true,
@@ -20,47 +36,35 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-    },
-    { timestamps: true }
-);
-
-const profileSchema = new Schema(
-    {
-        userID: {
-            type: mongoose.Schema.ObjectId,
-            ref: 'User',
-            required: true,
-        },
-        name: String,
-        city: String,
-        country: String,
-        job: String,
-        aboutMe: String,
-        yearsExperience: String,
-        language: String,
-        educationLevel: String,
-        phone: String,
-        email: String,
-        address: String,
-        site: String,
-        github: String,
-        linkedin: String,
-        workExperience: [String],
-        education: [String],
-        cv: {
-            type: Buffer, 
+        profile: {
+            city: String,
+            district: String,
+            job: String,
+            company: String,
+            aboutMe: String,
+            yearsExperience: String,
+            language: [String],
+            educationLevel: String,
+            phone: String,
+            site: String,
+            github: String,
+            linkedin: String,
+            workExperience: [workExperienceSchema],
+            education: [educationSchema],
+            cv: {
+                type: Buffer,
+            },
         },
     },
     { timestamps: true }
 );
 
+// Middleware para encriptar a palavra-passe
 userSchema.pre("save", async function (next) {
     if (!this.isModified("password")) return next();
 
     try {
-        // Gera o salt
         const salt = await bcrypt.genSalt(10);
-        // Encripta a palavra-passe
         this.password = await bcrypt.hash(this.password, salt);
         next();
     } catch (err) {
@@ -68,5 +72,5 @@ userSchema.pre("save", async function (next) {
     }
 });
 
-export const User = mongoose.models.User || mongoose.model('User', userSchema);
-export const Profile = mongoose.models.Profile || mongoose.model('Profile', profileSchema);
+// Exportar o modelo
+export const User = mongoose.models.User || mongoose.model("User", userSchema);

@@ -130,22 +130,6 @@ export default function Register() {
                                     />
                                     </div>
 
-                                    {/* <div className="form-group">
-                                    <label className="form-label" htmlFor="user">
-                                        Nome de utilizador *
-                                    </label>
-                                    <input
-                                        className="form-control"
-                                        id="user"
-                                        type="text"
-                                        name="user"
-                                        value={formData.user}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="jethire"
-                                    />
-                                    </div> */}
-
                                     <div className="form-group">
                                     <label className="form-label" htmlFor="password">
                                         Palavra-passe *
