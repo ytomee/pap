@@ -1,7 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import bcrypt from "bcrypt";
 
-// Subesquemas
 const workExperienceSchema = new Schema({
     institute: { type: String, required: true },
     role: { type: String, required: true },
@@ -16,26 +15,12 @@ const educationSchema = new Schema({
     end: { type: String, required: false },
 });
 
-// Esquema principal do utilizador com perfil integrado
 const userSchema = new Schema(
     {
-        type: {
-            type: String,
-            required: true,
-        },
-        name: {
-            type: String,
-            required: true,
-        },
-        email: {
-            type: String,
-            required: true,
-            unique: true,
-        },
-        password: {
-            type: String,
-            required: true,
-        },
+        type: { type: String, required: true },
+        name: { type: String, required: true },
+        email: { type: String, required: true, unique: true },
+        password: { type: String, required: true },
         profile: {
             city: String,
             district: String,
@@ -51,15 +36,14 @@ const userSchema = new Schema(
             linkedin: String,
             workExperience: [workExperienceSchema],
             education: [educationSchema],
-            cv: {
-                type: Buffer,
-            },
+            pfp: { type: Buffer },
+            banner: { type: Buffer },
+            cv: { type: Buffer },
         },
     },
     { timestamps: true }
 );
 
-// Middleware para encriptar a palavra-passe
 userSchema.pre("save", async function (next) {
     if (!this.isModified("password")) return next();
 
@@ -72,5 +56,4 @@ userSchema.pre("save", async function (next) {
     }
 });
 
-// Exportar o modelo
 export const User = mongoose.models.User || mongoose.model("User", userSchema);

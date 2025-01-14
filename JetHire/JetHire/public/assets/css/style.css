@@ -1265,7 +1265,21 @@ h6,
   cursor: pointer; 
   transition: 0.3s ease;
 }
+.upload-label-pfp {
+  height: 170px;
+  border-radius: 8px;
+  border: 1px dashed var(--neutral-400); /* Borda estilo 'dashed' */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; 
+  transition: 0.3s ease;
+}
 .upload-label:hover {
+  background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+  border-color: #888; /* Cor da borda ao passar o mouse */
+}
+.upload-label-pfp:hover {
   background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
   border-color: #888; /* Cor da borda ao passar o mouse */
 }
@@ -1283,14 +1297,12 @@ h6,
   padding: 5px;
 }
 .remove-button-profile {
-  height: 50px;
+  text-align: left;
+  padding: 0;
   width: 100%;
   color: var(--neutral-900);
   background-color: transparent;
   border: none;
-}
-.remove-button-profile svg{
-  height: 30px;
 }
 .btn-border {
   border: 1px solid #B4C0E0;

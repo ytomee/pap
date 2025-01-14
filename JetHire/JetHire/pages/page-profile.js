@@ -103,44 +103,84 @@ export default function RegistProfile() {
                         <span className="font-md color-brand-2 mt-20 d-inline-block">Criação de perfil</span>
                         <h2 className="mt-5 mb-10">Vamos criar a sua conta!</h2>
                         <p className="font-md color-text-paragraph-2">
-                            por definir
+                            Para se dar a conhecer melhor, e encontrar mais eficazmente a sua oportunidade de trabalho, preencha os seguintes dados.
                         </p>
                         <form className="contact-form-style mt-30" id="profile-form" action="#" method="POST">
                             <div className="row wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-                                <div className="col-lg-3 col-md-3 mb-10">
-                                    <h4 className="mb-10">Cidade</h4>
-                                    <div className="input-style mb-20">
-                                        <input className="font-sm color-text-paragraph-2" name="city" placeholder="ex: Cantanhede" type="text" />
+                                <div className="col-lg-10">
+                                    <div className="row">
+                                        <div className="col-lg-3 col-md-3 mb-10">
+                                            <h4 className="mb-10">Cidade</h4>
+                                            <div className="input-style mb-20">
+                                                <input className="font-sm color-text-paragraph-2" name="city" placeholder="ex: Cantanhede" type="text" />
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-3 col-md-3 mb-10">
+                                            <h4 className="mb-10">Distrito</h4>
+                                            <div className="input-style mb-20">
+                                                <input className="font-sm color-text-paragraph-2" name="district" placeholder="ex: Coimbra" type="text" />
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-6 col-md-6 mb-10">
+                                            <h4 className="mb-10">Telemóvel</h4>
+                                            <div className="input-style mb-20">
+                                                <input className="font-sm color-text-paragraph-2" name="phone" placeholder="ex: 918273878" type="text" />
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-4 col-md-6 mb-10">
+                                            <h4 className="mb-10">Profissão atual</h4>
+                                            <div className="input-style mb-20">
+                                                <input className="font-sm color-text-paragraph-2" name="job" placeholder="(Se aplicável)" type="text" />
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-4 col-md-6 mb-10">
+                                            <h4 className="mb-10">Empresa</h4>
+                                            <div className="input-style mb-20">
+                                                <input className="font-sm color-text-paragraph-2" name="company" placeholder="(Se aplicável)" type="text" />
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-4 col-md-6 mb-10">
+                                            <h4 className="mb-10">Anos de experiência</h4>
+                                            <div className="input-style mb-20">
+                                                <input className="font-sm color-text-paragraph-2" name="company" placeholder="ex: 4" type="text" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-3 mb-10">
-                                    <h4 className="mb-10">Distrito</h4>
+                                <div className="col-lg-2">
+                                    <h4 className="mb-10">Foto de perfil</h4>
                                     <div className="input-style mb-20">
-                                        <input className="font-sm color-text-paragraph-2" name="district" placeholder="ex: Coimbra" type="text" />
+                                        <input 
+                                            id="pfp-upload" 
+                                            className="file-input" 
+                                            name="pfp" 
+                                            type="file" 
+                                            style={{ display: "none" }} 
+                                        />
+                                        <label 
+                                            htmlFor="pfp-upload" 
+                                            className="upload-label-pfp font-sm color-text-paragraph-2 d-flex align-items-center justify-content-center"
+                                        >
+                                            <i className="fa-solid fa-plus mr-5"></i> Fazer upload
+                                        </label>
                                     </div>
                                 </div>
-                                <div className="col-lg-6 col-md-6 mb-10">
-                                    <h4 className="mb-10">Telemóvel</h4>
+                                <div className="col-lg-12">
+                                    <h4 className="mb-10">Foto de fundo</h4>
                                     <div className="input-style mb-20">
-                                        <input className="font-sm color-text-paragraph-2" name="phone" placeholder="ex: 918273878" type="text" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-10">
-                                    <h4 className="mb-10">Profissão atual</h4>
-                                    <div className="input-style mb-20">
-                                        <input className="font-sm color-text-paragraph-2" name="job" placeholder="(Se aplicável)" type="text" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-10">
-                                    <h4 className="mb-10">Empresa</h4>
-                                    <div className="input-style mb-20">
-                                        <input className="font-sm color-text-paragraph-2" name="company" placeholder="(Se aplicável)" type="text" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-10">
-                                    <h4 className="mb-10">Anos de experiência</h4>
-                                    <div className="input-style mb-20">
-                                        <input className="font-sm color-text-paragraph-2" name="company" placeholder="ex: 4" type="text" />
+                                        <input 
+                                            id="banner-upload" 
+                                            className="file-input" 
+                                            name="banner" 
+                                            type="file" 
+                                            style={{ display: "none" }} 
+                                        />
+                                        <label 
+                                            htmlFor="banner-upload" 
+                                            className="upload-label-pfp font-sm color-text-paragraph-2 d-flex align-items-center justify-content-center"
+                                        >
+                                            <i className="fa-solid fa-plus mr-5"></i> Fazer upload
+                                        </label>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-md-12">
@@ -148,7 +188,7 @@ export default function RegistProfile() {
                                     <div className="textarea-style">
                                         <textarea className="font-sm color-text-paragraph-2" 
                                                   name="aboutMe" 
-                                                  placeholder="Conta-nos um pouco sobre ti." 
+                                                  placeholder="Conte-nos um pouco sobre si." 
                                                   maxLength="3000"
                                                   onChange={handleTextChange}
                                                   defaultValue={""} 
@@ -184,25 +224,36 @@ export default function RegistProfile() {
                                 </div>
                                 <div className="col-lg-12 col-md-12">
                                     <h4 className="mb-10">Educação</h4>
+                                    <div className="row">
+                                        <div className="col-lg-6">
+                                            <h6 className="mb-5">Curso</h6>
+                                        </div>
+                                        <div className="col-lg-3">
+                                            <h6 className="mb-5">Instituto</h6>
+                                        </div>
+                                        <div className="col-lg-1">
+                                            <h6 className="mb-5">Início</h6>
+                                        </div>
+                                        <div className="col-lg-1">
+                                            <h6 className="mb-5">Fim</h6>
+                                        </div>
+                                        <div className="col-lg-1"></div>
+                                    </div>
                                     {educations.length === 0 ? (
-                                        <div className="mb-10">Sem nenhum registo.</div>
+                                        <div className="mb-20">Sem nenhum registo.</div>
                                     ) : (
                                         educations.map((edu, index) => (
-                                            <div className="row mb-20" key={index}>
+                                            <div className="row mb-10" key={index}>
                                                 <div className="col-lg-6">
-                                                    <h6 className="mb-5">Curso</h6>
                                                     <div className="input-style">{edu.role}</div>
                                                 </div>
                                                 <div className="col-lg-3">
-                                                    <h6 className="mb-5">Instituto</h6>
                                                     <div className="input-style">{edu.company}</div>
                                                 </div>
                                                 <div className="col-lg-1">
-                                                    <h6 className="mb-5">Início</h6>
                                                     <div>{edu.startYear}</div>
                                                 </div>
                                                 <div className="col-lg-1">
-                                                    <h6 className="mb-5">Fim</h6>
                                                     <div>{edu.endYear}</div>
                                                 </div>
                                                 <div className="col-lg-1">
@@ -211,20 +262,7 @@ export default function RegistProfile() {
                                                         onClick={() => removeEducation(index)}
                                                         type="button"
                                                     >
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none"
-                                                            viewBox="0 0 24 24"
-                                                            strokeWidth={1.5}
-                                                            stroke="currentColor"
-                                                            className="size-6"
-                                                        >
-                                                            <path
-                                                                strokeLinecap="round"
-                                                                strokeLinejoin="round"
-                                                                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
-                                                            />
-                                                        </svg>
+                                                        <strong>Remover</strong>
                                                     </button>
                                                 </div>
                                             </div>
@@ -297,25 +335,36 @@ export default function RegistProfile() {
                                 </div>
                                 <div className="col-lg-12">
                                     <h4 className="mb-10">Experiência</h4>
+                                    <div className="row">
+                                        <div className="col-lg-6">
+                                            <h6 className="mb-5">Curso</h6>
+                                        </div>
+                                        <div className="col-lg-3">
+                                            <h6 className="mb-5">Instituto</h6>
+                                        </div>
+                                        <div className="col-lg-1">
+                                            <h6 className="mb-5">Início</h6>
+                                        </div>
+                                        <div className="col-lg-1">
+                                            <h6 className="mb-5">Fim</h6>
+                                        </div>
+                                        <div className="col-lg-1"></div>
+                                    </div>
                                     {experiences.length === 0 ? (
-                                        <div className="mb-10">Sem nenhum registo.</div>
+                                        <div className="mb-20">Sem nenhum registo.</div>
                                     ) : (
                                         experiences.map((exp, index) => (
-                                            <div className="row mb-20" key={index}>
+                                            <div className="row mb-10" key={index}>
                                                 <div className="col-lg-6">
-                                                    <h6 className="mb-5">Função</h6>
                                                     <div className="input-style">{exp.role}</div>
                                                 </div>
                                                 <div className="col-lg-3">
-                                                    <h6 className="mb-5">Empresa</h6>
                                                     <div className="input-style">{exp.company}</div>
                                                 </div>
                                                 <div className="col-lg-1">
-                                                    <h6 className="mb-5">Início</h6>
                                                     <div>{exp.startYear}</div>
                                                 </div>
                                                 <div className="col-lg-1">
-                                                    <h6 className="mb-5">Fim</h6>
                                                     <div>{exp.endYear}</div>
                                                 </div>
                                                 <div className="col-lg-1">
@@ -324,20 +373,7 @@ export default function RegistProfile() {
                                                         onClick={() => removeExperience(index)}
                                                         type="button"
                                                     >
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none"
-                                                            viewBox="0 0 24 24"
-                                                            strokeWidth={1.5}
-                                                            stroke="currentColor"
-                                                            className="size-6"
-                                                        >
-                                                            <path
-                                                                strokeLinecap="round"
-                                                                strokeLinejoin="round"
-                                                                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
-                                                            />
-                                                        </svg>
+                                                       Remover
                                                     </button>
                                                 </div>
                                             </div>

@@ -27,7 +27,6 @@ export default function Register() {
     
         const { fullname, email, password, rePassword } = formData;
     
-        // Validação básica
         if (password !== rePassword) {
           return setErrorMessage("As palavras-passe não coincidem.");
         }
