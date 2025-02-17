@@ -36,36 +36,64 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                     </li>
                                 </ul>
                             </nav>
-                            <div className={`burger-icon burger-icon-white ${openClass && "burger-close"}`} 
-                            onClick={()=>{handleOpen(); handleRemove()}}>
-                                <span className="burger-icon-top" /><span className="burger-icon-mid" /><span className="burger-icon-bottom" /></div>
+                            <div
+                                className={`burger-icon burger-icon-white ${openClass && 'burger-close'}`}
+                                onClick={() => {
+                                    handleOpen();
+                                    handleRemove();
+                                }}
+                            >
+                                <span className="burger-icon-top" />
+                                <span className="burger-icon-mid" />
+                                <span className="burger-icon-bottom" />
+                            </div>
                         </div>
                         <div className="header-right">
                             <div className="block-signin">
-                                {status === "authenticated" ? (
+                                {status === 'authenticated' ? (
                                     <ul className="main-menu">
                                         <li className="has-children">
-                                        <a><span className="mr-10">{session?.user?.name}</span><Image src={session?.user?.image} height={35} width={35} style={{ borderRadius: '50%' }}/></a>
+                                            <a>
+                                                <span className="mr-10 navbar-name">{session?.user?.name}</span>
+                                                {session?.user?.image && (
+                                                    <Image
+                                                        src={session.user.image}
+                                                        height={35}
+                                                        width={35}
+                                                        style={{ borderRadius: '50%' }}
+                                                        alt="User Image"
+                                                    />
+                                                )}
+                                            </a>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <button><i className="fa-solid fa-user mr-5"></i>Ver perfil</button>
+                                                    <button>
+                                                        <i className="fa-solid fa-user mr-5"></i>Ver perfil
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <button><i className="fa-solid fa-gear mr-5"></i>Definições</button>
+                                                    <button>
+                                                        <i className="fa-solid fa-gear mr-5"></i>Definições
+                                                    </button>
                                                 </li>
                                                 <li>
                                                     <button onClick={() => signOut()}>
-                                                        <i className="fa-solid fa-person-running mr-5"></i>Sair</button>
+                                                        <i className="fa-solid fa-person-running mr-5"></i>Sair
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 ) : (
-                                <>
-                                    <Link legacyBehavior href="page-register"><a className="">Criar conta</a></Link>
+                                    <>
+                                        <Link legacyBehavior href="page-register">
+                                            <a className="">Criar conta</a>
+                                        </Link>
 
-                                    <Link legacyBehavior href="page-signin"><a className="btn btn-default btn-shadow ml-40">Login</a></Link>
-                                </>
+                                        <Link legacyBehavior href="page-signin">
+                                            <a className="btn btn-default btn-shadow ml-40">Login</a>
+                                        </Link>
+                                    </>
                                 )}
                             </div>
                         </div>

@@ -3433,6 +3433,10 @@ ul li:last-child .card-list-4 {
   position: relative;
   transition: 0.3s;
 }
+
+.header .navbar-name {
+  text-transform: capitalize;
+}
 /* .header .main-menu li ul li a::after {
   content: "";
   position: absolute;

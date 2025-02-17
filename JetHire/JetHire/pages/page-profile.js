@@ -4,11 +4,13 @@
 
 import Layout from "../components/Layout/Layout";
 import Link from "next/link";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 
 export default function RegistProfile() {
 
     const [charCount, setCharCount] = useState(0);
+
+    //FORM CODE
 
     const handleTextChange = (e) => {
         setCharCount(e.target.value.length);
@@ -94,6 +96,8 @@ export default function RegistProfile() {
         setExperiences(experiences.filter((_, i) => i !== index));
     };
 
+    
+
     return (
         <>
             <Layout>
@@ -101,7 +105,7 @@ export default function RegistProfile() {
                     <div className="container">
                     <div>
                         <span className="font-md color-brand-2 mt-20 d-inline-block">Criação de perfil</span>
-                        <h2 className="mt-5 mb-10">Vamos criar a sua conta!</h2>
+                        <h2 className="mt-5 mb-10">Olá, vamos criar a sua conta!</h2>
                         <p className="font-md color-text-paragraph-2">
                             Para se dar a conhecer melhor, e encontrar mais eficazmente a sua oportunidade de trabalho, preencha os seguintes dados.
                         </p>
@@ -142,7 +146,7 @@ export default function RegistProfile() {
                                         <div className="col-lg-4 col-md-6 mb-10">
                                             <h4 className="mb-10">Anos de experiência</h4>
                                             <div className="input-style mb-20">
-                                                <input className="font-sm color-text-paragraph-2" name="company" placeholder="ex: 4" type="text" />
+                                                <input className="font-sm color-text-paragraph-2" name="yearsExperience" placeholder="ex: 4" type="text" />
                                             </div>
                                         </div>
                                     </div>
@@ -207,17 +211,17 @@ export default function RegistProfile() {
                                     <div className="row">
                                         <div className="col-lg-4">
                                             <div className="input-style mb-20">
-                                                <input className="font-sm color-text-paragraph-2" name="company" placeholder="ex: Português" type="text" />
+                                                <input className="font-sm color-text-paragraph-2" name="lang1" placeholder="ex: Português" type="text" />
                                             </div>
                                         </div>
                                         <div className="col-lg-4">
                                             <div className="input-style mb-20">
-                                                <input className="font-sm color-text-paragraph-2" name="company" placeholder="ex: Francês" type="text" />
+                                                <input className="font-sm color-text-paragraph-2" name="lang2" placeholder="ex: Francês" type="text" />
                                             </div>
                                         </div>
                                         <div className="col-lg-4">
                                             <div className="input-style mb-20">
-                                                <input className="font-sm color-text-paragraph-2" name="company" placeholder="ex: Inglês" type="text" />
+                                                <input className="font-sm color-text-paragraph-2" name="lang3" placeholder="ex: Inglês" type="text" />
                                             </div>
                                         </div>
                                     </div>
@@ -485,7 +489,7 @@ export default function RegistProfile() {
                                         Terminar o registo
                                     </button>
                                     <label className="ml-20">
-                                        <input className="float-start mr-5 mt-6" type="checkbox" /> Ao confirmar esta caixa, está a concordar com os nossos <a className="terms-conditions">Termos & Condições</a>.
+                                        <input required className="float-start mr-5 mt-6" type="checkbox" /> Ao confirmar esta caixa, está a concordar com os nossos <a className="terms-conditions">Termos & Condições</a>.
                                     </label>
                                 </div>
                             </div>

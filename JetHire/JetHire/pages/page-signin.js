@@ -4,9 +4,30 @@
 
 import Layout from "../components/Layout/Layout";
 import Link from "next/link";
-import { signIn } from 'next-auth/react';
+import { signIn } from "next-auth/react";
+import { useState } from "react";
 
 export default function Signin() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const result = await signIn("credentials", {
+            email,
+            password,
+            redirect: false,
+        });
+
+        if (result?.error) {
+            setError("Email ou palavra-passe incorretos.");
+        } else {
+            window.location.href = "/"; 
+        }
+    };
+
     return (
         <>
             <Layout>
@@ -19,16 +40,16 @@ export default function Signin() {
                                     <p className="font-sm text-brand-2 mb-20">Bem-vindo, outra vez! </p>
                                     <div className="social-icons-group">
                                         <button onClick={() => signIn("google")}
-                                        className="btn social-login hover-up mb-20">
-                                            <img src="assets/imgs/template/icons/icon-google.svg"/>
+                                            className="btn social-login hover-up mb-20">
+                                            <img src="assets/imgs/template/icons/icon-google.svg" />
                                             <strong>Google</strong>
                                         </button>
                                         <button className="btn social-login hover-up mb-20">
-                                            <img src="assets/imgs/template/icons/linkedin.svg"/>
+                                            <img src="assets/imgs/template/icons/linkedin.svg" />
                                             <strong>LinkedIn</strong>
                                         </button>
                                         <button className="btn social-login hover-up mb-20">
-                                            <img src="assets/imgs/template/icons/github-mark.svg"/>
+                                            <img src="assets/imgs/template/icons/github-mark.svg" />
                                             <strong>GitHub</strong>
                                         </button>
                                     </div>
@@ -36,31 +57,48 @@ export default function Signin() {
                                         <span>ou continuar com</span>
                                     </div>
                                 </div>
-                                <form className="login-register text-start mt-20" action="#">
+                                <form onSubmit={handleSubmit} className="login-register text-start mt-20">
                                     <div className="form-group">
                                         <label className="form-label" htmlFor="input-1">
-                                            Nome de utilizador
+                                            Email
                                         </label>
-                                        <input className="form-control" id="input-1" type="text" required name="fullname" placeholder="jethire" />
+                                        <input
+                                            className="form-control"
+                                            id="input-1"
+                                            type="email"
+                                            required
+                                            name="email"
+                                            placeholder="jethire@example.com"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                        />
                                     </div>
                                     <div className="form-group">
-                                        <label className="form-label" htmlFor="input-4">
-                                            Palavra-passe
-                                        </label>
-                                        <input className="form-control" id="input-4" type="password" required name="password" placeholder="••••••••" />
+                                        <label className="form-label" htmlFor="input-4">Palavra-passe</label>
+                                        <input
+                                            className="form-control"
+                                            id="input-4"
+                                            type="password"
+                                            required
+                                            name="password"
+                                            placeholder="••••••••"
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}
+                                        />
                                     </div>
-                                    {/* <div className="login_footer form-group d-flex justify-content-between">
+                                    {error && <p className="text-danger mb-10">{error}</p>}
+                                    <div className="login_footer form-group d-flex justify-content-between">
                                         <label className="cb-container">
                                             <input type="checkbox" />
-                                            <span className="text-small">Remenber me</span>
+                                            <span className="text-small">Lembrar-me</span>
                                             <span className="checkmark" />
                                         </label>
                                         <Link legacyBehavior href="/page-contact">
-                                            <a className="text-muted">Forgot Password</a>
+                                            <a className="text-muted">Esqueci-me da password</a>
                                         </Link>
-                                    </div> */}
+                                    </div>
                                     <div className="form-group">
-                                        <button className="btn btn-brand-1 hover-up w-100" type="submit" name="login">
+                                        <button className="btn btn-brand-1 hover-up w-100" type="submit">
                                             Login
                                         </button>
                                     </div>
