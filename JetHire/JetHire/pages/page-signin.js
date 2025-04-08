@@ -14,17 +14,17 @@ export default function Signin() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         const result = await signIn("credentials", {
             email,
             password,
             redirect: false,
         });
-
+    
         if (result?.error) {
             setError("Email ou palavra-passe incorretos.");
         } else {
-            window.location.href = "/"; 
+            window.location.href = "/";
         }
     };
 
@@ -87,16 +87,19 @@ export default function Signin() {
                                         />
                                     </div>
                                     {error && <p className="text-danger mb-10">{error}</p>}
-                                    <div className="login_footer form-group d-flex justify-content-between">
+                                    {/* <div className="login_footer form-group d-flex justify-content-between">
                                         <label className="cb-container">
-                                            <input type="checkbox" />
+                                        <input
+                                            type="checkbox"
+                                            checked={rememberMe}
+                                        />
                                             <span className="text-small">Lembrar-me</span>
                                             <span className="checkmark" />
                                         </label>
                                         <Link legacyBehavior href="/page-contact">
                                             <a className="text-muted">Esqueci-me da password</a>
                                         </Link>
-                                    </div>
+                                    </div> */}
                                     <div className="form-group">
                                         <button className="btn btn-brand-1 hover-up w-100" type="submit">
                                             Login
@@ -104,7 +107,7 @@ export default function Signin() {
                                     </div>
                                     <div className="text-muted text-center">
                                         Ainda não tem conta?
-                                        <Link legacyBehavior href="/page-signin">
+                                        <Link legacyBehavior href="/page-register">
                                             <a> Criar conta</a>
                                         </Link>
                                     </div>

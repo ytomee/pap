@@ -14,6 +14,11 @@ const educationSchema = new Schema({
     end: { type: String, required: false },
 });
 
+const skillsSchema = new Schema({
+    name: { type: String, required: true },
+    value: { type: String, required: true }
+});
+
 const userSchema = new Schema(
     {
         type: { type: String, required: true },
@@ -22,21 +27,25 @@ const userSchema = new Schema(
         password: { type: String },
         profile: {
             city: String,
-            district: String,
-            job: String,
-            company: String,
+            country: String,
             aboutMe: String,
+            aboutMeShort: String,
             yearsExperience: String,
-            language: [String],
+            role: String,
+            languages: [String],
             educationLevel: String,
             phone: String,
+            contactEmail: String,
+            skills: [skillsSchema],
             site: String,
             github: String,
             linkedin: String,
             workExperience: [workExperienceSchema],
             education: [educationSchema],
-            pfp: { type: Buffer },
-            banner: { type: Buffer },
+            pfp: String,
+            pfp_id: String,
+            banner: String,
+            banner_id: String,
             cv: { type: Buffer },
         },
     },

@@ -1,12 +1,17 @@
 import Link from "next/link";
-import Layout from "../components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import React, { useState } from "react";
+import User from "../../models/user";
+import connectMongoDB from "../../lib/mongodb";
 import { useSession } from "next-auth/react";
 
-export default function CandidateDetails() {
-    
+export default function Profile({ user, profileComplete, profilePercentage }) {
+
     const { data: session } = useSession();
-    console.log("Sessão atual:", session);
+
+    if (!user) {
+        return <div>404</div>;
+    }
 
     return (
         <>
@@ -14,18 +19,37 @@ export default function CandidateDetails() {
                 <section className="section-box-2">
                     <div className="container">
                         <div className="banner-hero banner-image-single">
-                            <img src="assets/imgs/page/candidates/img.png" alt="jobbox" />
+                            {user.profile.banner ? (
+                                <img src={user.profile.banner} alt="banner" />
+                            ) : (
+                                <img src="/assets/imgs/default/banner.jpg" alt="banner" />
+                            )}
                         </div>
                         <div className="box-company-profile">
                             <div className="image-company">
-                                <img src="assets/imgs/page/candidates/candidate-profile.jpg" alt="jobbox" />
+                                {user.profile.pfp ? (
+                                    <img src={user.profile.pfp} alt="pfp" />
+                                ) : (
+                                    <img src="/assets/imgs/default/user.png" alt="pfp" />
+                                )}
                             </div>
                             <div className="row">
                                 <div className="col-lg-8 col-md-12">
                                     <h3>
-                                        Tomé Almeida <span className="card-location font-regular"><i className="fa-solid fa-location-dot mr-5"></i>Cantanhede, PT</span>
+                                        {user.name} 
+                                        {user.profile.city && (
+                                            <span className="card-location font-regular">
+                                                <i className="fa-solid fa-location-dot mr-5"></i>
+                                                {user.profile.city}
+                                                {user.profile.country && `, ${user.profile.country}`}
+                                            </span>
+                                        )}
                                     </h3>
-                                    <p className="mt-5 font-md color-text-paragraph">Full-Stack Developer</p>
+                                    {user.profile.role ? (
+                                        <p className="mt-5 font-md color-text-paragraph">{user.profile.role}</p>
+                                    ) : (
+                                        <p className="mt-5 font-md color-text-paragraph">Á procura de emprego</p>
+                                    )}
                                 </div>
                                 <div className="col-lg-4 col-md-12 text-lg-end">
                                     <Link legacyBehavior href="page-contact">
@@ -44,9 +68,13 @@ export default function CandidateDetails() {
                                 <div className="content-single">
                                     <div className="tab-content">
                                         <div>
-                                            <h4 className="mt-0 mb-20">Sobre mim</h4>
-                                            <p>Hello there! My name is Alan Walker. I am a graphic designer, and I’m very passionate and dedicated to my work. With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!</p>
+                                            {user.profile.aboutMe && (
+                                                <>
+                                                    <h4 className="mt-0 mb-20">Sobre mim</h4>
+                                                    <p>{user.profile.aboutMe}</p>
+                                                </>
+                                            )}
+
                                             <h4 className="mt-40">Competências profissionais</h4>
                                             <div className="row">
                                                 <div className="col-lg-6 col-md-6 col-sm-12">
@@ -153,19 +181,35 @@ export default function CandidateDetails() {
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-40 pl-lg-15 mt-lg-30">
+                                {session?.user?.id === user._id && (
+                                    <div className="sidebar-border">
+                                        {!profileComplete && (
+                                            <>
+                                                <h5 className="f-14">Parece que ainda não completou o seu perfil.</h5>
+                                                <p>Vamos mudar isso!</p>
+                                                <h5 className="f-14 mt-5">{profilePercentage}% completo</h5>
+                                            </>
+                                        )}
+                                        <a href={`/edit/${user._id}`} className="btn btn-default mt-10">Editar perfil</a>
+                                    </div>
+                                )}
                                 <div className="sidebar-border">
                                     <h5 className="f-18">Visão geral</h5>
                                     <div className="sidebar-list-job">
                                         <ul>
-                                            <li>
-                                                <div className="sidebar-icon-item">
-                                                    <i className="fa-solid fa-user-clock"></i>
-                                                </div>
-                                                <div className="sidebar-text-info">
-                                                    <span className="text-description">Experiência</span>
-                                                    <strong className="small-heading">Sem experiência</strong>
-                                                </div>
-                                            </li>
+                                            {user.profile.yearsExperience && (
+                                                <li>
+                                                    <div className="sidebar-icon-item">
+                                                        <i className="fa-solid fa-user-clock"></i>
+                                                    </div>
+                                                    <div className="sidebar-text-info">
+                                                        <span className="text-description">Experiência</span>
+                                                            <strong className="small-heading">
+                                                                {user.profile.yearsExperience}
+                                                            </strong>
+                                                    </div>
+                                                </li>
+                                            )}
                                             <li>
                                                 <div className="sidebar-icon-item">
                                                     <i className="fa-solid fa-earth-americas"></i>
@@ -175,46 +219,96 @@ export default function CandidateDetails() {
                                                     <strong className="small-heading">Português, Inglês</strong>
                                                 </div>
                                             </li>
-                                            <li className="pb-15">
-                                                <div className="sidebar-icon-item">
-                                                    <i className="fa-solid fa-graduation-cap"></i>
-                                                </div>
-                                                <div className="sidebar-text-info">
-                                                    <span className="text-description">Nível de educação</span>
-                                                    <strong className="small-heading">Ensino Profissional</strong>
-                                                </div>
-                                            </li>
-                                            <li className="pb-10">
-                                                <div className="sidebar-icon-item">
-                                                    <i className="fa-solid fa-link"></i>
-                                                </div>
-                                                <div className="sidebar-text-info">
-                                                    <span className="socials"><a>Site pessoal</a></span>
-                                                </div>
-                                            </li>
-                                            <li className="pb-10">
-                                                <div className="sidebar-icon-item">
-                                                    <i className="fa-brands fa-github"></i>
-                                                </div>
-                                                <div className="sidebar-text-info">
-                                                    <span className="socials"><a>GitHub</a></span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="sidebar-icon-item">
-                                                    <i className="fa-brands fa-linkedin"></i>
-                                                </div>
-                                                <div className="sidebar-text-info">
-                                                    <span className="socials"><a>LinkedIn</a></span>
-                                                </div>
-                                            </li>
+                                            {user.profile.educationLevel && (
+                                                <li className="pb-15">
+                                                    <div className="sidebar-icon-item">
+                                                        <i className="fa-solid fa-graduation-cap"></i>
+                                                    </div>
+                                                    <div className="sidebar-text-info">
+                                                        <span className="text-description">Nível de educação</span>
+                                                        <strong className="small-heading">{user.profile.educationLevel}</strong>
+                                                    </div>
+                                                </li>
+                                            )}
+                                            {user.profile.site && (
+                                                <li className="pb-10">
+                                                    <div className="sidebar-icon-item">
+                                                        <i className="fa-solid fa-link"></i>
+                                                    </div>
+                                                    <div className="sidebar-text-info">
+                                                        <span className="socials">
+                                                            <a
+                                                                href={
+                                                                    user.profile.site.startsWith("http") 
+                                                                        ? user.profile.site 
+                                                                        : `https://${user.profile.site}`
+                                                                }
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                            >
+                                                                Site pessoal
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            )}
+                                            {user.profile.github && (
+                                                <li>
+                                                    <div className="sidebar-icon-item">
+                                                        <i className="fa-brands fa-github"></i>
+                                                    </div>
+                                                    <div className="sidebar-text-info">
+                                                        <span className="socials">
+                                                            <a
+                                                                href={
+                                                                    user.profile.github.startsWith("http") 
+                                                                        ? user.profile.github 
+                                                                        : `https://${user.profile.github}`
+                                                                }
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                            >
+                                                                GitHub
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            )}
+                                            {user.profile.linkedin && (
+                                                <li>
+                                                    <div className="sidebar-icon-item">
+                                                        <i className="fa-brands fa-linkedin"></i>
+                                                    </div>
+                                                    <div className="sidebar-text-info">
+                                                        <span className="socials">
+                                                            <a
+                                                                href={
+                                                                    user.profile.linkedin.startsWith("http") 
+                                                                        ? user.profile.linkedin 
+                                                                        : `https://${user.profile.linkedin}`
+                                                                }
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                            >
+                                                                LinkedIn
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            )}
                                         </ul>
                                     </div>
                                     <div className="sidebar-list-job">
                                         <ul>
-                                            <li><strong>Localização:</strong> Cantanhede, Coimbra, PT</li>
-                                            <li><strong>Telemóvel:</strong> 965 360 269</li>
-                                            <li><strong>Email: </strong>tomealmeida@gmail.com</li>
+                                            {user.profile.city && (
+                                                <li>
+                                                    <strong>Localização: </strong>
+                                                    {user.profile.city}
+                                                    {user.profile.country && `, ${user.profile.country}`}
+                                                </li>
+                                            )}
+                                            {user.profile.phone && (<li><strong>Telemóvel: </strong>{user.profile.phone}</li>)}
+                                            <li><strong>Email: </strong>{ !user.profile.contactEmail ? user.email : user.profile.contactEmail }</li>
                                         </ul>
                                         <div className="mt-30">
                                             <Link legacyBehavior href="page-contact">
@@ -230,4 +324,71 @@ export default function CandidateDetails() {
             </Layout>
         </>
     );
+}
+
+function checkProfileCompletion(profile) {
+    if (!profile) return { complete: false, percentage: 0 };
+
+    const requiredFields = [
+        "city",
+        "country",
+        "aboutMe",
+        "aboutMeShort",
+        "yearsExperience",
+        "role",
+        "languages",
+        "educationLevel",
+        "phone",
+        "contactEmail",
+        "skills",
+        "site",
+        "github",
+        "linkedin",
+        "pfp", 
+        "banner",
+        "cv",
+    ];
+
+    let filledCount = 0;
+
+    requiredFields.forEach((field) => {
+        if (Array.isArray(profile[field])) {
+            if (profile[field].length > 0) filledCount++;
+        } else if (profile[field]) {
+            filledCount++;
+        }
+    });
+
+    const percentage = Math.round((filledCount / requiredFields.length) * 100);
+
+    return {
+        complete: percentage === 100,
+        percentage,
+    };
+}
+
+export async function getServerSideProps(context) {
+    const { id } = context.params;
+
+    try {
+        await connectMongoDB();
+        const user = await User.findById(id).lean();
+
+        if (!user) {
+            return { notFound: true };
+        }
+
+        const verificationResult = checkProfileCompletion(user.profile);
+
+        return {
+            props: {
+                user: JSON.parse(JSON.stringify(user)),
+                profileComplete: verificationResult.complete,
+                profilePercentage: verificationResult.percentage,
+            },
+        };
+    } catch (error) {
+        console.error(error);
+        return { props: { user: null, profileComplete: false, profilePercentage: 0 } };
+    }
 }

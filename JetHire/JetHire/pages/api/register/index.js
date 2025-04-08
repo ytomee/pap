@@ -14,7 +14,6 @@ export default async function handler(req, res) {
     }
 
     try {
-        // Garante que a conexão com o MongoDB foi estabelecida
         await connectMongoDB();
 
         const existingUser = await User.findOne({ email });

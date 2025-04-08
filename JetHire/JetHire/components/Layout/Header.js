@@ -6,6 +6,11 @@ import { signOut , useSession } from 'next-auth/react';
 
 const Header = ({handleOpen,handleRemove,openClass}) => {
     const {status, data: session} = useSession();
+
+    const handleSignOut = () => {
+        signOut({ callbackUrl: "/" });
+    };
+    
     return (
         <>
             <header className="header sticky-bar">
@@ -13,7 +18,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                     <div className="main-header">
                         <div className="header-left">
                             <div className="header-logo">
-                            <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox" src="assets/imgs/template/logo.svg"/></a></Link>
+                            <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox" src="/assets/imgs/template/logo.svg"/></a></Link>
                             </div>
                         </div>
                         <div className="header-nav">
@@ -67,9 +72,11 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                             </a>
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <button>
-                                                        <i className="fa-solid fa-user mr-5"></i>Ver perfil
-                                                    </button>
+                                                    <Link legacyBehavior href={`/profile/${session.user.id}`}>
+                                                        <button>
+                                                            <i className="fa-solid fa-user mr-5"></i>Ver perfil
+                                                        </button>
+                                                    </Link>
                                                 </li>
                                                 <li>
                                                     <button>
@@ -77,7 +84,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                                     </button>
                                                 </li>
                                                 <li>
-                                                    <button onClick={() => signOut()}>
+                                                    <button onClick={() => handleSignOut()}>
                                                         <i className="fa-solid fa-person-running mr-5"></i>Sair
                                                     </button>
                                                 </li>
