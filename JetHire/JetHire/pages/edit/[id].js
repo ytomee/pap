@@ -2,14 +2,23 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+//REACT
 import Layout from "../../components/Layout/Layout";
 import { useState, useEffect } from "react";
+
+//JSON
 import countries from "../../components/json/countries.json"
 import educationLevels from "../../components/json/education.json"
 import yearsExperienceJson from "../../components/json/years.json"
 
 //COMPONENTS
 import Languages from "../../components/elements/edit/languages";
+import PFP from "../../components/elements/edit/PFP";
+import Banner from "../../components/elements/edit/Banner";
+import AboutMe from "../../components/elements/edit/AboutMe";
+import AboutMeShort from "../../components/elements/edit/AboutMeShort";
+import Education from "../../components/elements/edit/Education";
+import Experience from "../../components/elements/edit/Experience";
 
 //DATABASE & SESSION
 import connectMongoDB from "../../lib/mongodb";
@@ -53,7 +62,7 @@ export default function EditProfile({ user }) {
             const data = await res.json();
 
             if (res.ok) {
-                window.location.href = "/";
+                window.location.href = `/profile/${formData._id}`;
             } else {
                 setError(data.message || "Erro ao atualizar perfil.");
             }
@@ -66,146 +75,6 @@ export default function EditProfile({ user }) {
         e.preventDefault();
         console.log("Dados a enviar:", JSON.stringify(formData, null, 2));
     };    
-
-    //FORM CODE
-    const [charCount, setCharCount] = useState(0);
-    const [charCountSmall, setCharCountSmall] = useState(0);
-
-    const handleTextChange = (e) => {
-        setCharCount(e.target.value.length);
-        const { name, value } = e.target;
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            profile: {
-                ...prevFormData.profile,
-                [name]: value,
-            },
-        }));
-    };
-
-    const handleTextChangeSmall = (e) => {
-        setCharCountSmall(e.target.value.length);
-        const { name, value } = e.target;
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            profile: {
-                ...prevFormData.profile,
-                [name]: value,
-            },
-        }));
-    };
-
-    const handlePFPChange = (e) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
-        
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            const base64String = reader.result.split(",")[1];
-            setFormData((prev) => ({
-            ...prev,
-            pfp: base64String,
-            }));
-        };
-        reader.readAsDataURL(file);
-    };
-
-    const handleBannerChange = (e) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
-        
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            const base64String = reader.result.split(",")[1];
-            setFormData((prev) => ({
-            ...prev,
-            banner: base64String,
-            }));
-        };
-        reader.readAsDataURL(file);
-    };
-
-    const generateYears = () => {
-        const years = [];
-        for (let year = 2025; year >= 1950; year--) {
-            years.push(year);
-        }
-        return years;
-    };
-
-    const years = generateYears();
-
-    //EDUCATION SCHEMA
-    const [educations, setEducations] = useState([]);
-    const [newEducation, setNewEducation] = useState({
-        role: "",
-        company: "",
-        startYear: "",
-        endYear: "",
-    });
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setNewEducation({ ...newEducation, [name]: value });
-    };
-
-    const addEducation = (e) => {
-        e.preventDefault();
-        const { role, company, startYear, endYear } = newEducation;
-
-        if (!role || !company || !startYear || (!endYear && endYear !== "Atual")) {
-            alert("Preencha todos os campos.");
-            return;
-        }
-
-        if (startYear !== "Atual" && endYear !== "Atual" && parseInt(startYear) > parseInt(endYear)) {
-            alert("A data de início deve ser anterior à data de fim.");
-            return;
-        }
-
-        setEducations([...educations, newEducation]);
-        setNewEducation({ role: "", company: "", startYear: "", endYear: "" });
-    };
-
-    const removeEducation = (index) => {
-        setEducations(educations.filter((_, i) => i !== index));
-    };
-
-    //EXPERIENCE SCHEMA
-    const [experiences, setExperiences] = useState([]);
-    const [newExperience, setNewExperience] = useState({
-        role: "",
-        company: "",
-        startYear: "",
-        endYear: "",
-    });
-
-    const handleExperienceChange = (e) => {
-        const { name, value } = e.target;
-        setNewExperience({ ...newExperience, [name]: value });
-    };
-
-    const addExperience = (e) => {
-        e.preventDefault();
-        const { role, company, startYear, endYear } = newExperience;
-
-        if (!role || !company || !startYear || (!endYear && endYear !== "Atual")) {
-            alert("Preencha todos os campos.");
-            return;
-        }
-
-        if (startYear !== "Atual" && endYear !== "Atual" && parseInt(startYear) > parseInt(endYear)) {
-            alert("A data de início deve ser anterior à data de fim.");
-            return;
-        }
-
-        setExperiences([...experiences, newExperience]);
-        setNewExperience({ role: "", company: "", startYear: "", endYear: "" });
-    };
-
-    const removeExperience = (index) => {
-        setExperiences(experiences.filter((_, i) => i !== index));
-    };
 
     return (
         <>
@@ -245,22 +114,22 @@ export default function EditProfile({ user }) {
                                             <div className="col-lg-3 col-md-3 mb-10">
                                                 <h4 className="mb-10">País</h4>
                                                 <div className="select-style mb-20">
-                                                <select
-                                                    name="country"
-                                                    value={formData.country}
-                                                    onChange={handleChange}
-                                                    >
-                                                    {formData?.profile?.country && (
-                                                        <option key={formData?.profile?.country} value={formData?.profile?.country}>
-                                                        {formData?.profile?.country}
-                                                        </option>
-                                                    )}
-                                                    {countries.map((country) => (
-                                                        <option key={country.name} value={country.name}>
-                                                        {country.name}
-                                                        </option>
-                                                    ))}
-                                                </select>
+                                                    <select
+                                                        name="country"
+                                                        value={formData.country}
+                                                        onChange={handleChange}
+                                                        >
+                                                        {formData?.profile?.country && (
+                                                            <option key={formData?.profile?.country} value={formData?.profile?.country}>
+                                                            {formData?.profile?.country}
+                                                            </option>
+                                                        )}
+                                                        {countries.map((country) => (
+                                                            <option key={country.name} value={country.name}>
+                                                            {country.name}
+                                                            </option>
+                                                        ))}
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div className="col-lg-4 col-md-4 mb-10">
@@ -306,104 +175,19 @@ export default function EditProfile({ user }) {
                                     </div>
                                     <div className="col-lg-2">
                                         <h4 className="mb-10">Foto de perfil</h4>
-                                        <div className="input-style mb-20">
-                                            <input 
-                                                id="pfp-upload" 
-                                                className="file-input" 
-                                                name="pfp" 
-                                                type="file" 
-                                                accept="image/*" 
-                                                onChange={handlePFPChange}
-                                                style={{ display: "none" }} 
-                                            />
-
-                                            <label htmlFor="pfp-upload" className="upload-label-pfp">
-                                            {formData.profile?.pfp || formData.pfp ? (
-                                                <img
-                                                src={
-                                                    formData.pfp
-                                                    ? formData.pfp.startsWith("data:") || formData.pfp.startsWith("http")
-                                                        ? formData.pfp
-                                                        : `data:image/jpeg;base64,${formData.pfp}`
-                                                    : formData.profile.pfp
-                                                }
-                                                alt="Foto de perfil"
-                                                className="upload-label-image"
-                                                />
-                                            ) : (
-                                                <div className="font-sm color-text-paragraph-2 d-flex align-items-center justify-content-center">
-                                                <i className="fa-solid fa-plus mr-5"></i> Fazer upload
-                                                </div>
-                                            )}
-                                            </label>
-
-                                        </div>
+                                        <PFP setFormData={setFormData} formData={formData}></PFP>
                                     </div>
                                     <div className="col-lg-12">
                                         <h4 className="mb-10">Foto de fundo</h4>
-                                        <div className="input-style mb-20">
-                                            <input 
-                                                id="banner-upload" 
-                                                className="file-input" 
-                                                name="banner" 
-                                                type="file" 
-                                                accept="image/*" 
-                                                onChange={handleBannerChange}
-                                                style={{ display: "none" }} 
-                                            />
-
-                                            <label 
-                                                htmlFor="banner-upload"
-                                                className="upload-label-pfp text-sm color-text-paragraph-2 d-flex align-items-center justify-content-center"
-                                            >
-                                            {formData.profile?.banner || formData.banner ? (
-                                                <img
-                                                src={
-                                                    formData.banner
-                                                    ? formData.banner.startsWith("data:") || formData.banner.startsWith("http")
-                                                        ? formData.banner
-                                                        : `data:image/jpeg;base64,${formData.banner}`
-                                                    : formData.profile.banner
-                                                }
-                                                alt="Foto de fundo"
-                                                className="upload-label-image"
-                                                />
-                                            ) : (
-                                                <>
-                                                    <i className="fa-solid fa-plus mr-5"></i> Fazer upload
-                                                </>
-                                            )}
-                                            </label>
-                                        </div>
+                                        <Banner setFormData={setFormData} formData={formData}></Banner>
                                     </div>
                                     <div className="col-lg-12 col-md-12">
                                         <h4 className="mb-10">Sobre mim</h4>
-                                        <div className="textarea-style">
-                                            <textarea 
-                                                className="font-sm color-text-paragraph-2" 
-                                                name="aboutMe" 
-                                                placeholder="Conte-nos um pouco sobre si." 
-                                                maxLength="3000"
-                                                onChange={handleTextChange}
-                                                value={formData?.profile?.aboutMe || ""}
-                                            />
-                                        </div>
-                                        <p className="char-number">{charCount}/3000</p>
+                                        <AboutMe setFormData={setFormData} formData={formData}></AboutMe>
                                     </div>
                                     <div className="col-lg-12 col-md-12">
                                         <h4 className="mb-10">Agora resuma em poucas palavras</h4>
-                                        <div className="textarea-style">
-                                            <textarea 
-                                                className="font-sm color-text-paragraph-2" 
-                                                name="aboutMeShort" 
-                                                placeholder="Diga-nos resumidamente o que disse antes." 
-                                                maxLength="500"
-                                                style={{ minHeight: "100px" }} 
-                                                onChange={handleTextChangeSmall}
-                                                value={formData?.profile?.aboutMeShort || ""}
-                                            />
-                                        </div>
-                                        <p className="char-number">{charCountSmall}/500</p>
+                                        <AboutMeShort setFormData={setFormData} formData={formData}></AboutMeShort>
                                     </div>
                                     <div className="col-lg-3 col-md-3 mb-10">
                                         <h4 className="mb-10">Nível de educação</h4>
@@ -449,231 +233,13 @@ export default function EditProfile({ user }) {
                                     </div>
                                     <div className="col-lg-6 col-md-6 mb-10">
                                         <h4 className="mb-10">Línguas</h4>
-                                        <Languages setFormData={setFormData}></Languages>
+                                        <Languages setFormData={setFormData} formData={formData}></Languages>
                                     </div>
 
-                                    <div className="col-lg-12 col-md-12">
-                                        <h4 className="mb-10">Educação</h4>
-                                        <div className="row">
-                                            <div className="col-lg-6">
-                                                <h6 className="mb-5">Curso</h6>
-                                            </div>
-                                            <div className="col-lg-3">
-                                                <h6 className="mb-5">Instituto</h6>
-                                            </div>
-                                            <div className="col-lg-1">
-                                                <h6 className="mb-5">Início</h6>
-                                            </div>
-                                            <div className="col-lg-1">
-                                                <h6 className="mb-5">Fim</h6>
-                                            </div>
-                                            <div className="col-lg-1"></div>
-                                        </div>
-                                        {educations.length === 0 ? (
-                                            <div className="mb-20">Sem nenhum registo.</div>
-                                        ) : (
-                                            educations.map((edu, index) => (
-                                                <div className="row mb-10" key={index}>
-                                                    <div className="col-lg-6">
-                                                        <div className="input-style">{edu.role}</div>
-                                                    </div>
-                                                    <div className="col-lg-3">
-                                                        <div className="input-style">{edu.company}</div>
-                                                    </div>
-                                                    <div className="col-lg-1">
-                                                        <div>{edu.startYear}</div>
-                                                    </div>
-                                                    <div className="col-lg-1">
-                                                        <div>{edu.endYear}</div>
-                                                    </div>
-                                                    <div className="col-lg-1">
-                                                        <button
-                                                            className="remove-button-profile"
-                                                            onClick={() => removeEducation(index)}
-                                                            type="button"
-                                                        >
-                                                            <strong>Remover</strong>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        )}
+                                    <Education setFormData={setFormData} formData={formData}></Education>
 
-                                        <div className="row">
-                                            <div className="col-lg-6">
-                                                <h6 className="mb-10">Curso</h6>
-                                                <div className="input-style mb-20">
-                                                    <input
-                                                        className="font-sm color-text-paragraph-2"
-                                                        name="role"
-                                                        value={newEducation.role}
-                                                        placeholder="ex: Engenheiro Informático"
-                                                        onChange={handleInputChange}
-                                                        type="text"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3">
-                                                <h6 className="mb-10">Instituto</h6>
-                                                <div className="input-style mb-20">
-                                                    <input
-                                                        className="font-sm color-text-paragraph-2"
-                                                        name="company"
-                                                        value={newEducation.company}
-                                                        placeholder="ex: ISEC"
-                                                        onChange={handleInputChange}
-                                                        type="text"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-1">
-                                                <h6 className="mb-10">Ínicio</h6>
-                                                <div className="select-style mb-20">
-                                                    <select name="startYear" value={newEducation.startYear} onChange={handleInputChange}>
-                                                        <option>Selec.</option>
-                                                        {years.map((year) => (
-                                                            <option key={year} value={year}>
-                                                                {year}
-                                                            </option>
-                                                        ))}
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-1">
-                                                <h6 className="mb-10">Fim</h6>
-                                                <div className="select-style mb-20">
-                                                    <select name="endYear" value={newEducation.endYear} onChange={handleInputChange}>
-                                                        <option>Selec.</option>
-                                                        <option value="Atual">Atual</option>
-                                                        {years.map((year) => (
-                                                            <option key={year} value={year}>
-                                                                {year}
-                                                            </option>
-                                                        ))}
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-1 mb-20">
-                                                <h6 className="mb-10">Adicionar</h6>
-                                                <div className="mb-20">
-                                                    <button className="btn-submit-register-form" onClick={addEducation}>
-                                                    <i className="fa-solid fa-plus mr-5"></i> Adic.
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <h4 className="mb-10">Experiência</h4>
-                                        <div className="row">
-                                            <div className="col-lg-6">
-                                                <h6 className="mb-5">Curso</h6>
-                                            </div>
-                                            <div className="col-lg-3">
-                                                <h6 className="mb-5">Instituto</h6>
-                                            </div>
-                                            <div className="col-lg-1">
-                                                <h6 className="mb-5">Início</h6>
-                                            </div>
-                                            <div className="col-lg-1">
-                                                <h6 className="mb-5">Fim</h6>
-                                            </div>
-                                            <div className="col-lg-1"></div>
-                                        </div>
-                                        {experiences.length === 0 ? (
-                                            <div className="mb-20">Sem nenhum registo.</div>
-                                        ) : (
-                                            experiences.map((exp, index) => (
-                                                <div className="row mb-10" key={index}>
-                                                    <div className="col-lg-6">
-                                                        <div className="input-style">{exp.role}</div>
-                                                    </div>
-                                                    <div className="col-lg-3">
-                                                        <div className="input-style">{exp.company}</div>
-                                                    </div>
-                                                    <div className="col-lg-1">
-                                                        <div>{exp.startYear}</div>
-                                                    </div>
-                                                    <div className="col-lg-1">
-                                                        <div>{exp.endYear}</div>
-                                                    </div>
-                                                    <div className="col-lg-1">
-                                                        <button
-                                                            className="remove-button-profile"
-                                                            onClick={() => removeExperience(index)}
-                                                            type="button"
-                                                        >
-                                                        Remover
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        )}
+                                    <Experience setFormData={setFormData} formData={formData}></Experience>
 
-                                        <div className="row">
-                                            <div className="col-lg-6">
-                                                <h6 className="mb-10">Função</h6>
-                                                <div className="input-style mb-20">
-                                                    <input
-                                                        className="font-sm color-text-paragraph-2"
-                                                        name="role"
-                                                        value={newExperience.role}
-                                                        placeholder="ex: Desenvolvedor Front-End"
-                                                        onChange={handleExperienceChange}
-                                                        type="text"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3">
-                                                <h6 className="mb-10">Empresa</h6>
-                                                <div className="input-style mb-20">
-                                                    <input
-                                                        className="font-sm color-text-paragraph-2"
-                                                        name="company"
-                                                        value={newExperience.company}
-                                                        placeholder="ex: Jet Hire"
-                                                        onChange={handleExperienceChange}
-                                                        type="text"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-1">
-                                                <h6 className="mb-10">Ínicio</h6>
-                                                <div className="select-style mb-20">
-                                                    <select name="startYear" value={newExperience.startYear} onChange={handleExperienceChange}>
-                                                        <option>Selec.</option>
-                                                        {years.map((year) => (
-                                                            <option key={year} value={year}>
-                                                                {year}
-                                                            </option>
-                                                        ))}
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-1">
-                                                <h6 className="mb-10">Fim</h6>
-                                                <div className="select-style mb-20">
-                                                    <select name="endYear" value={newExperience.endYear} onChange={handleExperienceChange}>
-                                                        <option>Selec.</option>
-                                                        <option value="Atual">Atual</option>
-                                                        {years.map((year) => (
-                                                            <option key={year} value={year}>
-                                                                {year}
-                                                            </option>
-                                                        ))}
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-1 mb-20">
-                                                <h6 className="mb-10">Adicionar</h6>
-                                                <div className="mb-20">
-                                                    <button className="btn-submit-register-form" onClick={addExperience}>
-                                                        <i className="fa-solid fa-plus mr-5"></i> Adic.
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div className="col-lg-3 mb-20">
                                         <h4 className="mb-10">Site pessoal</h4>
                                         <div className="input-style mb-20">

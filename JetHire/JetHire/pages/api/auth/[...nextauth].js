@@ -85,7 +85,7 @@ const authOptions = {
     session: {
         strategy: "jwt",
     },
-    debug: true,
+    debug: false,
     secret: process.env.NEXTAUTH_SECRET,
 };
 

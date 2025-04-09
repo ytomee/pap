@@ -335,18 +335,14 @@ function checkProfileCompletion(profile) {
         "aboutMe",
         "aboutMeShort",
         "yearsExperience",
-        "role",
         "languages",
         "educationLevel",
         "phone",
         "contactEmail",
         "skills",
-        "site",
-        "github",
-        "linkedin",
         "pfp", 
         "banner",
-        "cv",
+        "cv"
     ];
 
     let filledCount = 0;
