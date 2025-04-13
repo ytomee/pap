@@ -34,9 +34,6 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                         <Link legacyBehavior href="/candidates-grid"><a>Candidatos</a></Link>
                                     </li>
                                     <li>
-                                        <Link legacyBehavior href="/blog-grid"><a>Blog</a></Link>
-                                    </li>
-                                    <li>
                                         <Link legacyBehavior href="/page-contact"><a>Sobre nós</a></Link>
                                     </li>
                                 </ul>

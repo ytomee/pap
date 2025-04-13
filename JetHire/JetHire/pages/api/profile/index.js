@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
       const userId = token.id;
 
-      const { pfp, banner, ...formData } = req.body;
+      const { pfp, banner, cv, ...formData } = req.body;
 
       if (pfp) {
         const user = await User.findById(userId);
@@ -71,6 +71,29 @@ export default async function handler(req, res) {
         };
       }
 
+      if (cv) {
+        const user = await User.findById(userId);
+        const oldId = user?.profile?.cv_id;
+      
+        if (oldId) {
+          try {
+            await cloudinary.uploader.destroy(oldId);
+          } catch (err) {
+            console.error("Erro ao apagar imagem antiga:", err);
+          }
+        }
+      
+        const uploadRes = await cloudinary.uploader.upload(`data:image/jpeg;base64,${cv}`, {
+          folder: "cv",
+        });
+      
+        formData.profile = {
+          ...formData.profile,
+          cv: uploadRes.secure_url,
+          cv_id: uploadRes.public_id,
+        };
+      }
+      
       const user = await User.findByIdAndUpdate(
         userId,
         { $set: formData },

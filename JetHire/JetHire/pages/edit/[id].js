@@ -19,6 +19,8 @@ import AboutMe from "../../components/elements/edit/AboutMe";
 import AboutMeShort from "../../components/elements/edit/AboutMeShort";
 import Education from "../../components/elements/edit/Education";
 import Experience from "../../components/elements/edit/Experience";
+import Skills from "../../components/elements/edit/Skills";
+import CV from "../../components/elements/edit/CV";
 
 //DATABASE & SESSION
 import connectMongoDB from "../../lib/mongodb";
@@ -235,7 +237,12 @@ export default function EditProfile({ user }) {
                                         <h4 className="mb-10">Línguas</h4>
                                         <Languages setFormData={setFormData} formData={formData}></Languages>
                                     </div>
-
+                                    
+                                    <div className="mb-30">
+                                        <h4 className="mb-10">Competências profissionais</h4>
+                                        <Skills setFormData={setFormData} formData={formData}></Skills>
+                                    </div>
+                                    
                                     <Education setFormData={setFormData} formData={formData}></Education>
 
                                     <Experience setFormData={setFormData} formData={formData}></Experience>
@@ -281,21 +288,7 @@ export default function EditProfile({ user }) {
                                     </div>
                                     <div className="col-lg-3">
                                         <h4 className="mb-10">Curriculum Vitae</h4>
-                                        <div className="input-style mb-20">
-                                            <input 
-                                                id="cv-upload" 
-                                                className="file-input" 
-                                                name="cv" 
-                                                type="file" 
-                                                style={{ display: "none" }} 
-                                            />
-                                            <label 
-                                                htmlFor="cv-upload" 
-                                                className="upload-label font-sm color-text-paragraph-2 d-flex align-items-center justify-content-center"
-                                            >
-                                                <i className="fa-solid fa-plus mr-5"></i> Fazer upload
-                                            </label>
-                                        </div>
+                                        <CV setFormData={setFormData} formData={formData}></CV>
                                     </div>
                                     <div className="col-lg-12 col-md-12">
                                         <button 

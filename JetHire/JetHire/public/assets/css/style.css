@@ -326,8 +326,12 @@ li.hr span {
   display: block;
 }
 
+.main-color {
+  color: var(--neutral-900)!important;
+}
+
 p {
-  color: #4F5E64;
+  color: var(--neutral-900);
 } /*--- Common Classes---------------------*/
 ::-moz-selection {
   background: var(--red-500); /* WebKit/Blink Browsers */
@@ -821,12 +825,17 @@ h6 {
   background-image: url(../imgs/page/about/linkedin.svg);
 }
 
+.box-progress-bar * {
+  transition: none!important;
+}
+
 .box-progress-bar .progress {
   height: 6px;
   position: relative;
   overflow: visible;
   border-radius: 5px;
   background-color: var(--red-100);
+  cursor: pointer;
 }
 .box-progress-bar .progress .bg-paragraph-2 {
   overflow: visible;
@@ -877,6 +886,9 @@ h6 {
   right: -5px;
 }
 
+.profile-list{
+  margin-bottom: 20px;
+}
 .profile-list li{
   list-style: none;
   color: var(--neutral-800);
@@ -904,6 +916,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 iframe {
   width: 100%;
@@ -1107,7 +1120,7 @@ h6,
 }
 .btn-apply-big {
   color: var(--red-500);
-  font-size: 20px;
+  font-size: 18px;
   padding: 18px 18px;
   border-radius: 6px;
   transition: .1s;
@@ -6430,6 +6443,33 @@ ul li:last-child .card-list-4 {
   padding: 22px 27px;
   margin-top: 33px;
   border-radius: 4px;
+}
+
+.skills-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.skills-item .skills-item-label {
+  color: var(--neutral-900);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.skills-item .skills-remove-btn {
+  background: none;
+  border: none;
+  transition: .2s;
+}
+
+.skills-item .skills-remove-btn:hover {
+  color: var(--red-500);
+}
+
+.skills-item .skills-progress-bar {
+  width: 92%;
+  margin-top: -23px;
 }
 
 .box-tags a {

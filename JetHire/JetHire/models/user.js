@@ -16,7 +16,7 @@ const educationSchema = new Schema({
 
 const skillsSchema = new Schema({
     name: { type: String, required: true },
-    value: { type: String, required: true }
+    value: { type: Number, required: true }
 });
 
 const userSchema = new Schema(
@@ -36,17 +36,18 @@ const userSchema = new Schema(
             educationLevel: String,
             phone: String,
             contactEmail: String,
-            skills: [skillsSchema],
             site: String,
             github: String,
             linkedin: String,
             workExperience: [workExperienceSchema],
             education: [educationSchema],
+            skills: [skillsSchema],
             pfp: String,
             pfp_id: String,
             banner: String,
             banner_id: String,
-            cv: { type: Buffer },
+            cv: String,
+            cv_id: String
         },
     },
     { timestamps: true }

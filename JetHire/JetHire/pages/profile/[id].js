@@ -48,14 +48,21 @@ export default function Profile({ user, profileComplete, profilePercentage }) {
                                     {user.profile.role ? (
                                         <p className="mt-5 font-md color-text-paragraph">{user.profile.role}</p>
                                     ) : (
-                                        <p className="mt-5 font-md color-text-paragraph">Á procura de emprego</p>
+                                        <p className="mt-5 font-md color-text-paragraph">À procura de emprego</p>
                                     )}
                                 </div>
-                                <div className="col-lg-4 col-md-12 text-lg-end">
-                                    <Link legacyBehavior href="page-contact">
-                                        <a className="btn btn-apply-big"><i className="fa-solid fa-link mr-5"></i>Curriculum Vitae</a>
-                                    </Link>
-                                </div>
+                                {user.profile.cv && (
+                                    <div className="col-lg-4 col-md-12 text-lg-end">
+                                        <Link legacyBehavior href="page-contact">
+                                            <a 
+                                                className="btn btn-apply-big"
+                                                href={user.profile.cv}
+                                                rel="noopener noreferrer"
+                                                target="_blank"
+                                            ><i className="fa-solid fa-link mr-5"></i>Curriculum Vitae</a>
+                                        </Link>
+                                    </div>
+                                )}
                             </div>
                         </div>
                         <div className="border-bottom pt-10 pb-10" />
@@ -75,92 +82,70 @@ export default function Profile({ user, profileComplete, profilePercentage }) {
                                                 </>
                                             )}
 
-                                            <h4 className="mt-40">Competências profissionais</h4>
-                                            <div className="row">
-                                                <div className="col-lg-6 col-md-6 col-sm-12">
-                                                    {/* <h6 className="color-text-paragraph">Programming</h6> */}
-                                                    <div className="box-progress-bar">
-                                                        <p className="font-xs color-text-paragraph mb-10">HTML &amp; CSS</p>
-                                                        <div className="progress">
-                                                            <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "78%" }} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
-                                                                <span>78%</span>
+                                            {user.profile.skills && (
+                                                <>
+                                                    <h4 className="mt-40">Competências profissionais</h4>
+                                                    <div className="row">
+                                                
+                                                        {user.profile.skills.map((skill, index) => (
+                                                            <div key={index} className="col-lg-6 mt-3">
+                                                                <div className="box-progress-bar">
+                                                                    <p className="font-xs color-text-paragraph mb-10 main-color">{skill.name}</p>
+                                                                    <div className="progress">
+                                                                        <div className="progress-bar bg-paragraph-2" 
+                                                                            role="progressbar" 
+                                                                            style={{ width: `${skill.value}%` }}
+                                                                            aria-valuenow={25} 
+                                                                            aria-valuemin={0} 
+                                                                            aria-valuemax={100}>
+                                                                            <span>{skill.value}%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Javascript</p>
-                                                        <div className="progress">
-                                                            <div className="progress-bar bg-brand-2" role="progressbar" style={{ width: "88%" }} aria-valuenow={50} aria-valuemin={0} aria-valuemax={100}>
-                                                                <span>88%</span>
-                                                            </div>
-                                                        </div>
-                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Database</p>
-                                                        <div className="progress">
-                                                            <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "62%" }} aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
-                                                                <span>62%</span>
-                                                            </div>
-                                                        </div>
-                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">React JS</p>
-                                                        <div className="progress">
-                                                            <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "92%" }} aria-valuenow={100} aria-valuemin={0} aria-valuemax={100}>
-                                                                <span>92%</span>
-                                                            </div>
-                                                        </div>
+                                                        ))}
                                                     </div>
-                                                </div>
-                                                <div className="col-lg-6 col-md-6 col-sm-12">
-                                                    {/* <h6 className="color-text-paragraph">Design</h6> */}
-                                                    <div className="box-progress-bar">
-                                                        <p className="font-xs color-text-paragraph mb-10">Photoshop</p>
-                                                        <div className="progress">
-                                                            <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "29%" }} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
-                                                                <span>29%</span>
-                                                            </div>
-                                                        </div>
-                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Figma</p>
-                                                        <div className="progress">
-                                                            <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "20%" }} aria-valuenow={50} aria-valuemin={0} aria-valuemax={100}>
-                                                                <span>20%</span>
-                                                            </div>
-                                                        </div>
-                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Illustrator</p>
-                                                        <div className="progress">
-                                                            <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "65%" }} aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
-                                                                <span>65%</span>
-                                                            </div>
-                                                        </div>
-                                                        <p className="font-xs color-text-paragraph mb-10 mt-30">Sketch</p>
-                                                        <div className="progress">
-                                                            <div className="progress-bar bg-paragraph-2" role="progressbar" style={{ width: "82%" }} aria-valuenow={100} aria-valuemin={0} aria-valuemax={100}>
-                                                                <span>82%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p />
-                                            <h4 className="mt-50">Experiência</h4>
-                                            <ul className="profile-list">
-                                                <li>
-                                                    <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>Critical Software</div>
-                                                    <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>Junior Developer</div>
-                                                    <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>2012 - Present</div>
-                                                </li>
-                                            </ul>
-                                            <h4 className="mt-40">Educação</h4>
-                                            <ul className="profile-list">
-                                                <li>
-                                                    <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>Escola Técnico Profissional de Cantanhede</div>
-                                                    <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>Técnico de Gestão e Programação de Sistemas Informáticos</div>
-                                                    <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>2012 - 2020</div>
-                                                </li>
-                                            </ul>
-                                            <h4 className="mt-40">Portfólio</h4>
-                                            <div className="row">
-                                                <div className="col-6 mb-20 mt-10">
+                                                </>
+                                            )}
+                                            
+                                            {user.profile.workExperience && user.profile.workExperience.length > 0  && (
+                                                <>
+                                                    <h4 className="mt-50">Experiência</h4>
+                                                    {user.profile.workExperience.map((experience, index) => (
+                                                        <ul key={index} className="profile-list">
+                                                            <li>
+                                                                <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>{experience.institute}</div>
+                                                                <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>{experience.role}</div>
+                                                                <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>{experience.start} - {experience.end}</div>
+                                                            </li>
+                                                        </ul>
+                                                    ))}
+                                                </>
+                                            )}
+
+                                            {user.profile.education && user.profile.education.length > 0  && (
+                                                <>
+                                                    <h4 className="mt-50">Educação</h4>
+                                                    {user.profile.education.map((education, index) => (
+                                                        <ul key={index} className="profile-list">
+                                                            <li>
+                                                                <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>{education.institute}</div>
+                                                                <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>{education.course}</div>
+                                                                <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>{education.start} - {education.end}</div>
+                                                            </li>
+                                                        </ul>
+                                                    ))}
+                                                </>
+                                            )}
+
+                                            <h4 className="mt-40">Os meus projetos</h4>
+                                            <div className="row mt-10">
+                                                <div className="col-6">
                                                     <div className="portfolio-square">
                                                         Teste de portfolio
                                                     </div>
                                                 </div>
-                                                <div className="col-6 mt-10">
+                                                <div className="col-6">
                                                     <div className="portfolio-square">
                                                         Teste de portfolio
                                                     </div>
@@ -183,11 +168,16 @@ export default function Profile({ user, profileComplete, profilePercentage }) {
                             <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-40 pl-lg-15 mt-lg-30">
                                 {session?.user?.id === user._id && (
                                     <div className="sidebar-border">
-                                        {!profileComplete && (
+                                        {!profileComplete ? (
                                             <>
                                                 <h5 className="f-14">Parece que ainda não completou o seu perfil.</h5>
                                                 <p>Vamos mudar isso!</p>
                                                 <h5 className="f-14 mt-5">{profilePercentage}% completo</h5>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <h5 className="f-14">O seu perfil está completo!</h5>
+                                                <p>Se quiser fazer alguma alteração, ainda pode.</p>
                                             </>
                                         )}
                                         <a href={`/edit/${user._id}`} className="btn btn-default mt-10">Editar perfil</a>
@@ -210,15 +200,19 @@ export default function Profile({ user, profileComplete, profilePercentage }) {
                                                     </div>
                                                 </li>
                                             )}
-                                            <li>
-                                                <div className="sidebar-icon-item">
-                                                    <i className="fa-solid fa-earth-americas"></i>
-                                                </div>
-                                                <div className="sidebar-text-info">
-                                                    <span className="text-description">Línguas</span>
-                                                    <strong className="small-heading">Português, Inglês</strong>
-                                                </div>
-                                            </li>
+                                            {user.profile.languages && (
+                                                <li>
+                                                    <div className="sidebar-icon-item">
+                                                        <i className="fa-solid fa-earth-americas"></i>
+                                                    </div>
+                                                    <div className="sidebar-text-info">
+                                                        <span className="text-description">Línguas</span>
+                                                        <strong className="small-heading">
+                                                            {user.profile.languages.join(", ")}
+                                                        </strong>
+                                                    </div>
+                                                </li>
+                                            )}
                                             {user.profile.educationLevel && (
                                                 <li className="pb-15">
                                                     <div className="sidebar-icon-item">

@@ -22,12 +22,11 @@ export default function Education({ formData, setFormData }) {
         endYear: "",
     });
 
-    // Carregar as educações do formData quando o componente for montado
     useEffect(() => {
         if (formData?.profile?.education) {
             setEducations(formData.profile.education);
         }
-    }, [formData]);  // Recarregar quando o formData mudar
+    }, [formData]); 
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -55,10 +54,8 @@ export default function Education({ formData, setFormData }) {
             end: endYear,
         };
 
-        // Atualizar o estado local de educações
         setEducations([...educations, updatedEducation]);
 
-        // Atualizar o formData com a nova educação
         setFormData((prevFormData) => ({
             ...prevFormData,
             profile: {
@@ -70,7 +67,6 @@ export default function Education({ formData, setFormData }) {
             },
         }));
 
-        // Limpar os campos do formulário
         setNewEducation({ course: "", institute: "", startYear: "", endYear: "" });
     };
 
@@ -78,7 +74,6 @@ export default function Education({ formData, setFormData }) {
         const updatedEducations = educations.filter((_, i) => i !== index);
         setEducations(updatedEducations);
 
-        // Atualizar o formData ao remover uma educação
         setFormData((prevFormData) => ({
             ...prevFormData,
             profile: {
