@@ -459,7 +459,7 @@ input[type=number]:focus,
 }
 
 .form-control {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 4px;
   background-color: #ffffff;
   padding: 11px 15px 13px 15px;
@@ -565,7 +565,7 @@ a {
   color: #A0ABB8;
 }
 .select-style .select2 {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 4px;
   padding: 10px 20px 10px 20px;
   display: inline-block;
@@ -719,7 +719,7 @@ h6 {
 }
 
 .color-text-mutted {
-  color: var(--neutral-400);
+  color: var(--neutral-600);
 }
 
 .color-white {
@@ -796,7 +796,7 @@ h6 {
   display: inline-block;
   width: 100%;
   padding: 20px 0px;
-  border-top: 1px solid #E0E6F7;
+  border-top: 1px solid var(--neutral-200);
   margin-top: 30px;
 }
 
@@ -1070,7 +1070,7 @@ h6,
 .btn-grey {
   padding: 17px 20px;
   gap: 10px;
-  background: #E0E6F7;
+  background: var(--neutral-200);
   border-radius: 8px;
   color: var(--red-500);
   font-size: 14px;
@@ -1556,7 +1556,7 @@ span.btn {
   height: 24px;
   width: 24px;
   background-color: #ffffff;
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 7px;
 }
 
@@ -2096,11 +2096,14 @@ label {
 
 .card-grid-2 {
   border-radius: 8px;
-  overflow: hidden;
+  height: 420px;
   margin-bottom: 24px;
-  position: relative;
   background: var(--neutral-100);
   border: 1px solid var(--neutral-500);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .card-grid-2 i {
   font-size: 20px;
@@ -2117,9 +2120,9 @@ label {
   /* background-color: var(--red-100); */
   cursor: pointer;
   border: 1px solid var(--red-500);
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.26);
-  -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.26);
-  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.26);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.10);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.10);
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.10);
 }
 .card-grid-2:hover .btn-apply-now {
   color: #ffffff;
@@ -2201,7 +2204,10 @@ label {
   border-radius: 12px;
 }
 .card-grid-2 .card-block-info {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
   width: 100%;
   padding: 5px 10px 20px 10px;
 }
@@ -2249,6 +2255,15 @@ label {
 }
 .card-grid-2 .card-block-info .card-2-bottom {
   position: relative;
+}
+.card-grid-2 .card-block-info .card-2-bottom .skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.card-grid-2 .card-block-info .card-2-bottom .skills-wrapper a {
+  flex: 1 0 auto;
+  text-align: center;
 }
 .card-grid-2 .card-block-info .card-2-bottom .btn-grey-small {
   margin-right: 5px;
@@ -2305,8 +2320,13 @@ label {
   display: flex;
 }
 .card-grid-2 .employers-info {
-  border-top: 1px solid #E0E6F7;
+  border-top: 1px solid var(--neutral-200);
   padding-top: 20px;
+}
+.card-grid-2 .employers-info .city-info {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .card-grid-2 .flash {
   position: absolute;
@@ -2317,7 +2337,7 @@ label {
   background: url(../imgs/template/icons/flash.svg) no-repeat 0px 0px;
 }
 .card-grid-2 .card-grid-2-image-left {
-  padding: 30px 20px 15px 20px;
+  padding: 30px 20px 10px 20px;
   display: flex;
   position: relative;
 }
@@ -2348,7 +2368,7 @@ label {
 }
 
 .card-image-top {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   padding: 12px 12px 20px 12px;
   border-radius: 16px;
   margin-bottom: 24px;
@@ -2375,7 +2395,7 @@ label {
   align-items: center;
   padding: 0px 10px;
   height: 24px;
-  background: #E0E6F7;
+  background: var(--neutral-200);
   border-radius: 5px;
   color: var(--red-500);
   min-width: 42px;
@@ -2522,7 +2542,7 @@ label {
   background-color: #ffffff;
   padding: 40px 30px 35px 30px;
   border-radius: 10px;
-  border: thin solid #E0E6F7;
+  border: thin solid var(--neutral-200);
   margin-bottom: 30px;
 }
 .card-grid-4:hover {
@@ -2604,7 +2624,7 @@ label {
   position: relative;
 }
 .card-grid-6 .card-text-desc {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   padding: 20px;
   border-radius: 4px;
   position: relative;
@@ -2638,7 +2658,7 @@ label {
 }
 
 .card-grid-border {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   padding: 30px;
   border-radius: 8px;
   margin-bottom: 30px;
@@ -2661,7 +2681,7 @@ label {
   width: 100%;
   padding: 0px 0px 15px 0px;
   margin-bottom: 0px;
-  border-bottom: 1px solid #E0E6F7;
+  border-bottom: 1px solid var(--neutral-200);
 }
 .card-list-4 .image {
   min-width: 60px;
@@ -2699,7 +2719,7 @@ ul li:last-child .card-list-4 {
   padding: 30px;
   display: flex;
   box-shadow: 0px 10px 20px -5px rgba(10, 42, 105, 0.06);
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
 }
 .box-radius-8 .image {
   display: inline-block;
@@ -2719,7 +2739,7 @@ ul li:last-child .card-list-4 {
 }
 
 .card-review-1 {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 10px;
   padding: 0px 25px 25px 25px;
   position: relative;
@@ -2736,7 +2756,7 @@ ul li:last-child .card-list-4 {
 }
 .card-review-1 .review-name {
   text-align: center;
-  border-bottom: 1px solid #E0E6F7;
+  border-bottom: 1px solid var(--neutral-200);
   padding-bottom: 15px;
   padding-top: 10px;
   margin-bottom: 15px;
@@ -3813,7 +3833,7 @@ ul li:last-child .card-list-4 {
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-header-info-wrap {
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   margin: 17px 0 30px 0;
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-header-info-wrap .single-mobile-header-info {
@@ -4172,7 +4192,7 @@ ul li:last-child .card-list-4 {
   transition-duration: 0.2s;
 }
 .footer .footer-bottom {
-  border-top: 1px solid #E0E6F7;
+  border-top: 1px solid var(--neutral-200);
   padding: 30px 0px;
   color: #4F5E64;
   font-size: 14px;
@@ -6006,7 +6026,7 @@ ul li:last-child .card-list-4 {
   display: inline-block;
   width: 100%;
   padding: 44px;
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 8px;
   margin-bottom: 30px;
 }
@@ -6378,7 +6398,7 @@ ul li:last-child .card-list-4 {
 }
 .form-comment .input-comment {
   border-radius: 4px;
-  border: 2px solid #E0E6F7;
+  border: 2px solid var(--neutral-200);
   padding: 20px;
   width: 100%;
   color: #A0ABB8;
@@ -6435,7 +6455,7 @@ ul li:last-child .card-list-4 {
   background-repeat: no-repeat;
 }
 .form-contact .border-bottom {
-  border-color: #E0E6F7;
+  border-color: var(--neutral-200);
 }
 
 .box-skills {
@@ -6704,7 +6724,7 @@ ul li:last-child .card-list-4 {
 .sidebar-border .sidebar-heading .avatar-sidebar .sidebar-info .dropdown-menu, .sidebar-shadow .sidebar-heading .avatar-sidebar .sidebar-info .dropdown-menu {
   min-width: unset;
   box-shadow: 0px 10px 20px -5px rgba(10, 42, 105, 0.06);
-  border: thin solid #E0E6F7;
+  border: thin solid var(--neutral-200);
 }
 .sidebar-border .sidebar-heading .avatar-sidebar .sidebar-info .dropdown-menu a, .sidebar-shadow .sidebar-heading .avatar-sidebar .sidebar-info .dropdown-menu a {
   font-size: 14px;
@@ -6809,7 +6829,7 @@ ul li:last-child .card-list-4 {
 }
 
 .job-overview {
-  border: thin solid #E0E6F7;
+  border: thin solid var(--neutral-200);
   border-radius: 8px;
   padding: 20px 30px 30px 30px;
   margin-bottom: 50px;
@@ -6870,12 +6890,12 @@ ul li:last-child .card-list-4 {
   padding: 20px;
   display: inline-block;
   width: 100%;
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 8px;
 }
 
 .box-improve {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0px 10px 20px -5px rgba(10, 42, 105, 0.06);
@@ -6960,7 +6980,7 @@ ul li:last-child .card-list-4 {
 }
 
 .box-border {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 4px;
   display: inline-block;
   padding: 1px 0px 3px 15px;
@@ -6968,9 +6988,9 @@ ul li:last-child .card-list-4 {
 }
 
 .box-filters-job {
-  border-bottom: 1px solid #E0E6F7;
+  border-bottom: 1px solid var(--neutral-200);
   margin-bottom: 30px;
-  padding: 0px 0px 5px 0px;
+  padding: 0px 0px 10px 0px;
 }
 .box-filters-job .box-view-type img {
   vertical-align: middle;
@@ -7205,7 +7225,7 @@ ul li:last-child .card-list-4 {
   display: inline-block;
   width: 100%;
   padding: 15px 0px 10px 0px;
-  border-bottom: 1px solid #E0E6F7;
+  border-bottom: 1px solid var(--neutral-200);
 }
 .list-checkbox li {
   position: relative;
@@ -7237,7 +7257,7 @@ ul li:last-child .card-list-4 {
 }
 
 .content-page .card-grid-2 .card-block-info {
-  padding: 0px 20px 30px 20px;
+  padding: 0px 20px 20px 20px;
   position: relative;
 }
 .content-page .card-grid-2 .card-block-info .btn-dots-abs-right {
@@ -7325,7 +7345,7 @@ ul li:last-child .card-list-4 {
 
 .box-list-character {
   background: #ffffff;
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 8px;
   padding: 10px;
   display: table;
@@ -7356,14 +7376,14 @@ ul li:last-child .card-list-4 {
   height: 28px;
 }
 .box-list-character ul li a:hover, .box-list-character ul li a.active {
-  background-color: #E0E6F7;
+  background-color: var(--neutral-200);
   border-radius: 50%;
   text-align: center;
   color: var(--red-500);
 }
 
 .sidebar-border-bg {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   background: #F2F6FD url(../imgs/page/company/bg-hiring.svg) no-repeat bottom left;
   padding: 30px 40px 260px 40px;
   border-radius: 4px;
@@ -7605,7 +7625,7 @@ ul li:last-child .card-list-4 {
 
 .box-we-hiring {
   max-width: 85%;
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   padding: 40px 250px 40px 190px;
   position: relative;
   display: flex;
@@ -7734,7 +7754,7 @@ ul li:last-child .card-list-4 {
 }
 
 .box-trust {
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
   border-radius: 4px;
   padding: 30px 30px 25px 30px;
   position: relative;
@@ -7969,7 +7989,7 @@ ul li:last-child .card-list-4 {
 
 .banner-hero .block-banner.form-none-shadow .form-find {
   box-shadow: none;
-  border: 1px solid #E0E6F7;
+  border: 1px solid var(--neutral-200);
 }
 
 .list-tags-banner-2 {
