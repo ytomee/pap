@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Layout from "../../components/Layout/Layout";
-import React, { useState } from "react";
+import React from "react";
 import User from "../../models/user";
 import connectMongoDB from "../../lib/mongodb";
 import { useSession } from "next-auth/react";
 
-export default function Profile({ user, profileComplete, profilePercentage }) {
+export default function Profile({ user, profileComplete, profilePercentage, mainPercentage, sidebarPercentage }) {
 
     const { data: session } = useSession();
 
@@ -36,7 +36,7 @@ export default function Profile({ user, profileComplete, profilePercentage }) {
                             <div className="row">
                                 <div className="col-lg-8 col-md-12">
                                     <h3>
-                                        {user.name} 
+                                        <span style={{ textTransform: "capitalize" }}>{user.name}</span>
                                         {user.profile.city && (
                                             <span className="card-location font-regular">
                                                 <i className="fa-solid fa-location-dot mr-5"></i>
@@ -71,101 +71,112 @@ export default function Profile({ user, profileComplete, profilePercentage }) {
                 <section className="section-box mt-30">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-8 col-md-12 col-sm-12 col-12">
+                            <div className={sidebarPercentage == 0 
+                            ? "col-lg-12 col-md-12 col-sm-12 col-12" 
+                            : "col-lg-8 col-md-12 col-sm-12 col-12"
+                            }>
                                 <div className="content-single">
                                     <div className="tab-content">
-                                        <div>
-                                            {user.profile.aboutMe && (
-                                                <>
-                                                    <h4 className="mt-0 mb-20">Sobre mim</h4>
-                                                    <p>{user.profile.aboutMe}</p>
-                                                </>
-                                            )}
+                                        {mainPercentage != 0 ? (
+                                            <div>
+                                                {user.profile.aboutMe && user.profile.aboutMe.length > 0 && (
+                                                    <>
+                                                        <h4 className="mt-0 mb-20">Sobre mim</h4>
+                                                        <p>{user.profile.aboutMe}</p>
+                                                    </>
+                                                )}
 
-                                            {user.profile.skills && (
-                                                <>
-                                                    <h4 className="mt-40">Competências profissionais</h4>
-                                                    <div className="row">
-                                                
-                                                        {user.profile.skills.map((skill, index) => (
-                                                            <div key={index} className="col-lg-6 mt-3">
-                                                                <div className="box-progress-bar">
-                                                                    <p className="font-xs color-text-paragraph mb-10 main-color">{skill.name}</p>
-                                                                    <div className="progress">
-                                                                        <div className="progress-bar bg-paragraph-2" 
-                                                                            role="progressbar" 
-                                                                            style={{ width: `${skill.value}%` }}
-                                                                            aria-valuenow={25} 
-                                                                            aria-valuemin={0} 
-                                                                            aria-valuemax={100}>
-                                                                            <span>{skill.value}%</span>
+                                                {user.profile.skills && user.profile.skills.length > 0 && (
+                                                    <>
+                                                        <h4 className="mt-40">Competências profissionais</h4>
+                                                        <div className="row">
+                                                    
+                                                            {user.profile.skills.map((skill, index) => (
+                                                                <div key={index} className="col-lg-6 mt-3">
+                                                                    <div className="box-progress-bar">
+                                                                        <p className="font-xs color-text-paragraph mb-10 main-color">{skill.name}</p>
+                                                                        <div className="progress">
+                                                                            <div className="progress-bar bg-paragraph-2" 
+                                                                                role="progressbar" 
+                                                                                style={{ width: `${skill.value}%` }}
+                                                                                aria-valuenow={25} 
+                                                                                aria-valuemin={0} 
+                                                                                aria-valuemax={100}>
+                                                                                <span>{skill.value}%</span>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            ))}
+                                                        </div>
+                                                    </>
+                                                )}
+                                                
+                                                {user.profile.workExperience && user.profile.workExperience.length > 0  && (
+                                                    <>
+                                                        <h4 className="mt-50">Experiência</h4>
+                                                        {user.profile.workExperience.map((experience, index) => (
+                                                            <ul key={index} className="profile-list">
+                                                                <li>
+                                                                    <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>{experience.institute}</div>
+                                                                    <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>{experience.role}</div>
+                                                                    <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>{experience.start} - {experience.end}</div>
+                                                                </li>
+                                                            </ul>
                                                         ))}
-                                                    </div>
-                                                </>
-                                            )}
-                                            
-                                            {user.profile.workExperience && user.profile.workExperience.length > 0  && (
-                                                <>
-                                                    <h4 className="mt-50">Experiência</h4>
-                                                    {user.profile.workExperience.map((experience, index) => (
-                                                        <ul key={index} className="profile-list">
-                                                            <li>
-                                                                <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>{experience.institute}</div>
-                                                                <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>{experience.role}</div>
-                                                                <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>{experience.start} - {experience.end}</div>
-                                                            </li>
-                                                        </ul>
-                                                    ))}
-                                                </>
-                                            )}
+                                                    </>
+                                                )}
 
-                                            {user.profile.education && user.profile.education.length > 0  && (
-                                                <>
-                                                    <h4 className="mt-50">Educação</h4>
-                                                    {user.profile.education.map((education, index) => (
-                                                        <ul key={index} className="profile-list">
-                                                            <li>
-                                                                <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>{education.institute}</div>
-                                                                <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>{education.course}</div>
-                                                                <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>{education.start} - {education.end}</div>
-                                                            </li>
-                                                        </ul>
-                                                    ))}
-                                                </>
-                                            )}
+                                                {user.profile.education && user.profile.education.length > 0  && (
+                                                    <>
+                                                        <h4 className="mt-50">Educação</h4>
+                                                        {user.profile.education.map((education, index) => (
+                                                            <ul key={index} className="profile-list">
+                                                                <li>
+                                                                    <div className="institute"><i className="fa-solid fa-house-crack mr-10"></i>{education.institute}</div>
+                                                                    <div className="role"><i className="fa-solid fa-briefcase mr-10"></i>{education.course}</div>
+                                                                    <div className="timeframe"><i className="fa-regular fa-clock mr-10"></i>{education.start} - {education.end}</div>
+                                                                </li>
+                                                            </ul>
+                                                        ))}
+                                                    </>
+                                                )}
 
-                                            <h4 className="mt-40">Os meus projetos</h4>
-                                            <div className="row mt-10">
-                                                <div className="col-6">
-                                                    <div className="portfolio-square">
-                                                        Teste de portfolio
+                                                <h4 className="mt-40">Os meus projetos</h4>
+                                                <div className="row mt-10">
+                                                    <div className="col-6">
+                                                        <div className="portfolio-square">
+                                                            Teste de portfolio
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-6">
-                                                    <div className="portfolio-square">
-                                                        Teste de portfolio
+                                                    <div className="col-6">
+                                                        <div className="portfolio-square">
+                                                            Teste de portfolio
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-6">
-                                                    <div className="portfolio-square">
-                                                        Teste de portfolio
+                                                    <div className="col-6">
+                                                        <div className="portfolio-square">
+                                                            Teste de portfolio
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-6">
-                                                    <div className="portfolio-square">
-                                                        Teste de portfolio
+                                                    <div className="col-6">
+                                                        <div className="portfolio-square">
+                                                            Teste de portfolio
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        ) : (
+                                            <div className="profile-noresults">
+                                                <i className="fa-solid fa-heart-crack"></i>
+                                                <h5>Parece que este utilizador ainda não configurou o seu perfil...</h5>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-40 pl-lg-15 mt-lg-30">
+                            {sidebarPercentage != 0 && (
+                                <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-40 pl-lg-15 mt-lg-30">
                                 {session?.user?.id === user._id && (
                                     <div className="sidebar-border">
                                         {!profileComplete ? (
@@ -200,7 +211,7 @@ export default function Profile({ user, profileComplete, profilePercentage }) {
                                                     </div>
                                                 </li>
                                             )}
-                                            {user.profile.languages && (
+                                            {user.profile.languages && user.profile.languages.length > 0 && (
                                                 <li>
                                                     <div className="sidebar-icon-item">
                                                         <i className="fa-solid fa-earth-americas"></i>
@@ -305,13 +316,17 @@ export default function Profile({ user, profileComplete, profilePercentage }) {
                                             <li><strong>Email: </strong>{ !user.profile.contactEmail ? user.email : user.profile.contactEmail }</li>
                                         </ul>
                                         <div className="mt-30">
-                                            <Link legacyBehavior href="page-contact">
-                                                <a className="btn btn-send-message">Entrar em contacto</a>
-                                            </Link>
+                                            <a className="btn btn-submit"
+                                                style={{ width: "100%" }}
+                                            >
+                                                <i className="fa-solid fa-paper-plane mr-10"></i>
+                                                Entrar em contacto
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            )}
                         </div>
                     </div>
                 </section>
@@ -327,16 +342,76 @@ function checkProfileCompletion(profile) {
         "city",
         "country",
         "aboutMe",
-        "aboutMeShort",
         "yearsExperience",
         "languages",
         "educationLevel",
         "phone",
-        "contactEmail",
         "skills",
         "pfp", 
         "banner",
         "cv"
+    ];
+
+    let filledCount = 0;
+
+    requiredFields.forEach((field) => {
+        if (Array.isArray(profile[field])) {
+            if (profile[field].length > 0) filledCount++;
+        } else if (profile[field]) {
+            filledCount++;
+        }
+    });
+
+    const percentage = Math.round((filledCount / requiredFields.length) * 100);
+
+    return {
+        complete: percentage === 100,
+        percentage,
+    };
+}
+
+function checkMainProfile(profile) {
+    if (!profile) return { complete: false, percentage: 0 };
+
+    const requiredFields = [
+        "aboutMe",
+        "skills",
+        "workExperience",
+        "education"
+    ];
+
+    let filledCount = 0;
+
+    requiredFields.forEach((field) => {
+        if (Array.isArray(profile[field])) {
+            if (profile[field].length > 0) filledCount++;
+        } else if (profile[field]) {
+            filledCount++;
+        }
+    });
+
+    const percentage = Math.round((filledCount / requiredFields.length) * 100);
+
+    return {
+        complete: percentage === 100,
+        percentage,
+    };
+}
+
+function checkSidebarProfile(profile) {
+    if (!profile) return { complete: false, percentage: 0 };
+
+    const requiredFields = [
+        "yearsExperience",
+        "languages",
+        "educationLevel",
+        "site",
+        "github",
+        "linkedin",
+        "city",
+        "country",
+        "phone",
+        "contactEmail"
     ];
 
     let filledCount = 0;
@@ -369,16 +444,25 @@ export async function getServerSideProps(context) {
         }
 
         const verificationResult = checkProfileCompletion(user.profile);
+        const verificationMainResult = checkMainProfile(user.profile);
+        const verificationSidebarResult = checkSidebarProfile(user.profile);
 
         return {
             props: {
                 user: JSON.parse(JSON.stringify(user)),
                 profileComplete: verificationResult.complete,
                 profilePercentage: verificationResult.percentage,
+                mainPercentage: verificationMainResult.percentage,
+                sidebarPercentage: verificationSidebarResult.percentage,
             },
         };
     } catch (error) {
         console.error(error);
-        return { props: { user: null, profileComplete: false, profilePercentage: 0 } };
+        return { props: { user: null, 
+                          profileComplete: false, 
+                          profilePercentage: 0,
+                          mainPercentage: 0,
+                          sidebarPercentage: 0 
+               }        };
     }
 }
