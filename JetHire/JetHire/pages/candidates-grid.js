@@ -38,9 +38,9 @@ export default function CandidateGrid() {
                         <div className="banner-hero banner-single banner-single-bg">
                             <div className="block-banner text-center">
                                 <h3 className="wow animate__animated animate__fadeInUp">
-                                    <span className="job-list-number"> {filteredUsers.length} </span> candidatos disponíveis
+                                    <span className="job-list-number"> {users.length} </span> candidatos disponíveis
                                 </h3>
-                                <p className="mt-10 wow animate__animated animate__fadeInUp">Descobre talentos prontos para integrar a tua equipa.</p>
+                                <p className="mt-10 wow animate__animated animate__fadeInUp">Descobre talentos prontos para integrar a sua equipa.</p>
                                 <div className="form-find text-start mt-40 wow animate__animated animate__fadeInUp">
                                     <form onSubmit={(e) => e.preventDefault()}>
                                         <input
@@ -117,7 +117,14 @@ export default function CandidateGrid() {
                                     <p className="mt-3">A carregar candidatos...</p>
                                 </div>
                             ) : filteredUsers.length === 0 ? (
-                                <div className="text-center py-5">
+                                <div 
+                                    className="py-5"
+                                    style={{height: "300px", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column"}}
+                                >   
+                                    <i 
+                                        className="fa-solid fa-triangle-exclamation mb-10"
+                                        style={{fontSize: "50px"}}
+                                    ></i>
                                     <h4>Não existem resultados.</h4>
                                 </div>
                             ) : (

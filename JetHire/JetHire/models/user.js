@@ -19,6 +19,15 @@ const skillsSchema = new Schema({
     value: { type: Number, required: true }
 });
 
+const portfolioSchema = new Schema({
+    label: { type: String, required: false },
+    link: {type: String, required: true },
+    image: { 
+        url: {type: String, required: true },
+        id: {type: String, required: true }
+    }
+});
+
 const userSchema = new Schema(
     {
         type: { type: String, required: true },
@@ -42,6 +51,7 @@ const userSchema = new Schema(
             workExperience: [workExperienceSchema],
             education: [educationSchema],
             skills: [skillsSchema],
+            portfolio: [portfolioSchema],
             pfp: String,
             pfp_id: String,
             banner: String,

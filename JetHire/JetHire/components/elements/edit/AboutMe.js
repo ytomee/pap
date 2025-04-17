@@ -31,12 +31,12 @@ export default function AboutMe({ formData, setFormData }) {
                     className="font-sm color-text-paragraph-2" 
                     name="aboutMe" 
                     placeholder="Conte-nos um pouco sobre si." 
-                    maxLength="3000"
+                    maxLength="1800"
                     onChange={handleTextChange}
                     value={formData?.profile?.aboutMe || ""}
                 />
             </div>
-            <p className="char-number">{charCount}/3000</p>
+            <p className="char-number">{charCount}/1800</p>
         </>
     );
 }

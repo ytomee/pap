@@ -906,18 +906,111 @@ h6 {
 .profile-list .timeframe{
   font-size: 12px;
 }
-.portfolio-square{
-  height: 200px;
-  border-radius: 10px;
-  background-color: var(--red-400);
-  backdrop-filter: opacity(30%);
-  color: var(--neutral-100);
-  font-size: 20px;
+
+.portfolio-square {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
 }
+
+.portfolio-text {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s ease;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.portfolio-button:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-button:hover .portfolio-text {
+  transform: translateY(0px);
+  color: var(--neutral-100);
+  opacity: 1;
+}
+
+.portfolio-button {
+  display: block;
+  text-decoration: none;
+}
+
+.custom-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+
+.custom-image-url {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.custom-image {
+  height: 200px;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.custom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+.custom-caption {
+  font-size: 20px;
+  text-align: center;
+  pointer-events: none;
+  color: var(--neutral-100);
+  font-weight: 500;
+}
+
+.custom-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
 iframe {
   width: 100%;
 }
@@ -2320,7 +2413,6 @@ label {
   display: flex;
 }
 .card-grid-2 .employers-info {
-  border-top: 1px solid var(--neutral-200);
   padding-top: 20px;
 }
 .card-grid-2 .employers-info .city-info {
@@ -2955,6 +3047,28 @@ ul li:last-child .card-list-4 {
 
 .text-mutted-2 {
   color: #66789C;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.loading .spinner-border {
+  height: 100px;
+  width: 100px;
+}
+
+.loading h3 {
+  color: var(--neutral-100);
 }
 
 /*page loading*/
@@ -6612,7 +6726,7 @@ ul li:last-child .card-list-4 {
 .content-single p {
   font-size: 16px;
   line-height: 200%;
-  color: #4F5E64;
+  color: var(--neutral-800);
   line-height: 32px;
   margin-bottom: 20px;
 }
@@ -7160,7 +7274,7 @@ ul li:last-child .card-list-4 {
 }
 
 .text-sortby {
-  color: #A0ABB8;
+  color: var(--neutral-700);
   font-weight: 500;
   font-size: 12px;
   display: inline-block;
@@ -7222,7 +7336,7 @@ ul li:last-child .card-list-4 {
 .text-small {
   font-size: 14px;
   line-height: 22px;
-  color: #4F5E64;
+  color: var(--neutral-800);
   font-weight: 500;
 }
 .text-small a{

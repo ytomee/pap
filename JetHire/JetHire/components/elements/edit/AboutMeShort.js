@@ -31,13 +31,13 @@ export default function AboutMeShort({ formData, setFormData }) {
                     className="font-sm color-text-paragraph-2" 
                     name="aboutMeShort" 
                     placeholder="Diga-nos resumidamente o que disse antes." 
-                    maxLength="500"
+                    maxLength="130"
                     style={{ minHeight: "100px" }} 
                     onChange={handleTextChange}
                     value={formData?.profile?.aboutMeShort || ""}
                 />
             </div>
-            <p className="char-number">{charCount}/500</p>
+            <p className="char-number">{charCount}/130</p>
         </>
     );
 }

@@ -21,6 +21,7 @@ import Education from "../../components/elements/edit/Education";
 import Experience from "../../components/elements/edit/Experience";
 import Skills from "../../components/elements/edit/Skills";
 import CV from "../../components/elements/edit/CV";
+import Portfolio from "../../components/elements/edit/Portfolio";
 
 //DATABASE & SESSION
 import connectMongoDB from "../../lib/mongodb";
@@ -31,6 +32,7 @@ export default function EditProfile({ user }) {
 
     const [formData, setFormData] = useState(user);
     const [error, setError] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         if (user) {
@@ -53,6 +55,7 @@ export default function EditProfile({ user }) {
         e.preventDefault();
 
         try {
+            setIsLoading(true); 
             const res = await fetch("/api/profile", {
                 method: "POST",
                 headers: {
@@ -70,6 +73,8 @@ export default function EditProfile({ user }) {
             }
         } catch (err) {
             setError("Erro de comunicação com o servidor.");
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -80,6 +85,15 @@ export default function EditProfile({ user }) {
 
     return (
         <>
+            {isLoading && (
+                <div className="loading">
+                    <div 
+                        className="spinner-border text-danger" 
+                        role="status" 
+                    />
+                    <h3>A carregar...</h3>
+                </div>
+            )}
             <Layout>
                 <section>
                     <div className="container">
@@ -246,6 +260,8 @@ export default function EditProfile({ user }) {
                                     <Education setFormData={setFormData} formData={formData}></Education>
 
                                     <Experience setFormData={setFormData} formData={formData}></Experience>
+
+                                    <Portfolio setFormData={setFormData} formData={formData}></Portfolio>
 
                                     <div className="col-lg-3 mb-20">
                                         <h4 className="mb-10">Site pessoal</h4>

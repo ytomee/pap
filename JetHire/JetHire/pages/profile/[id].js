@@ -82,7 +82,9 @@ export default function Profile({ user, profileComplete, profilePercentage, main
                                                 {user.profile.aboutMe && user.profile.aboutMe.length > 0 && (
                                                     <>
                                                         <h4 className="mt-0 mb-20">Sobre mim</h4>
-                                                        <p>{user.profile.aboutMe}</p>
+                                                        {user.profile.aboutMe.split('\n').map((linha, i) => (
+                                                            <p key={i}>{linha}</p>
+                                                        ))}
                                                     </>
                                                 )}
 
@@ -142,29 +144,24 @@ export default function Profile({ user, profileComplete, profilePercentage, main
                                                     </>
                                                 )}
 
-                                                <h4 className="mt-40">Os meus projetos</h4>
-                                                <div className="row mt-10">
-                                                    <div className="col-6">
-                                                        <div className="portfolio-square">
-                                                            Teste de portfolio
+                                                {user.profile.portfolio && user.profile.portfolio.length > 0  && (
+                                                    <>
+                                                        <h4 className="mt-40">Os meus projetos</h4>
+                                                        <div className="row mt-10">
+                                                            {user.profile.portfolio.map((portfolio, index) => (
+                                                            <div key={index} className="col-6">
+                                                                <a href={portfolio.link} target="_blank" rel="noopener noreferrer" className="portfolio-button">
+                                                                <div className="portfolio-square" style={{ backgroundImage: `url(${portfolio.image.url})` }}>
+                                                                    <div className="portfolio-overlay">
+                                                                    <span className="portfolio-text">{portfolio.label}</span>
+                                                                    </div>
+                                                                </div>
+                                                                </a>
+                                                            </div>
+                                                            ))}
                                                         </div>
-                                                    </div>
-                                                    <div className="col-6">
-                                                        <div className="portfolio-square">
-                                                            Teste de portfolio
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-6">
-                                                        <div className="portfolio-square">
-                                                            Teste de portfolio
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-6">
-                                                        <div className="portfolio-square">
-                                                            Teste de portfolio
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                    </>
+                                                )}
                                             </div>
                                         ) : (
                                             <div className="profile-noresults">
