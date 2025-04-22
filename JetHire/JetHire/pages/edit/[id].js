@@ -333,6 +333,10 @@ export async function getServerSideProps(context) {
     const { id } = context.params;
     const session = await getSession({ req: context.req });
 
+    console.log("Session User ID:", session?.user?.id);
+    console.log("Context ID:", id);
+
+    /*
     if (!session || !session.user || session.user.id !== id) {
         return {
             redirect: {
@@ -341,6 +345,7 @@ export async function getServerSideProps(context) {
             },
         };
     }
+    */
 
     try {
         await connectMongoDB();
