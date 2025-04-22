@@ -3,29 +3,29 @@
 "use client";
 
 //REACT
-import Layout from "/components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import { useState, useEffect } from "react";
 
 //JSON
-import countries from "/components/json/countries.json"
-import educationLevels from "/components/json/education.json"
-import yearsExperienceJson from "/components/json/years.json"
+import countries from "../../components/json/countries.json"
+import educationLevels from "../../components/json/education.json"
+import yearsExperienceJson from "../../components/json/years.json"
 
 //COMPONENTS
-import Languages from "/components/elements/edit/Languages";
-import PFP from "/components/elements/edit/PFP";
-import Banner from "/components/elements/edit/Banner";
-import AboutMe from "/components/elements/edit/AboutMe";
-import AboutMeShort from "/components/elements/edit/AboutMeShort";
-import Education from "/components/elements/edit/Education";
-import Experience from "/components/elements/edit/Experience";
-import Skills from "/components/elements/edit/Skills";
-import CV from "/components/elements/edit/CV";
-import Portfolio from "/components/elements/edit/Portfolio";
+import Languages from "../../components/elements/edit/Languages";
+import PFP from "../../components/elements/edit/PFP";
+import Banner from "../../components/elements/edit/Banner";
+import AboutMe from "../../components/elements/edit/AboutMe";
+import AboutMeShort from "../../components/elements/edit/AboutMeShort";
+import Education from "../../components/elements/edit/Education";
+import Experience from "../../components/elements/edit/Experience";
+import Skills from "../../components/elements/edit/Skills";
+import CV from "../../components/elements/edit/CV";
+import Portfolio from "../../components/elements/edit/Portfolio";
 
 //DATABASE & SESSION
-import connectMongoDB from "/lib/mongodb";
-import User from "/models/user";
+import connectMongoDB from "../../lib/mongodb";
+import User from "../../models/user";
 import { getSession } from "next-auth/react";
 
 export default function EditProfile({ user }) {
