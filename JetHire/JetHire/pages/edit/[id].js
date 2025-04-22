@@ -12,7 +12,7 @@ import educationLevels from "../../components/json/education.json"
 import yearsExperienceJson from "../../components/json/years.json"
 
 //COMPONENTS
-import Languages from "/../components/elements/edit/languages";
+import Languages from "components/elements/edit/languages";
 import PFP from "../../components/elements/edit/PFP";
 import Banner from "../../components/elements/edit/Banner";
 import AboutMe from "../../components/elements/edit/AboutMe";
