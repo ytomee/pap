@@ -87,7 +87,7 @@ const authOptions = {
             session.user.email = token.email;
             session.user.image = token.image;
             
-            console.log('Sessão:', session);
+            //console.log('Sessão:', session);
             return session;
         }
     },
