@@ -1,6 +1,5 @@
 ﻿/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link';
-import Image from 'next/image';
 import React from 'react';
 import { signOut , useSession } from 'next-auth/react';
 
@@ -58,11 +57,11 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                             <a>
                                                 <span className="mr-10 navbar-name">{session?.user?.name}</span>
                                                 {session?.user?.image && (
-                                                    <Image
+                                                    <img
                                                         src={session.user.image}
-                                                        height={35}
-                                                        width={35}
-                                                        style={{ borderRadius: '50%' }}
+                                                        height={30}
+                                                        width={30}
+                                                        style={{ borderRadius: '50%', marginRight: "5px", objectFit: "cover" }}
                                                         alt="User Image"
                                                     />
                                                 )}

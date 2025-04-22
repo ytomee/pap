@@ -54,7 +54,7 @@ export default function Register() {
     }
   };
 
-  return (
+  return (  
     <Layout>
       <section className="pt-20 login-register">
         <div className="container">
@@ -63,7 +63,7 @@ export default function Register() {
               <div className="text-center">
                 <p className="font-sm text-brand-2">Registe-se </p>
                 <h2 className="mt-10 mb-5 text-brand-1">Bem-Vindo!</h2>
-                <p className="font-sm text-muted mb-30">
+                <p className="font-sm text-mutted-2 mb-30">
                   Acesso a todas as funcionalidades. <br /> Sem necessidade de cartão de crédito.
                 </p>
                 <div className="social-icons-group">
@@ -154,7 +154,7 @@ export default function Register() {
                     Registar
                   </button>
                 </div>
-                <div className="text-muted text-center">
+                <div className="text-mutted-2 text-center">
                   Já tem uma conta?
                   <Link legacyBehavior href="/page-signin">
                     <a href="page-signin"> Entrar</a>

@@ -72,8 +72,8 @@ export default function Profile({ user, profileComplete, profilePercentage, main
                     <div className="container">
                         <div className="row">
                             <div className={sidebarPercentage == 0 
-                            ? "col-lg-12 col-md-12 col-sm-12 col-12" 
-                            : "col-lg-8 col-md-12 col-sm-12 col-12"
+                                ? "col-lg-12 col-md-12 col-sm-12 col-12" 
+                                : "col-lg-8 col-md-12 col-sm-12 col-12"
                             }>
                                 <div className="content-single">
                                     <div className="tab-content">
@@ -92,7 +92,6 @@ export default function Profile({ user, profileComplete, profilePercentage, main
                                                     <>
                                                         <h4 className="mt-40">Competências profissionais</h4>
                                                         <div className="row">
-                                                    
                                                             {user.profile.skills.map((skill, index) => (
                                                                 <div key={index} className="col-lg-6 mt-3">
                                                                     <div className="box-progress-bar">
@@ -114,7 +113,7 @@ export default function Profile({ user, profileComplete, profilePercentage, main
                                                     </>
                                                 )}
                                                 
-                                                {user.profile.workExperience && user.profile.workExperience.length > 0  && (
+                                                {user.profile.workExperience && user.profile.workExperience.length > 0 && (
                                                     <>
                                                         <h4 className="mt-50">Experiência</h4>
                                                         {user.profile.workExperience.map((experience, index) => (
@@ -129,7 +128,7 @@ export default function Profile({ user, profileComplete, profilePercentage, main
                                                     </>
                                                 )}
 
-                                                {user.profile.education && user.profile.education.length > 0  && (
+                                                {user.profile.education && user.profile.education.length > 0 && (
                                                     <>
                                                         <h4 className="mt-50">Educação</h4>
                                                         {user.profile.education.map((education, index) => (
@@ -144,20 +143,20 @@ export default function Profile({ user, profileComplete, profilePercentage, main
                                                     </>
                                                 )}
 
-                                                {user.profile.portfolio && user.profile.portfolio.length > 0  && (
+                                                {user.profile.portfolio && user.profile.portfolio.length > 0 && (
                                                     <>
                                                         <h4 className="mt-40">Os meus projetos</h4>
                                                         <div className="row mt-10">
                                                             {user.profile.portfolio.map((portfolio, index) => (
-                                                            <div key={index} className="col-6">
-                                                                <a href={portfolio.link} target="_blank" rel="noopener noreferrer" className="portfolio-button">
-                                                                <div className="portfolio-square" style={{ backgroundImage: `url(${portfolio.image.url})` }}>
-                                                                    <div className="portfolio-overlay">
-                                                                    <span className="portfolio-text">{portfolio.label}</span>
-                                                                    </div>
+                                                                <div key={index} className="col-6">
+                                                                    <a href={portfolio.link} target="_blank" rel="noopener noreferrer" className="portfolio-button">
+                                                                        <div className="portfolio-square" style={{ backgroundImage: `url(${portfolio.image.url})` }}>
+                                                                            <div className="portfolio-overlay">
+                                                                                <span className="portfolio-text">{portfolio.label}</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
                                                                 </div>
-                                                                </a>
-                                                            </div>
                                                             ))}
                                                         </div>
                                                     </>
@@ -167,162 +166,169 @@ export default function Profile({ user, profileComplete, profilePercentage, main
                                             <div className="profile-noresults">
                                                 <i className="fa-solid fa-heart-crack"></i>
                                                 <h5>Parece que este utilizador ainda não configurou o seu perfil...</h5>
+
+                                                {session?.user?.id === user._id && (
+                                                    <div className="text-center mt-20">
+                                                        <a href={`/edit/${user._id}`} className="btn btn-default">Editar perfil</a>
+                                                    </div>
+                                                )}
                                             </div>
                                         )}
                                     </div>
                                 </div>
                             </div>
+
                             {sidebarPercentage != 0 && (
                                 <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-40 pl-lg-15 mt-lg-30">
-                                {session?.user?.id === user._id && (
+                                    {session?.user?.id === user._id && (
+                                        <div className="sidebar-border">
+                                            {!profileComplete ? (
+                                                <>
+                                                    <h5 className="f-14">Parece que ainda não completou o seu perfil.</h5>
+                                                    <p>Vamos mudar isso!</p>
+                                                    <h5 className="f-14 mt-5">{profilePercentage}% completo</h5>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <h5 className="f-14">O seu perfil está completo!</h5>
+                                                    <p>Se quiser fazer alguma alteração, ainda pode.</p>
+                                                </>
+                                            )}
+                                            <a href={`/edit/${user._id}`} className="btn btn-default mt-10">Editar perfil</a>
+                                        </div>
+                                    )}
+
                                     <div className="sidebar-border">
-                                        {!profileComplete ? (
-                                            <>
-                                                <h5 className="f-14">Parece que ainda não completou o seu perfil.</h5>
-                                                <p>Vamos mudar isso!</p>
-                                                <h5 className="f-14 mt-5">{profilePercentage}% completo</h5>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <h5 className="f-14">O seu perfil está completo!</h5>
-                                                <p>Se quiser fazer alguma alteração, ainda pode.</p>
-                                            </>
-                                        )}
-                                        <a href={`/edit/${user._id}`} className="btn btn-default mt-10">Editar perfil</a>
-                                    </div>
-                                )}
-                                <div className="sidebar-border">
-                                    <h5 className="f-18">Visão geral</h5>
-                                    <div className="sidebar-list-job">
-                                        <ul>
-                                            {user.profile.yearsExperience && (
-                                                <li>
-                                                    <div className="sidebar-icon-item">
-                                                        <i className="fa-solid fa-user-clock"></i>
-                                                    </div>
-                                                    <div className="sidebar-text-info">
-                                                        <span className="text-description">Experiência</span>
+                                        <h5 className="f-18">Visão geral</h5>
+                                        <div className="sidebar-list-job">
+                                            <ul>
+                                                {user.profile.yearsExperience && (
+                                                    <li>
+                                                        <div className="sidebar-icon-item">
+                                                            <i className="fa-solid fa-user-clock"></i>
+                                                        </div>
+                                                        <div className="sidebar-text-info">
+                                                            <span className="text-description">Experiência</span>
+                                                            <strong className="small-heading">{user.profile.yearsExperience}</strong>
+                                                        </div>
+                                                    </li>
+                                                )}
+                                                {user.profile.languages && user.profile.languages.length > 0 && (
+                                                    <li>
+                                                        <div className="sidebar-icon-item">
+                                                            <i className="fa-solid fa-earth-americas"></i>
+                                                        </div>
+                                                        <div className="sidebar-text-info">
+                                                            <span className="text-description">Línguas</span>
                                                             <strong className="small-heading">
-                                                                {user.profile.yearsExperience}
+                                                                {user.profile.languages.join(", ")}
                                                             </strong>
-                                                    </div>
-                                                </li>
-                                            )}
-                                            {user.profile.languages && user.profile.languages.length > 0 && (
-                                                <li>
-                                                    <div className="sidebar-icon-item">
-                                                        <i className="fa-solid fa-earth-americas"></i>
-                                                    </div>
-                                                    <div className="sidebar-text-info">
-                                                        <span className="text-description">Línguas</span>
-                                                        <strong className="small-heading">
-                                                            {user.profile.languages.join(", ")}
-                                                        </strong>
-                                                    </div>
-                                                </li>
-                                            )}
-                                            {user.profile.educationLevel && (
-                                                <li className="pb-15">
-                                                    <div className="sidebar-icon-item">
-                                                        <i className="fa-solid fa-graduation-cap"></i>
-                                                    </div>
-                                                    <div className="sidebar-text-info">
-                                                        <span className="text-description">Nível de educação</span>
-                                                        <strong className="small-heading">{user.profile.educationLevel}</strong>
-                                                    </div>
-                                                </li>
-                                            )}
-                                            {user.profile.site && (
-                                                <li className="pb-10">
-                                                    <div className="sidebar-icon-item">
-                                                        <i className="fa-solid fa-link"></i>
-                                                    </div>
-                                                    <div className="sidebar-text-info">
-                                                        <span className="socials">
-                                                            <a
-                                                                href={
-                                                                    user.profile.site.startsWith("http") 
+                                                        </div>
+                                                    </li>
+                                                )}
+                                                {user.profile.educationLevel && (
+                                                    <li className="pb-15">
+                                                        <div className="sidebar-icon-item">
+                                                            <i className="fa-solid fa-graduation-cap"></i>
+                                                        </div>
+                                                        <div className="sidebar-text-info">
+                                                            <span className="text-description">Nível de educação</span>
+                                                            <strong className="small-heading">{user.profile.educationLevel}</strong>
+                                                        </div>
+                                                    </li>
+                                                )}
+                                                {user.profile.site && (
+                                                    <li className="pb-10">
+                                                        <div className="sidebar-icon-item">
+                                                            <i className="fa-solid fa-link"></i>
+                                                        </div>
+                                                        <div className="sidebar-text-info">
+                                                            <span className="socials">
+                                                                <a
+                                                                    href={user.profile.site.startsWith("http") 
                                                                         ? user.profile.site 
                                                                         : `https://${user.profile.site}`
-                                                                }
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                            >
-                                                                Site pessoal
-                                                            </a>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                            )}
-                                            {user.profile.github && (
-                                                <li>
-                                                    <div className="sidebar-icon-item">
-                                                        <i className="fa-brands fa-github"></i>
-                                                    </div>
-                                                    <div className="sidebar-text-info">
-                                                        <span className="socials">
-                                                            <a
-                                                                href={
-                                                                    user.profile.github.startsWith("http") 
+                                                                    }
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                >
+                                                                    Site pessoal
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                )}
+                                                {user.profile.github && (
+                                                    <li>
+                                                        <div className="sidebar-icon-item">
+                                                            <i className="fa-brands fa-github"></i>
+                                                        </div>
+                                                        <div className="sidebar-text-info">
+                                                            <span className="socials">
+                                                                <a
+                                                                    href={user.profile.github.startsWith("http") 
                                                                         ? user.profile.github 
                                                                         : `https://${user.profile.github}`
-                                                                }
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                            >
-                                                                GitHub
-                                                            </a>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                            )}
-                                            {user.profile.linkedin && (
-                                                <li>
-                                                    <div className="sidebar-icon-item">
-                                                        <i className="fa-brands fa-linkedin"></i>
-                                                    </div>
-                                                    <div className="sidebar-text-info">
-                                                        <span className="socials">
-                                                            <a
-                                                                href={
-                                                                    user.profile.linkedin.startsWith("http") 
+                                                                    }
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                >
+                                                                    GitHub
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                )}
+                                                {user.profile.linkedin && (
+                                                    <li>
+                                                        <div className="sidebar-icon-item">
+                                                            <i className="fa-brands fa-linkedin"></i>
+                                                        </div>
+                                                        <div className="sidebar-text-info">
+                                                            <span className="socials">
+                                                                <a
+                                                                    href={user.profile.linkedin.startsWith("http") 
                                                                         ? user.profile.linkedin 
                                                                         : `https://${user.profile.linkedin}`
-                                                                }
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                            >
-                                                                LinkedIn
-                                                            </a>
-                                                        </span>
-                                                    </div>
-                                                </li>
-                                            )}
-                                        </ul>
-                                    </div>
-                                    <div className="sidebar-list-job">
-                                        <ul>
-                                            {user.profile.city && (
+                                                                    }
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                >
+                                                                    LinkedIn
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                )}
+                                            </ul>
+                                        </div>
+
+                                        <div className="sidebar-list-job">
+                                            <ul>
+                                                {user.profile.city && (
+                                                    <li>
+                                                        <strong>Localização: </strong>
+                                                        {user.profile.city}
+                                                        {user.profile.country && `, ${user.profile.country}`}
+                                                    </li>
+                                                )}
+                                                {user.profile.phone && (
+                                                    <li><strong>Telemóvel: </strong>{user.profile.phone}</li>
+                                                )}
                                                 <li>
-                                                    <strong>Localização: </strong>
-                                                    {user.profile.city}
-                                                    {user.profile.country && `, ${user.profile.country}`}
+                                                    <strong>Email: </strong>
+                                                    {!user.profile.contactEmail ? user.email : user.profile.contactEmail}
                                                 </li>
-                                            )}
-                                            {user.profile.phone && (<li><strong>Telemóvel: </strong>{user.profile.phone}</li>)}
-                                            <li><strong>Email: </strong>{ !user.profile.contactEmail ? user.email : user.profile.contactEmail }</li>
-                                        </ul>
-                                        <div className="mt-30">
-                                            <a className="btn btn-submit"
-                                                style={{ width: "100%" }}
-                                            >
-                                                <i className="fa-solid fa-paper-plane mr-10"></i>
-                                                Entrar em contacto
-                                            </a>
+                                            </ul>
+                                            <div className="mt-30">
+                                                <a className="btn btn-submit" style={{ width: "100%" }}>
+                                                    <i className="fa-solid fa-paper-plane mr-10"></i>
+                                                    Entrar em contacto
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             )}
                         </div>
                     </div>

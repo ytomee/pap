@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import Candidates from "../components/elements/candidates/Candidates";
 
 export default function CandidateGrid() {
+    
     const [users, setUsers] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [sortOrder, setSortOrder] = useState("recent");

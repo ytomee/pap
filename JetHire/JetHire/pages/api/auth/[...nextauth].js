@@ -33,7 +33,12 @@ const authOptions = {
                     throw new Error("Password incorreta");
                 }
 
-                return user;
+                return {
+                    id: user._id.toString(),
+                    name: user.name,
+                    email: user.email,
+                    image: user.profile?.pfp || "https://res.cloudinary.com/dngcufwm8/image/upload/v1745057172/user_v4xsnh.png"
+                };
             }
         })
     ],
@@ -67,18 +72,22 @@ const authOptions = {
         // },
         async jwt({ token, user }) {
             if (user) {
-                token.id = user.id || user._id;
+                token.id = user.id;
+                token.name = user.name,
                 token.email = user.email;
+                token.image = user.image;
             }
 
-            // console.log('Token JWT:', token);
+            //console.log('Token JWT:', token);
             return token;
         },
         async session({ session, token }) {
             session.user.id = token.id;
+            session.user.name = token.name;
             session.user.email = token.email;
+            session.user.image = token.image;
             
-            // console.log('Sessão:', session);
+            console.log('Sessão:', session);
             return session;
         }
     },

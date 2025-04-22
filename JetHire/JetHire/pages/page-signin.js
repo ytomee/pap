@@ -105,7 +105,7 @@ export default function Signin() {
                                             Login
                                         </button>
                                     </div>
-                                    <div className="text-muted text-center">
+                                    <div className="text-mutted-2 text-center">
                                         Ainda não tem conta?
                                         <Link legacyBehavior href="/page-register">
                                             <a> Criar conta</a>
@@ -114,10 +114,10 @@ export default function Signin() {
                                 </form>
                             </div>
                             <div className="img-1 d-none d-lg-block">
-                                <img className="shape-1" src="assets/imgs/page/login-register/img-4.svg" alt="JobBox" />
+                                <img className="shape-1" src="assets/imgs/page/login-register/img-4.svg"/>
                             </div>
                             <div className="img-2">
-                                <img src="assets/imgs/page/login-register/img-3.svg" alt="JobBox" />
+                                <img src="assets/imgs/page/login-register/img-3.svg"/>
                             </div>
                         </div>
                     </div>
