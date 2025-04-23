@@ -1,7 +1,6 @@
 ﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
-import BlogSlider from "./../components/sliders/Blog";
 
 export default function JobList() {
     return (
@@ -913,26 +912,6 @@ export default function JobList() {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className="section-box mt-50 mb-50">
-                        <div className="container">
-                            <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Blog</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Tem acesso ás últimas notícias e dicas dos nossos membros!</p>
-                            </div>
-                        </div>
-                        <div className="container">
-                            <div className="mt-50">
-                                <div className="box-swiper style-nav-top">
-                                    <BlogSlider />
-                                </div>
-                                <div className="text-center">
-                                    <Link legacyBehavior href="blog-grid">
-                                        <a className="btn btn-brand-1 mt--30 hover-up"><i class="fa-brands fa-blogger-b mr-10"></i>Ir para o blog</a>
-                                    </Link>
                                 </div>
                             </div>
                         </div>
