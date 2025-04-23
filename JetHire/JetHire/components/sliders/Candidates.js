@@ -32,7 +32,7 @@ const CandidatesSlider = () => {
     
                 const filteredUsers = data.filter(user => {
                     const percentage = calculatePercentage(user.profile);
-                    return percentage >= 60;
+                    return percentage >= 85;
                 });
     
                 setUsers(filteredUsers.slice(0, 10));
