@@ -8,7 +8,7 @@ export default function Candidates({ users }) {
         {users.map((user, index) => (
           <motion.div
             key={user._id}
-            className="col-xl-3 col-lg-4 col-md-6"
+            className="col-xl-3 col-lg-6 col-md-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}

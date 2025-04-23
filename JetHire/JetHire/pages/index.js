@@ -2,10 +2,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
-import BlogSlider from "../components/sliders/Blog";
+import CandidatesSlider from "../components/sliders/Candidates";
 import CategoryTab from "../components/elements/CategoryTab";
 import CategorySlider from "../components/sliders/Category";
-import Candidates from "../components/elements/Candidates";
 
 export default function Index5() {
     return (
@@ -175,22 +174,22 @@ export default function Index5() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-70">
+                    <section className="section-box mt-50 mb-50">
                         <div className="container">
                             <div className="text-start">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Candidatos recentes</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Encontra os candidatos mais recentes da plataforma.</p>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Vê aqui alguns dos nossos candidatos mais recentes!</p>
                             </div>
-                            <div className="mt-50 card-bg-white">
-                                <Candidates/>
-                                <div className="row mt-40 mb-60">
-                                    <div className="col-lg-12">
-                                        <div className="text-center">
-                                            <Link legacyBehavior href="/blog-grid">
-                                                <a className="btn btn-brand-1 mt--30 hover-up"><i className="fa-solid fa-user-group mr-10"></i>Ver mais</a>
-                                            </Link>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div className="container">
+                            <div className="mt-50">
+                                <div className="box-swiper style-nav-top">
+                                    <CandidatesSlider />
+                                </div>
+                                <div className="text-center">
+                                    <Link legacyBehavior href="/candidates-grid">
+                                        <a className="btn btn-brand-1 hover-up"><i className="fa-brands fa-blogger-b mr-10"></i>Ver mais candidatos</a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -210,26 +209,6 @@ export default function Index5() {
                                             <a href="page-register" className="btn btn-default"><i className="fa-solid fa-feather mr-10"></i>Criar conta</a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className="section-box mt-50 mb-50">
-                        <div className="container">
-                            <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Blog</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Tem acesso ás últimas notícias e dicas dos nossos membros!</p>
-                            </div>
-                        </div>
-                        <div className="container">
-                            <div className="mt-50">
-                                <div className="box-swiper style-nav-top">
-                                    <BlogSlider />
-                                </div>
-                                <div className="text-center">
-                                    <Link legacyBehavior href="/blog-grid">
-                                        <a className="btn btn-brand-1 hover-up"><i className="fa-brands fa-blogger-b mr-10"></i>Ir para o blog</a>
-                                    </Link>
                                 </div>
                             </div>
                         </div>
