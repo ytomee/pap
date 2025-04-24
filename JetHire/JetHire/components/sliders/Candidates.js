@@ -47,8 +47,6 @@ const CandidatesSlider = () => {
         <>
             <div className="swiper-container swiper-group-3 swiper">
                 <Swiper
-                    slidesPerView={3}
-                    spaceBetween={30}
                     loop={true}
                     navigation={{
                         prevEl: ".swiper-button-prev",
@@ -56,15 +54,15 @@ const CandidatesSlider = () => {
                     }}
                     className="swiper-wrapper pb-50 pt-5"
                     breakpoints={{
-                        640: {
-                            slidesPerView: 1,
-                            spaceBetween: 15,
-                        },
                         768: {
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                             spaceBetween: 20,
                         },
                         1024: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1400: {
                             slidesPerView: 3,
                             spaceBetween: 30,
                         }

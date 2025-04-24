@@ -2153,13 +2153,17 @@ label {
 .card-grid-1 {
   position: relative;
   border-radius: 10px;
-  border: 0.88px solid var(--red-200);
+  border: 1px solid var(--neutral-300);
   overflow: hidden;
   margin-bottom: 30px;
   position: relative;
-  background: var(--red-000);
+  background: var(--neutral-100);
   text-align: center;
   padding: 30px;
+}
+
+.card-grid-1:hover {
+  border: 1px solid var(--red-500);
 }
 
 .card-shadow {
