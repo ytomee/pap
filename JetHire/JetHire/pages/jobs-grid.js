@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
-import BlogSlider from "./../components/sliders/Blog";
 
 export default function JobGrid() {
     return (
@@ -1765,26 +1764,6 @@ export default function JobGrid() {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className="section-box mt-50 mb-50">
-                        <div className="container">
-                            <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">News and Blog</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Get the latest news, updates and tips</p>
-                            </div>
-                        </div>
-                        <div className="container">
-                            <div className="mt-50">
-                                <div className="box-swiper style-nav-top">
-                                    <BlogSlider />
-                                </div>
-                                <div className="text-center">
-                                    <Link legacyBehavior href="blog-grid">
-                                        <a className="btn btn-brand-1 btn-icon-load mt--30 hover-up">Load More Posts</a>
-                                    </Link>
                                 </div>
                             </div>
                         </div>
