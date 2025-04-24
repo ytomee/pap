@@ -7661,6 +7661,16 @@ ul li:last-child .card-list-4 {
   margin: 0px;
   padding: 0 220px;
 }
+@media (max-width: 1400px) {
+  .nav-tabs {
+    padding: 0 150px;
+  }
+}
+@media (max-width: 1200px) {
+  .nav-tabs {
+    padding: 0 10px;
+  }
+}
 .nav-tabs li {
   display: inline-block;
 }

@@ -133,15 +133,15 @@ export default function Index5() {
                         </div>
                     </section>
                     <section className="section-box mt-90">
-                    <div className="container">
-                        <div className="text-center">
-                            <h2 className="section-title wow animate__animated animate__fadeInUp">Ofertas mais recentes</h2>
-                            <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Encontra as ofertas de trabalho mais recentes. </p>
+                        <div className="container">
+                            <div className="text-center">
+                                <h2 className="section-title wow animate__animated animate__fadeInUp">Ofertas mais recentes</h2>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Encontra as ofertas de trabalho mais recentes. </p>
+                            </div>
+                            <div className="mt-30">
+                                <CategoryTab />
+                            </div>
                         </div>
-                        <div className="mt-30">
-                            <CategoryTab />
-                        </div>
-                    </div>
                     </section>
                     <section className="section-box overflow-visible mt-150 mb-150">
                         <div className="container">
