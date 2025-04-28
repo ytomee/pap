@@ -5,19 +5,19 @@ const workExperienceSchema = new Schema({
     role: { type: String, required: true },
     start: { type: String, required: true },
     end: { type: String, required: false },
-});
+}, { _id: false });
 
 const educationSchema = new Schema({
     institute: { type: String, required: true },
     course: { type: String, required: true },
     start: { type: String, required: true },
     end: { type: String, required: false },
-});
+}, { _id: false });
 
 const skillsSchema = new Schema({
     name: { type: String, required: true },
     value: { type: Number, required: true }
-});
+}, { _id: false });
 
 const portfolioSchema = new Schema({
     label: { type: String, required: false },
@@ -26,7 +26,7 @@ const portfolioSchema = new Schema({
         url: {type: String, required: true },
         id: {type: String, required: true }
     }
-});
+}, { _id: false });
 
 const userSchema = new Schema(
     {
@@ -48,10 +48,12 @@ const userSchema = new Schema(
             site: String,
             github: String,
             linkedin: String,
+
             workExperience: [workExperienceSchema],
             education: [educationSchema],
             skills: [skillsSchema],
             portfolio: [portfolioSchema],
+            
             pfp: String,
             pfp_id: String,
             banner: String,

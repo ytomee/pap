@@ -1,10 +1,13 @@
 ﻿/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { signOut , useSession } from 'next-auth/react';
 
 const Header = ({handleOpen,handleRemove,openClass}) => {
     const {status, data: session} = useSession();
+    const [showConfirmLogout, setShowConfirmLogout] = useState(false);
 
     const handleSignOut = () => {
         signOut({ callbackUrl: "/" });
@@ -12,6 +15,26 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
     
     return (
         <>
+            <AnimatePresence>
+                {showConfirmLogout && (
+                    <motion.div
+                        initial={{ opacity: 0, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 1 }}
+                        transition={{ duration: 0.2 }}
+                        className="logout-confirm-overlay"
+                    >
+                        <div className="logout-confirm-box">
+                            <p>Tem a certeza que pretende sair?</p>
+                            <div className="buttons">
+                                <button onClick={handleSignOut} className="btn btn-danger">Sim, sair</button>
+                                <button onClick={() => setShowConfirmLogout(false)} className="btn btn-secondary">Cancelar</button>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             <header className="header sticky-bar">
                 <div className="container">
                     <div className="main-header">
@@ -81,13 +104,14 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                                         </button>
                                                     </Link>
                                                 </li>
+                                                <li><hr style={{marginBlock: "5px"}}></hr></li>
                                                 <li>
                                                     <button>
                                                         <i className="fa-solid fa-gear mr-5"></i>Definições
                                                     </button>
                                                 </li>
                                                 <li>
-                                                    <button onClick={() => handleSignOut()}>
+                                                    <button onClick={() => setShowConfirmLogout(true)}>
                                                         <i className="fa-solid fa-person-running mr-5"></i>Sair
                                                     </button>
                                                 </li>

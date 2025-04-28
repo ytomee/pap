@@ -5,11 +5,6 @@ import Layout from "../components/Layout/Layout";
 import React, { useState } from "react";
 
 export default function CompanyDetails() {
-    const [activeIndex, setActiveIndex] = useState(1);
-
-    const handleOnClick = (index) => {
-        setActiveIndex(index); // remove the curly braces
-    };
 
     return (
         <>
@@ -20,80 +15,49 @@ export default function CompanyDetails() {
                             <div className="banner-hero banner-image-single">
                                 <img src="assets/imgs/page/company/img.png" alt="jobBox" />
                             </div>
-                            <div className="box-company-profile">
-                                <div className="image-compay">
-                                    <img src="assets/imgs/page/company/company.png" alt="jobBox" />
-                                </div>
+                            <div className="box-company-profile" style={{padding: 0}}>
                                 <div className="row mt-10">
-                                    <div className="col-lg-8 col-md-12">
-                                        <h5 className="f-18">
-                                            AliThemes <span className="card-location font-regular ml-20">New York, US</span>
-                                        </h5>
-                                        <p className="mt-5 font-md color-text-paragraph-2 mb-15">Our Mission to make working life simple</p>
+                                    <div className="col-lg-8 col-md-12 d-flex align-items-end">
+                                        <div className="company-pfp mr-25">
+                                            <img src="assets/imgs/page/company/company.png" alt="jobBox" />
+                                        </div>
+                                        <div className="mb-5">
+                                            <h5 className="company-label">
+                                                AliThemes <span className="card-location font-regular"><i className="fa-solid fa-map-pin mr-5"></i>New York, US</span>
+                                            </h5>
+                                            <p className="mt-5 font-md color-text-paragraph-2">Our Mission to make working life simple</p>
+                                        </div>
                                     </div>
-                                    <div className="col-lg-4 col-md-12 text-lg-end">
+                                    <div className="col-lg-4 col-md-12 d-flex justify-content-end align-items-center">
                                         <Link legacyBehavior href="page-contact">
-                                            <a className="btn btn-call-icon btn-apply btn-apply-big">Contact us</a>
+                                            <a className="btn btn-apply" style={{padding: "18px", fontSize: "16px"}}><i className="fa-solid fa-phone mr-10"></i>Contacte-nos</a>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
-                            <div className="box-nav-tabs mt-40 mb-5">
-                                <ul className="nav" role="tablist">
-                                    <li>
-                                        <a className="btn btn-border aboutus-icon mr-15 mb-5 active" onClick={() => handleOnClick(1)}>
-                                            About us
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="btn btn-border recruitment-icon mr-15 mb-5" onClick={() => handleOnClick(2)}>
-                                            Recruitments
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="btn btn-border people-icon mb-5" onClick={() => handleOnClick(3)}>
-                                            People
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                             <div className="border-bottom pt-10 pb-10" />
                         </div>
                     </section>
-                    <section className="section-box mt-50">
+                    <section className="section-box mt-40">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-8 col-md-12 col-sm-12 col-12">
                                     <div className="content-single">
-                                        <div className="tab-content">
-                                            <div className={`tab-pane fade ${activeIndex === 1 && "show active"}`}>
-                                                <h4>Welcome to AliStudio Team</h4>
-                                                <p>The AliStudio Design team has a vision to establish a trusted platform that enables productive and healthy enterprises in a world of digital and remote everything, constantly changing work patterns and norms, and the need for organizational resiliency.</p>
-                                                <p>The ideal candidate will have strong creative skills and a portfolio of work which demonstrates their passion for illustrative design and typography. This candidate will have experiences in working with numerous different design platforms such as digital and print forms.</p>
-                                                <h4>Essential Knowledge, Skills, and Experience</h4>
-                                                <ul>
-                                                    <li>A portfolio demonstrating well thought through and polished end to end customer journeys</li>
-                                                    <li>5+ years of industry experience in interactive design and / or visual design</li>
-                                                    <li>Excellent interpersonal skills</li>
-                                                    <li>Aware of trends in mobile, communications, and collaboration</li>
-                                                    <li>Ability to create highly polished design prototypes, mockups, and other communication artifacts</li>
-                                                    <li>The ability to scope and estimate efforts accurately and prioritize tasks and goals independently</li>
-                                                    <li>History of impacting shipping products with your work</li>
-                                                    <li>A Bachelor s Degree in Design (or related field) or equivalent professional experience</li>
-                                                    <li>Proficiency in a variety of design tools such as Figma, Photoshop, Illustrator, and Sketch</li>
-                                                </ul>
-                                            </div>
-                                            <div className={`tab-pane fade ${activeIndex === 2 && "show active"}`}>
-                                                <h4>Recruitments</h4>
-                                                <p>The AliStudio Design team has a vision to establish a trusted platform that enables productive and healthy enterprises in a world of digital and remote everything, constantly changing work patterns and norms, and the need for organizational resiliency.</p>
-                                                <p>The ideal candidate will have strong creative skills and a portfolio of work which demonstrates their passion for illustrative design and typography. This candidate will have experiences in working with numerous different design platforms such as digital and print forms.</p>
-                                            </div>
-                                            <div className={`tab-pane fade ${activeIndex === 3 && "show active"}`}>
-                                                <h4>People</h4>
-                                                <p>The AliStudio Design team has a vision to establish a trusted platform that enables productive and healthy enterprises in a world of digital and remote everything, constantly changing work patterns and norms, and the need for organizational resiliency.</p>
-                                                <p>The ideal candidate will have strong creative skills and a portfolio of work which demonstrates their passion for illustrative design and typography. This candidate will have experiences in working with numerous different design platforms such as digital and print forms.</p>
-                                            </div>
-                                        </div>
+                                        <h4>Welcome to AliStudio Team</h4>
+                                        <p>The AliStudio Design team has a vision to establish a trusted platform that enables productive and healthy enterprises in a world of digital and remote everything, constantly changing work patterns and norms, and the need for organizational resiliency.</p>
+                                        <p>The ideal candidate will have strong creative skills and a portfolio of work which demonstrates their passion for illustrative design and typography. This candidate will have experiences in working with numerous different design platforms such as digital and print forms.</p>
+                                        <h4>Essential Knowledge, Skills, and Experience</h4>
+                                        <ul>
+                                            <li>A portfolio demonstrating well thought through and polished end to end customer journeys</li>
+                                            <li>5+ years of industry experience in interactive design and / or visual design</li>
+                                            <li>Excellent interpersonal skills</li>
+                                            <li>Aware of trends in mobile, communications, and collaboration</li>
+                                            <li>Ability to create highly polished design prototypes, mockups, and other communication artifacts</li>
+                                            <li>The ability to scope and estimate efforts accurately and prioritize tasks and goals independently</li>
+                                            <li>History of impacting shipping products with your work</li>
+                                            <li>A Bachelor s Degree in Design (or related field) or equivalent professional experience</li>
+                                            <li>Proficiency in a variety of design tools such as Figma, Photoshop, Illustrator, and Sketch</li>
+                                        </ul>
                                     </div>
                                     <div className="box-related-job content-page">
                                         <h5 className="mb-30">Latest Jobs</h5>

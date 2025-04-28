@@ -1328,7 +1328,7 @@ h6,
 
 .btn-paragraph-2 {
   padding: 8px 16px;
-  background: #66789C;
+  background: var(--neutral-500);
   border-radius: 5px;
   color: var(--red-500);
   min-width: 42px;
@@ -1454,7 +1454,7 @@ h6,
   cursor: pointer;
 }
 .btn-border {
-  border: 1px solid #B4C0E0;
+  border: 1px solid var(--neutral-200);
   padding: 10px 23px 10px 23px;
   border-radius: 10px;
   background: #ffffff;
@@ -1721,7 +1721,7 @@ input[type=tel]:focus {
 select {
   width: 100%;
   background: transparent;
-  border: 0px solid #B4C0E0;
+  border: 0px solid var(--neutral-200);
   box-shadow: none;
   font-size: 16px;
   color: var(--neutral-300);
@@ -1898,7 +1898,7 @@ label {
 }
 
 .swiper-pagination-customs {
-  background: #B4C0E0;
+  background: var(--neutral-200);
   border-radius: 50%;
   display: inline-block;
   background-repeat: no-repeat;
@@ -2027,6 +2027,114 @@ label {
   background-color: #345DBB;
 }
 
+.company-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.9);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.company-form-wrapper {
+  position: relative;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1600px;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.company-form-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.company-form-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--red-500);
+  border-radius: 8px;
+  border: 2px solid var(--neutral-100);
+}
+
+.company-form-wrapper::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+  border-radius: 8px;
+}
+
+.company-form-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.company-form-close:hover {
+  color: #000;
+}
+
+.company-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-form-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.company-form-group {
+  margin-bottom: 20px;
+}
+
+.company-form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.company-form-input,
+.company-form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.company-form-input::placeholder,
+.company-form-textarea::placeholder {
+  color: #999;
+}
+
+.company-form-button {
+  padding: 12px 20px;
+  background-color: var(--red-500);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.company-form-button:hover {
+  background-color: var(--red-800);
+}
+
 /* Styling;
  */
 .noUi-background {
@@ -2102,7 +2210,7 @@ label {
 
 .noUi-origin {
   border-radius: 12px;
-  background: #B4C0E0;
+  background: var(--neutral-200);
 }
 
 .noUi-connect {
@@ -2374,7 +2482,7 @@ label {
 }
 .card-grid-2 .card-block-info .card-2-bottom.card-2-bottom-candidate .btn-brand-hover {
   padding: 15px 33px;
-  border: thin solid #B4C0E0;
+  border: thin solid var(--neutral-200);
   font-size: 14px;
 }
 .card-grid-2 .card-block-info .card-2-bottom.card-2-bottom-candidate .btn-brand-hover:hover {
@@ -2491,7 +2599,7 @@ label {
   height: 261px;
   width: 100%;
   border-radius: 10px;
-  background-color: #B4C0E0;
+  background-color: var(--neutral-200);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px 0px;
@@ -2610,7 +2718,7 @@ label {
   margin-bottom: 30px;
 }
 .card-grid-4:hover {
-  border-color: #B4C0E0;
+  border-color: var(--neutral-200);
   box-shadow: 0px 37px 60px -15px rgba(50, 59, 79, 0.1);
 }
 .card-grid-4 a {
@@ -2965,10 +3073,20 @@ ul li:last-child .card-list-4 {
 }
 
 .box-newsletter {
+  position: relative;
   padding: 50px 30px;
   background: url(../imgs/template/bg-newsletter.svg) no-repeat 0px 0px;
   background-size: cover;
   border-radius: 16px;
+  overflow: hidden;
+  z-index: 0;
+}
+.box-newsletter::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 .box-register-company{
   display: flex;
@@ -2984,6 +3102,7 @@ ul li:last-child .card-list-4 {
 }
 .form-register-company a{
   font-weight: 700;
+  font-size: 18px;
 }
 .form-register-company:nth-child(2){
   cursor: pointer;
@@ -3022,8 +3141,7 @@ ul li:last-child .card-list-4 {
 }
 .box-newsletter .text-md-newsletter {
   color: #ffffff;
-  font-size: 34px;
-  line-height: 35px;
+  font-size: 26px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: bold;
 }
@@ -3141,7 +3259,7 @@ ul li:last-child .card-list-4 {
   padding: 7px 15px;
 }
 .breadcrumbs li {
-  color: #66789C;
+  color: var(--neutral-500);
   font-size: 14px;
   display: inline-block;
   padding-left: 20px;
@@ -3158,7 +3276,7 @@ ul li:last-child .card-list-4 {
 }
 .breadcrumbs li a {
   font-size: 14px;
-  color: #66789C;
+  color: var(--neutral-500);
   text-decoration: none;
   line-height: 14px;
   display: block;
@@ -3167,7 +3285,7 @@ ul li:last-child .card-list-4 {
   color: var(--neutral-900);
 }
 .breadcrumbs li:last-child::before {
-  color: #66789C;
+  color: var(--neutral-500);
 }
 .breadcrumbs li:first-child::before {
   display: none;
@@ -3282,7 +3400,7 @@ ul li:last-child .card-list-4 {
   height: 18px;
   width: 1.4px;
   border-radius: 5px;
-  background-color: #B4C0E0;
+  background-color: var(--neutral-200);
   position: absolute;
   top: 16px;
   right: -3px;
@@ -3523,6 +3641,9 @@ ul li:last-child .card-list-4 {
   min-width: 215px;
   text-align: right;
 }
+.header .main-header .header-right hr{
+  width: 100%;
+}
 
 .header .block-signin {
   display: flex;
@@ -3713,7 +3834,7 @@ ul li:last-child .card-list-4 {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 998;
   left: 0;
   transition: all 0.3s ease 0s;
   border-bottom: 1px solid var(--neutral-200);
@@ -6391,7 +6512,7 @@ ul li:last-child .card-list-4 {
   font-size: 18px;
 }
 .card-blog-1 .btn-brand-hover {
-  border-color: #B4C0E0;
+  border-color: var(--neutral-200);
 }
 .card-blog-1.post-list {
   display: flex;
@@ -6462,7 +6583,7 @@ ul li:last-child .card-list-4 {
 }
 .author-bio .author-des {
   padding: 25px;
-  border: 1px solid #B4C0E0;
+  border: 1px solid var(--neutral-200);
   border-radius: 4px;
 }
 
@@ -6727,6 +6848,53 @@ ul li:last-child .card-list-4 {
   width: 100%;
 }
 
+.logout-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-confirm-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+}
+
+.logout-confirm-box p {
+  font-size: 18px;
+}
+
+.logout-confirm-box .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.logout-confirm-box .btn {
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: var(--red-500);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--neutral-600);
+  color: white;
+}
+
 .content-single p {
   font-size: 16px;
   line-height: 200%;
@@ -6735,7 +6903,6 @@ ul li:last-child .card-list-4 {
   margin-bottom: 20px;
 }
 .content-single h3, .content-single h4, .content-single h5 {
-  margin-top: 20px;
   color: var(--neutral-900);
   font-weight: bold;
   margin-bottom: 20px;
@@ -6866,7 +7033,7 @@ ul li:last-child .card-list-4 {
 
 .text-description {
   font-size: 14px;
-  color: #66789C;
+  color: var(--neutral-500);
   line-height: 22px;
   display: inline-block;
   width: 50%;
@@ -6980,7 +7147,7 @@ ul li:last-child .card-list-4 {
 }
 .job-overview .text-description {
   font-size: 16px;
-  color: #66789C;
+  color: var(--neutral-500);
   line-height: 24px;
   font-weight: 400;
 }
@@ -7073,7 +7240,7 @@ ul li:last-child .card-list-4 {
   float: right;
   font-size: 14px;
   line-height: 22px;
-  color: #66789C;
+  color: var(--neutral-500);
   font-weight: 500;
 }
 
@@ -7104,7 +7271,7 @@ ul li:last-child .card-list-4 {
 }
 
 .head-border {
-  border-bottom: 1px solid #B4C0E0;
+  border-bottom: 1px solid var(--neutral-200);
   padding-bottom: 10px;
 }
 
@@ -7209,7 +7376,7 @@ ul li:last-child .card-list-4 {
 .text-body-999 {
   font-size: 16px;
   line-height: 22px;
-  color: #66789C;
+  color: var(--neutral-500);
 }
 
 .box-email-reminder .form-group {
@@ -7519,7 +7686,7 @@ ul li:last-child .card-list-4 {
   margin-bottom: 40px;
 }
 .sidebar-border-bg .text-grey {
-  color: #B4C0E0;
+  color: var(--neutral-200);
   font-size: 24px;
   line-height: 37px;
   letter-spacing: 2px;
@@ -7527,7 +7694,7 @@ ul li:last-child .card-list-4 {
   display: block;
 }
 .sidebar-border-bg .text-hiring {
-  color: #66789C;
+  color: var(--neutral-500);
   font-size: 36px;
   font-weight: 800;
   line-height: 57px;
@@ -7542,7 +7709,7 @@ ul li:last-child .card-list-4 {
 }
 
 .box-company-profile {
-  padding: 60px 0px 0px 0px;
+  padding-top: 70px;
   position: relative;
 }
 
@@ -7560,6 +7727,14 @@ ul li:last-child .card-list-4 {
   object-position: center;
   object-fit: cover;
 }
+.company-pfp img{
+  object-fit: cover;
+  border: none;
+  outline: none;
+}
+.company-label {
+  font-size: 32px;
+}
 
 .aboutus-icon {
   background-image: url(../imgs/page/company/icon-about.svg);
@@ -7573,7 +7748,7 @@ ul li:last-child .card-list-4 {
   color: var(--neutral-900);
   background-image: url(../imgs/page/company/icon-about-hover.svg);
   background-color: #ffffff;
-  border-color: #B4C0E0;
+  border-color: var(--neutral-200);
 }
 
 .recruitment-icon {
@@ -7588,7 +7763,7 @@ ul li:last-child .card-list-4 {
   color: var(--neutral-900);
   background-image: url(../imgs/page/company/icon-recruitment-hover.svg);
   background-color: #ffffff;
-  border-color: #B4C0E0;
+  border-color: var(--neutral-200);
 }
 
 .people-icon {
@@ -7603,7 +7778,7 @@ ul li:last-child .card-list-4 {
   color: var(--neutral-900);
   background-image: url(../imgs/page/company/icon-people-hover.svg);
   background-color: #ffffff;
-  border-color: #B4C0E0;
+  border-color: var(--neutral-200);
 }
 
 .login-register-cover {
@@ -7813,7 +7988,7 @@ ul li:last-child .card-list-4 {
 .box-we-hiring .text-2 {
   font-size: 18px;
   line-height: 23px;
-  color: #66789C;
+  color: var(--neutral-500);
   font-weight: 500;
   padding: 29px 20px 0px 20px;
 }
@@ -8132,13 +8307,13 @@ ul li:last-child .card-list-4 {
 }
 
 .list-tags-banner-2 {
-  color: #66789C;
+  color: var(--neutral-500);
   font-size: 14px;
   line-height: 26px;
 }
 .list-tags-banner-2 a {
   text-decoration: underline;
-  color: #66789C;
+  color: var(--neutral-500);
 }
 
 .block-banner-1, .block-banner-2, .block-banner-3 {
