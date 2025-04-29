@@ -1701,7 +1701,8 @@ input[type=text],
 input[type=email],
 input[type=date],
 input[type=time],
-input[type=tel] {
+input[type=tel],
+input[type=password] {
   border: 1px solid var(--neutral-300);
   border-radius: 4px;
   height: 50px;
@@ -3713,8 +3714,15 @@ ul li:last-child .card-list-4 {
   text-decoration: none;
   position: relative;
 }
-.header .main-menu li a:hover, .header .main-menu li a.active {
+.header .main-menu li a .ai {
+  color: var(--red-500);
+}
+.header .main-menu li a:hover,
+.header .main-menu li a.active {
   color: #000000;
+}
+.header .main-menu li a:hover .ai {
+  color: var(--red-800);
 }
 .header .main-menu li a i {
   font-size: 10px;
