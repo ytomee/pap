@@ -12,10 +12,6 @@ export default function CompanyForm({ setShowForm }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      alert("As palavras-passe não coincidem.");
-      return;
-    }
     console.log("Submitted data:", formData);
   };
 
@@ -46,17 +42,20 @@ export default function CompanyForm({ setShowForm }) {
           </button>
 
           <form className="company-form" onSubmit={handleSubmit}>
-            <h2 className="company-form-title">Formulário de registo de empresa</h2>
+            <div className="company-form-title">Formulário de registo de empresa</div>
+            <div className="company-form-desc">Entraremos em contacto consigo o mais rápido possível.</div>
 
             <div className="row">
+              <div className="col-12">
+                <h3 className="mb-20"><i className="fa-regular fa-building mr-10"></i>Dados da empresa</h3>
+              </div>
               <div className="col-12 col-md-5">
-                <h5 className="mb-10">Nome da empresa</h5>
+                <h5 className="mb-10">Nome</h5>
                 <div className="input-style mb-20">
                   <input
                     name="companyName"
                     value={formData.companyName || ""}
                     onChange={handleChange}
-                    placeholder="Jet Hire"
                     type="text"
                     required
                   />
@@ -93,7 +92,10 @@ export default function CompanyForm({ setShowForm }) {
                   </select>
                 </div>
               </div>
-
+              
+              <div className="col-12">
+                <h3 className="mt-20 mb-20"><i className="fa-solid fa-map-pin mr-10"></i>Localização</h3>
+              </div>
               <div className="col-12 col-md-3">
                 <h5 className="mb-10">País</h5>
                 <div className="select-style mb-20">
@@ -137,21 +139,11 @@ export default function CompanyForm({ setShowForm }) {
                   />
                 </div>
               </div>
-
-              <div className="col-12 col-md-4">
-                <h5 className="mb-10">Email geral</h5>
-                <div className="input-style mb-20">
-                  <input
-                    name="generalEmail"
-                    value={formData.generalEmail || ""}
-                    onChange={handleChange}
-                    type="email"
-                    required
-                  />
-                </div>
+              
+              <div className="col-12">
+                <h3 className="mt-20 mb-20"><i className="fa-regular fa-address-book mr-10"></i>Contactos</h3>
               </div>
-
-              <div className="col-12 col-md-4">
+              <div className="col-12 col-md-3">
                 <h5 className="mb-10">Telefone</h5>
                 <div className="input-style mb-20">
                   <input
@@ -159,6 +151,18 @@ export default function CompanyForm({ setShowForm }) {
                     value={formData.phone || ""}
                     onChange={handleChange}
                     type="text"
+                  />
+                </div>
+              </div>
+              
+              <div className="col-12 col-md-5">
+                <h5 className="mb-10">Email</h5>
+                <div className="input-style mb-20">
+                  <input
+                    name="generalEmail"
+                    value={formData.generalEmail || ""}
+                    onChange={handleChange}
+                    type="email"
                   />
                 </div>
               </div>
@@ -174,9 +178,12 @@ export default function CompanyForm({ setShowForm }) {
                   />
                 </div>
               </div>
-
-              <div className="col-12 col-md-6">
-                <h5 className="mb-10">Nome do responsável</h5>
+              
+              <div className="col-12">
+                <h3 className="mt-20 mb-20"><i className="fa-solid fa-user-tie mr-10"></i>Responsável pelo registo</h3>
+              </div>
+              <div className="col-12 col-md-5">
+                <h5 className="mb-10">Nome</h5>
                 <div className="input-style mb-20">
                   <input
                     name="responsiblePerson"
@@ -188,12 +195,12 @@ export default function CompanyForm({ setShowForm }) {
                 </div>
               </div>
 
-              <div className="col-12 col-md-6">
-                <h5 className="mb-10">Email de login</h5>
+              <div className="col-12 col-md-4">
+                <h5 className="mb-10">Email</h5>
                 <div className="input-style mb-20">
                   <input
-                    name="loginEmail"
-                    value={formData.loginEmail || ""}
+                    name="responsibleEmail"
+                    value={formData.responsibleEmail || ""}
                     onChange={handleChange}
                     type="email"
                     required
@@ -201,27 +208,14 @@ export default function CompanyForm({ setShowForm }) {
                 </div>
               </div>
 
-              <div className="col-12 col-md-6">
-                <h5 className="mb-10">Palavra-passe</h5>
+              <div className="col-12 col-md-3">
+                <h5 className="mb-10">Telefone</h5>
                 <div className="input-style mb-20">
                   <input
-                    name="password"
-                    value={formData.password || ""}
+                    name="responsiblePhone"
+                    value={formData.responsiblePhone || ""}
                     onChange={handleChange}
-                    type="password"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="col-12 col-md-6">
-                <h5 className="mb-10">Confirmar palavra-passe</h5>
-                <div className="input-style mb-20">
-                  <input
-                    name="confirmPassword"
-                    value={formData.confirmPassword || ""}
-                    onChange={handleChange}
-                    type="password"
+                    type="text"
                     required
                   />
                 </div>
