@@ -14,9 +14,9 @@ export default function AuthLayout({
   return (
     <div className="relative p-6 bg-white z-1 dark:bg-gray-900 sm:p-0">
       <ThemeProvider>
-        <div className="relative flex lg:flex-row w-full h-screen justify-center flex-col  dark:bg-gray-900 sm:p-0">
+        <div className="relative flex lg:flex-row w-full h-screen justify-center flex-col dark:bg-gray-900 sm:p-0">
           {children}
-          <div className="lg:w-1/2 w-full h-full bg-brand-950 dark:bg-white/5 lg:grid items-center hidden">
+          <div className="lg:w-1/2 w-full h-full bg-gray-950 dark:bg-gray-100 lg:grid items-center hidden">
             <div className="relative items-center justify-center  flex z-1">
               {/* <!-- ===== Common Grid Shape Start ===== --> */}
               <GridShape />
@@ -25,12 +25,20 @@ export default function AuthLayout({
                   <Image
                     width={231}
                     height={48}
-                    src="./images/logo/auth-logo.svg"
+                    className="dark:hidden"
+                    src="./images/logo/logo-dark.svg"
+                    alt="Logo"
+                  />
+                  <Image
+                    width={231}
+                    height={48}
+                    className="hidden dark:block"
+                    src="./images/logo/logo.svg"
                     alt="Logo"
                   />
                 </Link>
-                <p className="text-center text-gray-400 dark:text-white/60">
-                  Free and Open-Source Tailwind CSS Admin Dashboard Template
+                <p className="text-center text-gray-100 dark:text-gray-800">
+                  Procura emprego, contrata talentos.
                 </p>
               </div>
             </div>

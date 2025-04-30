@@ -4,38 +4,35 @@ import React from "react";
 import MonthlyTarget from "@/components/ecommerce/MonthlyTarget";
 import MonthlySalesChart from "@/components/ecommerce/MonthlySalesChart";
 import StatisticsChart from "@/components/ecommerce/StatisticsChart";
-import RecentOrders from "@/components/ecommerce/RecentOrders";
 import DemographicCard from "@/components/ecommerce/DemographicCard";
 
 export const metadata: Metadata = {
-  title:
-    "Next.js E-commerce Dashboard | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js Home for TailAdmin Dashboard Template",
+  title: "JetHire | Dashboard",
+  description: "Página principal da dashboard da Jet Hire",
 };
 
 export default function Ecommerce() {
   return (
     <div className="grid grid-cols-12 gap-4 md:gap-6">
-      <div className="col-span-12 space-y-6 xl:col-span-7">
+      <div className="col-span-12">
         <EcommerceMetrics />
-
-        <MonthlySalesChart />
       </div>
 
-      <div className="col-span-12 xl:col-span-5">
-        <MonthlyTarget />
+      <div className="col-span-12 grid grid-cols-1 xl:grid-cols-2 gap-4">
+        <MonthlySalesChart />
+        <MonthlySalesChart />
       </div>
 
       <div className="col-span-12">
         <StatisticsChart />
       </div>
 
-      <div className="col-span-12 xl:col-span-5">
+      <div className="col-span-12 xl:col-span-7">
         <DemographicCard />
       </div>
 
-      <div className="col-span-12 xl:col-span-7">
-        <RecentOrders />
+      <div className="col-span-12 xl:col-span-5">
+        <MonthlyTarget />
       </div>
     </div>
   );
