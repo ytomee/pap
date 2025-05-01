@@ -6,9 +6,11 @@ import Layout from "../components/Layout/Layout";
 import Sidebar from "../components/elements/companies-grid/Sidebar";
 import Company from "../components/elements/companies-grid/Company";
 import CompanyForm from "../components/elements/companies-grid/CompanyForm";
+import ValidRequest from "../components/elements/companies-grid/ValidRequest";
 
 export default function CompaniesGrid() {
     const [showForm, setShowForm] = useState(false);
+    const [showValidRequest, setShowValidRequest] = useState(false);
 
     useEffect(() => {
     if (showForm) {
@@ -22,9 +24,10 @@ export default function CompaniesGrid() {
     }, [showForm]);
 
     return (
-        <>
+        <> 
             <AnimatePresence>
-                {showForm && <CompanyForm setShowForm={setShowForm} />}
+                {showForm && <CompanyForm setShowForm={setShowForm} setShowValidRequest={setShowValidRequest} />}
+                {showValidRequest && <ValidRequest setShowValidRequest={setShowValidRequest} />}
             </AnimatePresence>
             <Layout>
                 <div>

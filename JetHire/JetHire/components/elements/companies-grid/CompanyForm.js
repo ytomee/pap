@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import countries from "/components/json/countries.json";
 
-export default function CompanyForm({ setShowForm }) {
+export default function CompanyForm({ setShowForm, setShowValidRequest }) {
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
@@ -10,10 +10,30 @@ export default function CompanyForm({ setShowForm }) {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted data:", formData);
-  };
+    try {
+      const res = await fetch("/api/company-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (res.ok) {
+        setShowForm(false);
+        setShowValidRequest(true);
+      } else {
+        const data = await res.json();
+        alert(data.error || "Erro ao submeter o formulário.");
+      }
+      
+    } catch (error) {
+      console.error("Erro ao submeter:", error);
+      alert("Erro ao submeter o formulário.");
+    }
+  };  
 
   const generateYears = () => {
     const years = [];
@@ -107,7 +127,7 @@ export default function CompanyForm({ setShowForm }) {
                   >
                     <option value="">Selec.</option>
                     {countries.map((country) => (
-                      <option key={country.value} value={country.value}>
+                      <option key={country.name} value={country.name}>
                         {country.name}
                       </option>
                     ))}
